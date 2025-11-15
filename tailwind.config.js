@@ -7,7 +7,12 @@ module.exports = {
   ],
   darkMode: ["class"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        display: ["var(--font-playfair)", "serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 }

@@ -1,5 +1,5 @@
-import { notFound } from "next/navigation"
 import { Metadata } from "next"
+import { notFound } from "next/navigation"
 import { allPages } from "contentlayer/generated"
 
 import { Mdx } from "@/components/mdx-components"
@@ -15,7 +15,7 @@ async function getPageFromParams(params: PageProps["params"]) {
   const page = allPages.find((page) => page.slugAsParams === slug)
 
   if (!page) {
-    null
+    return null
   }
 
   return page
@@ -50,10 +50,12 @@ export default async function PagePage({ params }: PageProps) {
   }
 
   return (
-    <article className="py-6 prose dark:prose-invert">
-      <h1>{page.title}</h1>
-      {page.description && <p className="text-xl">{page.description}</p>}
-      <hr />
+    <article className="prose-custom space-y-6">
+      <div className="space-y-3">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">Guidepost</p>
+        <h1 className="text-balance text-4xl md:text-5xl">{page.title}</h1>
+        {page.description && <p className="text-lg text-slate-600 dark:text-slate-300">{page.description}</p>}
+      </div>
       <Mdx code={page.body.code} />
     </article>
   )
