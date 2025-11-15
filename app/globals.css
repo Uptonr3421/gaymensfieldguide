@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply min-h-screen bg-slate-950 text-slate-50;
+  }
+
+  ::selection {
+    @apply bg-fuchsia-500 text-white;
+  }
+
+  a {
+    @apply transition-colors;
+  }
+}
+
+@layer components {
+  .prose :where(a) {
+    @apply text-fuchsia-200 underline decoration-dotted underline-offset-4;
+  }
+}

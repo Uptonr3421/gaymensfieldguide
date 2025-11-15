@@ -12,18 +12,16 @@ interface PageProps {
 
 async function getPageFromParams(params: PageProps["params"]) {
   const slug = params?.slug?.join("/")
-  const page = allPages.find((page) => page.slugAsParams === slug)
+  const page = allPages.find((entry) => entry.slugAsParams === slug)
 
   if (!page) {
-    null
+    return null
   }
 
   return page
 }
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const page = await getPageFromParams(params)
 
   if (!page) {
@@ -50,11 +48,14 @@ export default async function PagePage({ params }: PageProps) {
   }
 
   return (
-    <article className="py-6 prose dark:prose-invert">
-      <h1>{page.title}</h1>
-      {page.description && <p className="text-xl">{page.description}</p>}
-      <hr />
-      <Mdx code={page.body.code} />
+    <article className="space-y-6">
+      <div>
+        <h1 className="text-3xl font-semibold text-white">{page.title}</h1>
+        {page.description && <p className="text-lg text-slate-300">{page.description}</p>}
+      </div>
+      <div className="prose prose-invert max-w-none">
+        <Mdx code={page.body.code} />
+      </div>
     </article>
   )
 }
