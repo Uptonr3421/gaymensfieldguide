@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation"
 import { Metadata } from "next"
-import { allPages } from "contentlayer/generated"
+import { allPages, type Page } from "contentlayer/generated"
 
 import { Mdx } from "@/components/mdx-components"
 
@@ -10,12 +10,16 @@ interface PageProps {
   }
 }
 
-async function getPageFromParams(params: PageProps["params"]) {
+type PageDocument = Page
+
+async function getPageFromParams(
+  params: PageProps["params"]
+): Promise<PageDocument | null> {
   const slug = params?.slug?.join("/")
   const page = allPages.find((page) => page.slugAsParams === slug)
 
   if (!page) {
-    null
+    return null
   }
 
   return page
