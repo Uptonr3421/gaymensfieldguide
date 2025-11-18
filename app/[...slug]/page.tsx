@@ -10,12 +10,16 @@ interface PageProps {
   }
 }
 
-async function getPageFromParams(params: PageProps["params"]) {
+type Page = (typeof allPages)[number]
+
+async function getPageFromParams(
+  params: PageProps["params"]
+): Promise<Page | null> {
   const slug = params?.slug?.join("/")
   const page = allPages.find((page) => page.slugAsParams === slug)
 
   if (!page) {
-    null
+    return null
   }
 
   return page
