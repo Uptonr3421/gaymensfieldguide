@@ -1,13 +1,13 @@
 export const siteConfig = {
   name: "Gay Men's Field Guide",
   description:
-    "Tech, culture, and queer perspectives collide in raw, unfiltered takes for modern LGBTQ+ readers.",
-  tagline: "Dispatches on digital life, wellbeing, and community from a gay lens.",
+    "Vibecoding meets culture: Creative coding tutorials, tech insights, and developer lifestyle. Shop unique dev merch and join the Cleveland coding community.",
+  tagline: "Where code meets culture—vibecoding tutorials, tech wellness, and creative developer resources.",
   hero: {
-    kicker: "Field Notes for the Digital Queer",
-    headline: "Guidance for navigating tech, culture, and wellness",
+    kicker: "Vibecoding for the Modern Developer",
+    headline: "Code with style, build with purpose, vibe with community",
     subheading:
-      "Stories, experiments, and practical lessons from Cleveland's Gay Men's Field Guide community—now optimized for the open web.",
+      "Explore creative coding tutorials, tech culture insights, and developer lifestyle content from Cleveland's vibecoding community—now live on the open web.",
     cta: {
       label: "Explore the latest posts",
       href: "#latest",
@@ -15,7 +15,8 @@ export const siteConfig = {
   },
   contactEmail: "hello@gaymensfieldguide.com",
   nav: [
-    { label: "Articles", href: "/" },
+    { label: "Articles", href: "/posts" },
+    { label: "Shop", href: "/shop" },
     { label: "About", href: "/about" },
   ],
   socials: [
