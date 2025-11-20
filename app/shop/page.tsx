@@ -21,7 +21,7 @@ export default function ShopPage() {
           Merch Table
         </p>
         <h1 className="font-display text-4xl font-semibold text-slate-900 dark:text-slate-50">
-          Shop Gay Men's Field Guide
+          Shop Gay Men&apos;s Field Guide
         </h1>
         <p className="max-w-2xl text-base text-slate-600 dark:text-slate-300">
           Unique developer merchandise and vibecoding apparel. Each item links to a secure Stripe-hosted checkout. 
