@@ -15,7 +15,8 @@ export const siteConfig = {
   },
   contactEmail: "hello@gaymensfieldguide.com",
   nav: [
-    { label: "Articles", href: "/posts" },
+    { label: "Blog", href: "/blog" },
+    { label: "Field Notes", href: "/posts" },
     { label: "Shop", href: "/shop" },
     { label: "About", href: "/about" },
   ],

@@ -140,6 +140,61 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="relative mx-auto max-w-6xl px-6 pb-12">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+            <div>
+              <p className="text-sm uppercase tracking-[0.25em] text-white/60">Navigation</p>
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">Pick your next move</h2>
+              <p className="text-white/75 mt-3 max-w-3xl">
+                Shortcut into the parts of the Field Guide built for vibe coders, LLM tinkerers, and adventure planners. Every lane is tuned for mobile fingers and late-night inspiration.
+              </p>
+            </div>
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white/80 underline-offset-4 hover:text-white"
+            >
+              See the blog hub
+              <span aria-hidden>→</span>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {[{
+              label: "Inside co-ops",
+              href: "/posts/inside-co-ops-for-vibe-coders",
+              description: "Blueprints for sharing cloud credits, prompts, and rituals with your crew.",
+            },
+            {
+              label: "Latest dispatches",
+              href: "/blog",
+              description: "A curated home for field notes, prompt recipes, and culture pieces.",
+            },
+            {
+              label: "Shop the edit",
+              href: "/shop",
+              description: "Gear and goods that keep the essays ad-free and the campfire burning.",
+            },
+            {
+              label: "Meet the editor",
+              href: "/about",
+              description: "Understand the ethos behind the Field Guide and how to collaborate.",
+            }].map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:-translate-y-0.5 hover:border-white/30"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-green-900/10 opacity-0 transition-opacity group-hover:opacity-100" aria-hidden />
+                <div className="relative space-y-2">
+                  <p className="text-sm font-semibold text-white">{item.label}</p>
+                  <p className="text-sm text-white/75">{item.description}</p>
+                  <span className="inline-flex items-center gap-2 text-xs font-semibold text-white/80">Navigate <span aria-hidden>→</span></span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         <section className="relative mx-auto max-w-6xl px-6 pb-20">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
@@ -147,7 +202,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold leading-tight">Content pillars at launch</h2>
             </div>
             <Link
-              href="/guide"
+              href="/blog"
               className="inline-flex items-center gap-2 text-sm font-semibold text-white/80 underline-offset-4 hover:text-white"
             >
               Explore the roadmap
