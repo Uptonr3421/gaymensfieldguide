@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1B4332"/>
+      <stop offset="50%" stop-color="#2C2C2C"/>
+      <stop offset="100%" stop-color="#D4A574"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#grad)" rx="32"/>
+  <circle cx="250" cy="620" r="180" fill="#F8F6F4" opacity="0.07"/>
+  <rect x="420" y="340" width="420" height="220" rx="28" fill="#F8F6F4" opacity="0.08"/>
+  <text x="160" y="180" fill="#F8F6F4" font-family="'Inter', sans-serif" font-size="72" font-weight="700">Cleveland</text>
+  <text x="160" y="260" fill="#E07A5F" font-family="'Inter', sans-serif" font-size="36" font-weight="600">Lakefront nights &amp; queer-owned staples</text>
+</svg>

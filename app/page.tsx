@@ -1,6 +1,11 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+
+import { allPosts } from "contentlayer/generated"
+
 import { NeonAnimation } from "@/components/NeonAnimation"
+import { products } from "@/data/products"
+import { guides } from "@/data/guides"
 
 export const metadata: Metadata = {
   title: "Gay Men's Field Guide | Sophisticated Adventure for Gay Men",
@@ -9,6 +14,14 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
+  const posts = allPosts
+    .slice()
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+
+  const featuredPost = posts[0]
+  const featuredProducts = products.slice(0, 3)
+  const featuredGuides = guides.slice(0, 3)
+
   return (
     <>
       {/* Full-Screen Animated Background */}
@@ -137,6 +150,183 @@ export default function Home() {
                 <p className="text-xs text-white/60">We respect your inbox. Unsubscribe anytime.</p>
               </form>
             </div>
+          </div>
+        </section>
+
+        <section className="relative mx-auto max-w-6xl px-6 pb-16">
+          <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.25em] text-white/60">Latest story</p>
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">Editorial worth lingering on</h2>
+              <p className="mt-2 max-w-3xl text-white/75">
+                Fresh from the field—tight storytelling, practical rituals, and queer futurism tuned for the trail.
+              </p>
+            </div>
+            <Link
+              href="/posts"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white/85 underline-offset-4 hover:text-white"
+            >
+              Browse all field notes
+              <span aria-hidden>→</span>
+            </Link>
+          </div>
+
+          {featuredPost && (
+            <article className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-black/40 to-green-950/40 p-8 shadow-2xl">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(212,165,116,0.18),transparent_40%),radial-gradient(circle_at_80%_0%,rgba(224,122,95,0.16),transparent_35%)]" aria-hidden />
+              <div className="relative grid gap-8 lg:grid-cols-[1.1fr_0.9fr] items-center">
+                <div className="space-y-3">
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">{featuredPost.category}</p>
+                  <h3 className="text-3xl md:text-4xl font-semibold leading-tight text-white">
+                    <Link href={featuredPost.slug} className="transition hover:text-[#D4A574]">
+                      {featuredPost.title}
+                    </Link>
+                  </h3>
+                  {featuredPost.description && (
+                    <p className="text-base text-white/80 leading-relaxed">{featuredPost.description}</p>
+                  )}
+                  <div className="flex flex-wrap gap-4 text-sm text-white/70">
+                    <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1">
+                      <span className="h-2 w-2 rounded-full bg-[#E07A5F]" aria-hidden />
+                      {new Date(featuredPost.date).toLocaleDateString("en-US", {
+                        month: "short",
+                        day: "numeric",
+                        year: "numeric",
+                      })}
+                    </span>
+                    {featuredPost.readingTime && (
+                      <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1">
+                        <span className="h-2 w-2 rounded-full bg-[#D4A574]" aria-hidden />
+                        {featuredPost.readingTime} min read
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex flex-wrap gap-3">
+                    <Link
+                      href={featuredPost.slug}
+                      className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-black transition hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                    >
+                      Read the feature
+                      <span aria-hidden>→</span>
+                    </Link>
+                    <Link
+                      href="/blog"
+                      className="inline-flex items-center gap-2 rounded-full border border-white/40 px-5 py-2 text-sm font-semibold text-white/85 transition hover:border-white hover:text-white"
+                    >
+                      See the blog hub
+                    </Link>
+                  </div>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+                  <h4 className="text-lg font-semibold text-white">Inside this chapter</h4>
+                  <ul className="mt-4 space-y-3 text-sm text-white/80">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 h-2 w-2 rounded-full bg-[#E07A5F]" aria-hidden />
+                      Co-op rituals, prompt swaps, and ethics checks for experimental crews.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 h-2 w-2 rounded-full bg-[#D4A574]" aria-hidden />
+                      Thumb-friendly reading with sticky table of contents planned for every feature.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1 h-2 w-2 rounded-full bg-emerald-300" aria-hidden />
+                      Related posts, pull quotes, and alt text-first imagery for accessibility.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          )}
+        </section>
+
+        <section className="relative mx-auto max-w-6xl px-6 pb-16">
+          <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.25em] text-white/60">Shop showcase</p>
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">Gear that funds the journey</h2>
+              <p className="mt-2 max-w-3xl text-white/75">
+                Premium basics and camp-friendly staples with Stripe-hosted checkout links. Each purchase keeps the essays ad-free and the guides growing.
+              </p>
+            </div>
+            <Link
+              href="/shop"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white/85 underline-offset-4 hover:text-white"
+            >
+              Visit the shop
+              <span aria-hidden>→</span>
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+            {featuredProducts.map((product) => (
+              <Link
+                key={product.slug}
+                href={`/shop#${product.slug}`}
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:-translate-y-1 hover:border-white/30"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-[#1B4332]/30 opacity-0 transition-opacity group-hover:opacity-100" aria-hidden />
+                <div className="relative space-y-3">
+                  <div className="flex items-start justify-between gap-2">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.2em] text-white/60">Featured drop</p>
+                      <h3 className="text-xl font-semibold text-white">{product.title}</h3>
+                    </div>
+                    <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white">{product.price}</span>
+                  </div>
+                  <p className="text-sm text-white/75 leading-relaxed">{product.description}</p>
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-white/85">Quick add <span aria-hidden>→</span></span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="relative mx-auto max-w-6xl px-6 pb-12">
+          <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.25em] text-white/60">Guides</p>
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">Belong anywhere you land</h2>
+              <p className="mt-2 max-w-3xl text-white/75">
+                City nights, backcountry mornings, and support resources curated for queer men who roam.
+              </p>
+            </div>
+            <Link
+              href="/guide"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white/85 underline-offset-4 hover:text-white"
+            >
+              Explore all guides
+              <span aria-hidden>→</span>
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {featuredGuides.map((guide) => (
+              <Link
+                key={guide.slug}
+                href={`/guide#${guide.slug}`}
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-white/30"
+              >
+                <div className="absolute inset-0 opacity-80 transition-opacity group-hover:opacity-100" aria-hidden>
+                  <div
+                    className="h-full w-full rounded-xl"
+                    style={{
+                      backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0.65), rgba(27,67,50,0.65)), url(${guide.image})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                  />
+                </div>
+                <div className="relative flex h-full flex-col justify-between gap-3 text-white">
+                  <div className="space-y-2">
+                    <p className="text-xs uppercase tracking-[0.25em] text-white/70">{guide.category}</p>
+                    <h3 className="text-2xl font-semibold leading-tight">{guide.title}</h3>
+                    <p className="text-sm text-white/80 leading-relaxed">{guide.description}</p>
+                  </div>
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-white/90">
+                    {guide.action}
+                    <span aria-hidden>→</span>
+                  </span>
+                </div>
+              </Link>
+            ))}
           </div>
         </section>
 
