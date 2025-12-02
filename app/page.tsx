@@ -278,42 +278,42 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        <section className="relative mx-auto max-w-6xl px-6 pb-16">
+          <div className="mb-10">
+            <p className="text-sm uppercase tracking-[0.25em] text-white/60">For the Innovators</p>
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight">Vibe Coding &amp; The LLM Edge</h2>
+            <p className="text-white/75 mt-3 max-w-3xl">
+              Dive into the world of &ldquo;vibe coding&rdquo; and explore the cutting edge of Large Language Models. This space is dedicated
+              to developers and creators who are pushing the boundaries of what&rsquo;s possible with code and AI.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <Link
+              href="/blog/vibe-coding-intro"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:-translate-y-0.5 hover:border-white/30"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-blue-900/10 opacity-0 transition-opacity group-hover:opacity-100" aria-hidden />
+              <div className="relative space-y-2">
+                <p className="text-sm font-semibold text-white">What is Vibe Coding?</p>
+                <p className="text-sm text-white/75">An introduction to the philosophy and practice of coding with intuition and creativity.</p>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold text-white/80">Read More <span aria-hidden>→</span></span>
+              </div>
+            </Link>
+            <Link
+              href="/blog/llm-edge-applications"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:-translate-y-0.5 hover:border-white/30"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-purple-900/10 opacity-0 transition-opacity group-hover:opacity-100" aria-hidden />
+              <div className="relative space-y-2">
+                <p className="text-sm font-semibold text-white">LLMs at the Edge</p>
+                <p className="text-sm text-white/75">Exploring practical applications and new frontiers for language models in modern development.</p>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold text-white/80">Read More <span aria-hidden>→</span></span>
+              </div>
+            </Link>
+          </div>
+        </section>
       </main>
     </>
   )
 }
-
-
-<section className="relative mx-auto max-w-6xl px-6 pb-16">
-  <div className="mb-10">
-    <p className="text-sm uppercase tracking-[0.25em] text-white/60">For the Innovators</p>
-    <h2 className="text-3xl md:text-4xl font-bold leading-tight">Vibe Coding & The LLM Edge</h2>
-    <p className="text-white/75 mt-3 max-w-3xl">
-      Dive into the world of 'vibe coding' and explore the cutting edge of Large Language Models. This space is dedicated to developers and creators who are pushing the boundaries of what's possible with code and AI.
-    </p>
-  </div>
-  <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-    <Link
-      href="/blog/vibe-coding-intro"
-      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:-translate-y-0.5 hover:border-white/30"
-    >
-      <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-blue-900/10 opacity-0 transition-opacity group-hover:opacity-100" aria-hidden />
-      <div className="relative space-y-2">
-        <p className="text-sm font-semibold text-white">What is Vibe Coding?</p>
-        <p className="text-sm text-white/75">An introduction to the philosophy and practice of coding with intuition and creativity.</p>
-        <span className="inline-flex items-center gap-2 text-xs font-semibold text-white/80">Read More <span aria-hidden>→</span></span>
-      </div>
-    </Link>
-    <Link
-      href="/blog/llm-edge-applications"
-      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:-translate-y-0.5 hover:border-white/30"
-    >
-      <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-purple-900/10 opacity-0 transition-opacity group-hover:opacity-100" aria-hidden />
-      <div className="relative space-y-2">
-        <p className="text-sm font-semibold text-white">LLMs at the Edge</p>
-        <p className="text-sm text-white/75">Exploring practical applications and new frontiers for language models in modern development.</p>
-        <span className="inline-flex items-center gap-2 text-xs font-semibold text-white/80">Read More <span aria-hidden>→</span></span>
-      </div>
-    </Link>
-  </div>
-</section>
