@@ -36,7 +36,7 @@ export default function BlogPage() {
                 className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-4 py-2 text-white transition hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuchsia-500 dark:bg-white dark:text-slate-900"
               >
                 Read the latest
-                <span aria-hidden>→</span>
+                <span aria-hidden="true">→</span>
               </Link>
               <Link
                 href="/posts"
