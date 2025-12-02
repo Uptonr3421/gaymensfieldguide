@@ -195,6 +195,51 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="relative mx-auto max-w-6xl px-6 pb-16">
+          <div className="mb-10">
+            <p className="text-sm uppercase tracking-[0.25em] text-white/60">Featured voices</p>
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight">Built with the community</h2>
+            <p className="text-white/75 mt-3 max-w-3xl">
+              Real stories from gay men who navigate adventure, creativity, and modern masculinity with intention.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mb-16">
+            {[
+              {
+                quote: "Finally, a space that speaks to gay men without dumbing down the gear talk or the adventure planning.",
+                author: "Marcus, Seattle",
+                role: "Outdoor educator"
+              },
+              {
+                quote: "The editorial quality is stunning. Every feature feels like it was crafted for my late-night reading sessions.",
+                author: "James, Brooklyn",
+                role: "Creative director"
+              },
+              {
+                quote: "I appreciate the focus on ethical sourcing and community-first commerce. This is how modern brands should operate.",
+                author: "David, Portland",
+                role: "Sustainability consultant"
+              }
+            ].map((testimonial, index) => (
+              <div key={index} className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-black/40 to-green-950/20 p-6 shadow-lg">
+                <div className="mb-4 flex gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="h-4 w-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-white/90 leading-relaxed mb-4 italic">"{testimonial.quote}"</p>
+                <div className="border-t border-white/10 pt-4">
+                  <p className="font-semibold text-white">{testimonial.author}</p>
+                  <p className="text-sm text-white/60">{testimonial.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section className="relative mx-auto max-w-6xl px-6 pb-20">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
