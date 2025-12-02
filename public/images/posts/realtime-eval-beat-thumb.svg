@@ -1,0 +1,15 @@
+<svg width="900" height="540" viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Realtime eval beat thumbnail">
+  <defs>
+    <linearGradient id="beat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="50%" stop-color="#22c55e" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="540" rx="32" fill="#0b0f1c" />
+  <rect x="60" y="60" width="780" height="420" rx="26" fill="url(#beat)" opacity="0.1" />
+  <polyline points="120,340 220,220 320,260 420,180 520,210 620,150 720,200" fill="none" stroke="#22c55e" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="120" y="150" fill="#e2e8f0" font-size="20" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700">Realtime eval beat</text>
+  <text x="120" y="200" fill="#ffffff" font-size="48" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="800">Latency, safety, drift</text>
+  <text x="120" y="240" fill="#cbd5e1" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="600">Live dashboards for LLM edge crews</text>
+</svg>

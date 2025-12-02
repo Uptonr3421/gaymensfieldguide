@@ -1,0 +1,14 @@
+<svg width="900" height="540" viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Deployment pipeline">
+  <rect width="900" height="540" rx="32" fill="#0b1224" />
+  <g stroke="#14b8a6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <rect x="140" y="160" width="140" height="120" rx="16" fill="#0f172a" />
+    <rect x="380" y="160" width="140" height="120" rx="16" fill="#0f172a" />
+    <rect x="620" y="160" width="140" height="120" rx="16" fill="#0f172a" />
+    <line x1="280" y1="220" x2="380" y2="220" />
+    <line x1="520" y1="220" x2="620" y2="220" />
+  </g>
+  <text x="180" y="230" fill="#e2e8f0" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700">Node 20</text>
+  <text x="420" y="230" fill="#e2e8f0" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700">Vercel</text>
+  <text x="660" y="230" fill="#e2e8f0" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700">Edge pods</text>
+  <text x="190" y="360" fill="#cbd5e1" font-size="16" font-family="'Inter', 'Segoe UI', sans-serif">Pipelines tuned for thumb-first dashboards</text>
+</svg>

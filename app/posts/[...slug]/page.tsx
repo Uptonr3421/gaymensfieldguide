@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
+import Image from "next/image"
 
 import { allPosts } from "contentlayer/generated"
 
@@ -68,6 +69,40 @@ export default async function PostPage({ params }: PostProps) {
           <p className="text-lg text-slate-600 dark:text-slate-300">{post.description}</p>
         )}
       </div>
+      {(post.thumbnail || (post.graphics && post.graphics.length > 0)) && (
+        <div className="grid gap-4 rounded-3xl border border-slate-200/70 bg-white/60 p-4 shadow-sm dark:border-slate-800/70 dark:bg-slate-900/60 md:grid-cols-[1.1fr_1fr]">
+          {post.thumbnail && (
+            <div className="overflow-hidden rounded-2xl border border-slate-200/60 bg-slate-100/50 dark:border-slate-800/70 dark:bg-slate-900">
+              <Image
+                src={post.thumbnail}
+                alt={`${post.title} cover art`}
+                width={900}
+                height={540}
+                className="h-full w-full object-cover"
+                priority
+              />
+            </div>
+          )}
+          {post.graphics && post.graphics.length > 0 && (
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {post.graphics.slice(0, 3).map((graphic) => (
+                <div
+                  key={graphic}
+                  className="overflow-hidden rounded-xl border border-slate-200/60 bg-slate-100/30 dark:border-slate-800/70 dark:bg-slate-900/60"
+                >
+                  <Image
+                    src={graphic}
+                    alt={`${post.title} graphic`}
+                    width={600}
+                    height={360}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
       <Mdx code={post.body.code} />
       <div className="rounded-3xl border border-slate-200/70 bg-white/80 p-6 text-sm text-slate-600 dark:border-slate-800/70 dark:bg-slate-900/60 dark:text-slate-300">
         <p>

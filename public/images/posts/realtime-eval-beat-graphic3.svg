@@ -1,0 +1,8 @@
+<svg width="900" height="540" viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Safety pulse">
+  <rect width="900" height="540" rx="32" fill="#0b1224" />
+  <circle cx="220" cy="270" r="140" fill="#22c55e" opacity="0.16" />
+  <circle cx="680" cy="270" r="140" fill="#a855f7" opacity="0.18" />
+  <text x="150" y="270" fill="#e2e8f0" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700">Guardrails</text>
+  <text x="610" y="270" fill="#e2e8f0" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700">Model health</text>
+  <text x="250" y="360" fill="#cbd5e1" font-size="16" font-family="'Inter', 'Segoe UI', sans-serif">Live safety filters + policy hits</text>
+</svg>

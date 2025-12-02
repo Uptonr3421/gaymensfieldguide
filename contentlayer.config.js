@@ -66,6 +66,15 @@ export const Post = defineDocumentType(() => ({
     featured: {
       type: "boolean",
     },
+    thumbnail: {
+      type: "string",
+      description: "Path to the lead image used in cards and carousels",
+    },
+    graphics: {
+      type: "list",
+      of: { type: "string" },
+      description: "Inline gallery assets for the post body",
+    },
     tags: {
       type: "list",
       of: { type: "string" },

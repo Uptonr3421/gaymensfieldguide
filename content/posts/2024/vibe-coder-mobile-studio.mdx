@@ -1,0 +1,40 @@
+---
+title: "Vibe coder mobile studio: dashboards that respect thumb reach"
+description: "Designing an AI operations cockpit that lives on your phone so you can ship, monitor, and rest without opening a laptop."
+date: 2024-06-10
+category: "Product Design"
+language: en
+thumbnail: "/images/posts/vibe-coder-mobile-studio-thumb.svg"
+graphics:
+  - "/images/posts/vibe-coder-mobile-studio-graphic1.svg"
+  - "/images/posts/vibe-coder-mobile-studio-graphic2.svg"
+  - "/images/posts/vibe-coder-mobile-studio-graphic3.svg"
+tags:
+  - mobile first
+  - llm ops
+  - ux
+---
+
+We keep getting the same DM: “Can I manage evals and routing while I am on the train?” The answer should be yes. So we sketched the Vibe Coder mobile studio—a thumb-friendly set of tiles that let you peek at prompts, view drift alerts, and send co-op updates without loading a heavy dashboard.
+
+![Mobile dashboard mock with three cards](/images/posts/vibe-coder-mobile-studio-graphic1.svg)
+
+## Patterns that work on 6-inch screens
+
+- **Big hit targets.** Every card is at least 48px tall with generous padding and consistent rhythm.
+- **Color-coded priorities.** Green for stability, blue for latency, violet for culture/community notes.
+- **Offline friendly.** Critical cards cache the last successful payload so you can screenshot and share.
+
+![Thumb-first tile grid](/images/posts/vibe-coder-mobile-studio-graphic2.svg)
+
+## Co-op status without noise
+
+- Pager alerts roll up into a single badge; tap to expand details.
+- Crew chat tiles surface only the last message, not the full thread, to reduce cognitive load.
+- Eval pings can be snoozed for a set window so you can stay present in meetings.
+
+![Notification bursts arranged in three circles](/images/posts/vibe-coder-mobile-studio-graphic3.svg)
+
+## Try it with your stack
+
+Prototype the layout in React Native or Expo, map the cards to your own API, and deploy with Node 20 runtimes. If you ship it, send a screenshot—we’ll feature the best implementations.

@@ -1,0 +1,41 @@
+---
+title: "Edge Model Update Feed: quant notes that actually ship"
+description: "Weekly changelog covering quantized LLM + VLM drops, routing hints, and eval diffs for teams building at the edge."
+date: 2024-06-12
+category: "Model Updates"
+language: en
+featured: true
+thumbnail: "/images/posts/edge-model-update-feed-thumb.svg"
+graphics:
+  - "/images/posts/edge-model-update-feed-graphic1.svg"
+  - "/images/posts/edge-model-update-feed-graphic2.svg"
+  - "/images/posts/edge-model-update-feed-graphic3.svg"
+tags:
+  - quantization
+  - evals
+  - routing
+---
+
+The mainstream changelog moves too slowly for edge builders. This feed trims the noise and highlights the commits that matter when you are running inference on older GPUs, CPUs, or browser runtimes.
+
+![Routing lanes for edge models](/images/posts/edge-model-update-feed-graphic1.svg)
+
+## This week’s highlights
+
+1. **Llama 3.2 3B:** new INT4 quant with smoother sentence splitting in Chrome without Wasm SIMD hacks.
+2. **Gemma Edge Kit:** patched tokenizer fixes that stop hallucinated double spaces in log-prob streaming.
+3. **Mistral safety sweeps:** guardrails now catch prompt-chaining jailbreaks; latency added ~45ms in our runs.
+
+![Quantization ladder with four options](/images/posts/edge-model-update-feed-graphic2.svg)
+
+## Deployment cues
+
+- Stick with **INT8** if you still serve on CPU-only nodes; NF4 shines on consumer GPUs.
+- Keep a **dual-route** between a hosted LLM and your local quant during peak hours.
+- Track the **eval diffs** before you swap; creative-writing scores drop faster than instruction-following.
+
+![Changelog timeline for edge patches](/images/posts/edge-model-update-feed-graphic3.svg)
+
+## What’s next
+
+We are testing speculative decoding for edge-friendly stacks and will publish side-by-side latency charts once the results stabilize. Send your own traces to be included.

@@ -1,0 +1,10 @@
+<svg width="900" height="540" viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Model routing lanes">
+  <rect width="900" height="540" rx="32" fill="#0f172a" />
+  <g fill="none" stroke-width="12" stroke-linecap="round" opacity="0.85">
+    <path d="M100 150 C200 120 320 200 450 170 C580 140 720 200 820 160" stroke="#22c55e" />
+    <path d="M100 270 C220 240 320 320 460 300 C600 280 710 340 820 310" stroke="#0ea5e9" stroke-dasharray="12 14" />
+    <path d="M100 390 C200 360 320 440 450 410 C580 380 720 440 820 400" stroke="#a855f7" opacity="0.9" />
+  </g>
+  <text x="120" y="110" fill="#e2e8f0" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700">Routing lanes</text>
+  <text x="120" y="450" fill="#cbd5e1" font-size="16" font-family="'Inter', 'Segoe UI', sans-serif">Balanced latency across GPU, CPU, and WASM targets</text>
+</svg>

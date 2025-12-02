@@ -113,8 +113,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
               Skip to content
             </a>
 
-            <header 
-              className="mb-10 rounded-2xl border border-slate-200/60 bg-white/90 px-6 py-4 shadow-sm backdrop-blur dark:border-white/10 dark:bg-slate-900/70"
+            <header
+              className="sticky top-4 z-40 mb-10 rounded-2xl border border-slate-200/60 bg-white/90 px-6 py-4 shadow-sm backdrop-blur dark:border-white/10 dark:bg-slate-900/70"
               role="banner"
             >
               <div className="flex flex-wrap items-center gap-4">

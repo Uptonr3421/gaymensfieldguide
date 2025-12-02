@@ -1,0 +1,15 @@
+<svg width="900" height="540" viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ops checklist">
+  <rect width="900" height="540" rx="32" fill="#0b1224" />
+  <rect x="180" y="120" width="540" height="300" rx="24" fill="#0f172a" stroke="#14b8a6" stroke-opacity="0.4" />
+  <text x="220" y="170" fill="#e2e8f0" font-size="20" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700">Ops checklist</text>
+  <g fill="#22c55e" opacity="0.9">
+    <circle cx="230" cy="220" r="10" />
+    <circle cx="230" cy="270" r="10" />
+    <circle cx="230" cy="320" r="10" />
+  </g>
+  <g fill="#e2e8f0" font-family="'Inter', 'Segoe UI', sans-serif" font-size="16" font-weight="700">
+    <text x="250" y="225">Node 20 tested</text>
+    <text x="250" y="275">Traffic shadowed</text>
+    <text x="250" y="325">Rollback ready</text>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg width="900" height="540" viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Thumb-first grid">
+  <rect width="900" height="540" rx="32" fill="#050a18" />
+  <g transform="translate(150,80)">
+    <rect x="0" y="0" width="180" height="180" rx="22" fill="#22c55e" opacity="0.18" />
+    <rect x="210" y="0" width="180" height="180" rx="22" fill="#0ea5e9" opacity="0.18" />
+    <rect x="420" y="0" width="180" height="180" rx="22" fill="#a855f7" opacity="0.18" />
+    <rect x="0" y="200" width="180" height="180" rx="22" fill="#38bdf8" opacity="0.18" />
+    <rect x="210" y="200" width="180" height="180" rx="22" fill="#f59e0b" opacity="0.18" />
+    <rect x="420" y="200" width="180" height="180" rx="22" fill="#22c55e" opacity="0.18" />
+  </g>
+  <text x="180" y="70" fill="#e2e8f0" font-size="20" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700">Thumb-first tiles</text>
+  <text x="180" y="470" fill="#cbd5e1" font-size="16" font-family="'Inter', 'Segoe UI', sans-serif">Co-op pulses, latency watch, quick actions</text>
+</svg>

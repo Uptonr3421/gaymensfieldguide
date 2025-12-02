@@ -1,0 +1,16 @@
+<svg width="900" height="540" viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vibe coder mobile studio thumbnail">
+  <defs>
+    <linearGradient id="studio" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="50%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="540" rx="32" fill="#050a18" />
+  <rect x="70" y="70" width="760" height="400" rx="26" fill="url(#studio)" opacity="0.1" />
+  <rect x="180" y="120" width="540" height="320" rx="24" fill="#0f172a" stroke="#0ea5e9" stroke-opacity="0.45" />
+  <text x="220" y="190" fill="#e2e8f0" font-size="22" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700">Mobile studio</text>
+  <text x="220" y="240" fill="#ffffff" font-size="48" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="800">Vibe coder OS</text>
+  <text x="220" y="285" fill="#cbd5e1" font-size="20" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="600">Thumb-first dashboards for AI sprints</text>
+  <text x="220" y="330" fill="#a5b4fc" font-size="16" font-family="'Inter', 'Segoe UI', sans-serif">live evals · call routing · co-op status</text>
+</svg>

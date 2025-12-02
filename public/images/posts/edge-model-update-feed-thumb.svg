@@ -1,0 +1,17 @@
+<svg width="900" height="540" viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Edge model update thumbnail">
+  <defs>
+    <linearGradient id="edge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="50%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="540" rx="32" fill="#0b0f1c" />
+  <rect x="40" y="40" width="820" height="460" rx="28" fill="url(#edge)" opacity="0.12" />
+  <circle cx="210" cy="170" r="110" fill="#22c55e" opacity="0.14" />
+  <circle cx="690" cy="330" r="140" fill="#a855f7" opacity="0.18" />
+  <text x="70" y="140" fill="#e2e8f0" font-size="20" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700">Model refresh</text>
+  <text x="70" y="190" fill="#ffffff" font-size="52" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="800">Edge Update Feed</text>
+  <text x="70" y="240" fill="#cbd5e1" font-size="22" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="600">LLM + VLM patches that actually ship</text>
+  <text x="70" y="300" fill="#a5b4fc" font-size="16" font-family="'Inter', 'Segoe UI', sans-serif">quantized builds · routing cues · eval diffs</text>
+</svg>

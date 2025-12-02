@@ -1,12 +1,24 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
+
+import { allPosts } from "contentlayer/generated"
+
 import { NeonAnimation } from "@/components/NeonAnimation"
+import { formatDate } from "@/lib/utils"
 
 export const metadata: Metadata = {
   title: "Gay Men's Field Guide | Sophisticated Adventure for Gay Men",
   description:
     "Explore the Gay Men's Field Guide: cinematic storytelling, curated shop picks, and community resources built for modern gay adventurers.",
 }
+
+const sortedPosts = allPosts
+  .slice()
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+
+const thumbnailRail = sortedPosts.slice(0, 5)
+const articleRail = sortedPosts.slice(0, 8)
 
 export default function Home() {
   return (
@@ -30,7 +42,7 @@ export default function Home() {
             </h1>
 
             <p className="mb-12 text-lg sm:text-xl text-white/80 leading-relaxed">
-              Sophisticated adventure meets modern masculinity. Discover immersive storytelling, elevated gear picks, and curated guides designed to help you explore with confidence.
+              Sophisticated adventure meets modern masculinity. Now tuned for vibe coders, LLM edge explorers, and anyone who wants the fastest AI news without losing the cinematic feel.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -141,6 +153,63 @@ export default function Home() {
         </section>
 
         <section className="relative mx-auto max-w-6xl px-6 pb-12">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.25em] text-white/60">Live blog</p>
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">Thumbnail carousel for the latest drops</h2>
+              <p className="text-white/75 mt-2 max-w-3xl">
+                Built for mobile-first browsing: swipe through the freshest posts covering AI news, model updates, and edge-ready rituals for vibe coders.
+              </p>
+            </div>
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white/90 underline-offset-4 hover:text-white"
+            >
+              Visit the blog hub <span aria-hidden>→</span>
+            </Link>
+          </div>
+
+          <div className="-mx-6 mt-6 overflow-x-auto pb-4">
+            <div className="flex gap-4 px-1 sm:px-6 snap-x snap-mandatory">
+              {thumbnailRail.map((post) => (
+                <Link
+                  key={post._id}
+                  href={post.slug}
+                  className="group relative flex min-w-[260px] max-w-xs flex-col rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-white/40 snap-start"
+                >
+                  <div className="relative mb-3 aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-fuchsia-500/20 via-teal-500/10 to-emerald-500/20">
+                    {post.thumbnail ? (
+                      <Image
+                        src={post.thumbnail}
+                        alt={`${post.title} thumbnail`}
+                        fill
+                        className="object-cover"
+                        sizes="(min-width: 1024px) 280px, 70vw"
+                        priority
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center text-sm font-semibold text-white/70">
+                        Fresh dispatch
+                      </div>
+                    )}
+                    <div className="absolute bottom-2 left-2 rounded-full bg-black/60 px-3 py-1 text-xs font-semibold text-white/90">
+                      {formatDate(post.date)}
+                    </div>
+                  </div>
+                  <p className="text-[11px] uppercase tracking-[0.25em] text-white/60">{post.category}</p>
+                  <h3 className="mt-1 text-lg font-semibold text-white group-hover:text-white">
+                    {post.title}
+                  </h3>
+                  {post.description && (
+                    <p className="mt-1 text-sm text-white/70">{post.description}</p>
+                  )}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="relative mx-auto max-w-6xl px-6 pb-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
             <div>
               <p className="text-sm uppercase tracking-[0.25em] text-white/60">Navigation</p>
@@ -192,6 +261,55 @@ export default function Home() {
                 </div>
               </Link>
             ))}
+          </div>
+        </section>
+
+        <section className="relative mx-auto max-w-6xl px-6 pb-14">
+          <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.25em] text-white/60">Article carousel</p>
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">Eight live AI + edge updates</h2>
+              <p className="text-white/75 mt-2 max-w-3xl">
+                Covering model updates, vibe coding rituals, and ops notes for edge users. Scroll sideways on mobile or tap through on desktop.
+              </p>
+            </div>
+            <Link
+              href="/posts"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white/90 underline-offset-4 hover:text-white"
+            >
+              View the archive <span aria-hidden>→</span>
+            </Link>
+          </div>
+
+          <div className="-mx-6 mt-6 overflow-x-auto pb-4">
+            <div className="flex gap-4 px-1 sm:px-6 snap-x snap-mandatory">
+              {articleRail.map((post) => (
+                <article
+                  key={post._id}
+                  className="group flex min-w-[280px] max-w-sm flex-col rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-white/40 snap-start"
+                >
+                  <div className="flex items-center justify-between text-xs uppercase tracking-[0.25em] text-white/60">
+                    <span>{post.category}</span>
+                    <span className="text-white/50">{formatDate(post.date)}</span>
+                  </div>
+                  <h3 className="mt-2 text-xl font-semibold text-white group-hover:text-white">{post.title}</h3>
+                  {post.description && (
+                    <p className="mt-2 text-sm text-white/70">{post.description}</p>
+                  )}
+                  <div className="mt-3 flex flex-wrap gap-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-emerald-200/80">
+                    {(post.tags ?? []).slice(0, 3).map((tag) => (
+                      <span key={tag} className="rounded-full bg-emerald-500/10 px-2 py-1">{tag}</span>
+                    ))}
+                  </div>
+                  <Link
+                    href={post.slug}
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-white/90 underline-offset-4 transition hover:text-white"
+                  >
+                    Read update <span aria-hidden>→</span>
+                  </Link>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 

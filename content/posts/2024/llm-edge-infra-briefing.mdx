@@ -1,0 +1,40 @@
+---
+title: "LLM Edge Infra Briefing: Node 20 to Vercel, calm deployments"
+description: "A short briefing on how to ship AI products with Node 20 runtimes, Vercel edge functions, and rollback-ready pipelines."
+date: 2024-06-06
+category: "DevOps"
+language: en
+thumbnail: "/images/posts/llm-edge-infra-briefing-thumb.svg"
+graphics:
+  - "/images/posts/llm-edge-infra-briefing-graphic1.svg"
+  - "/images/posts/llm-edge-infra-briefing-graphic2.svg"
+  - "/images/posts/llm-edge-infra-briefing-graphic3.svg"
+tags:
+  - vercel
+  - node 20
+  - deployment
+---
+
+Most AI teams overbuild their deployment pipeline. This briefing keeps it light: Node 20, Vercel for shipping, and a rollback plan that lets you sleep. Everything is tuned for mobile-first UX so your readers and buyers get speed, not excuses.
+
+![Deployment pipeline with three stages](/images/posts/llm-edge-infra-briefing-graphic1.svg)
+
+## The pipeline
+
+1. **Node 20 baseline.** Modern syntax, fetch improvements, and fewer polyfills on both edge and server.
+2. **Vercel deploy hooks.** Prebuilt artifacts for production with `vercel --prebuilt` to keep cold starts minimal.
+3. **Edge pods.** Route read-heavy or personalization endpoints to edge functions; keep heavy training on the server.
+
+![Edge routes across nodes](/images/posts/llm-edge-infra-briefing-graphic2.svg)
+
+## Reliability checklist
+
+- Traffic shadowing before every cutover.
+- Rollback command prewritten and pinned in your ops runbook.
+- Cached assets sized for mobile; SVG hero art and responsive images wherever possible.
+
+![Ops checklist with three bullet points](/images/posts/llm-edge-infra-briefing-graphic3.svg)
+
+## Ship it
+
+Use this stack as a starter, then add the observability and auth your project needs. Keep the UX light, the assets optimized, and the deployments repeatable.

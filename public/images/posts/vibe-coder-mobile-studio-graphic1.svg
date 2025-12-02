@@ -1,0 +1,10 @@
+<svg width="900" height="540" viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mobile dashboard mock">
+  <rect width="900" height="540" rx="32" fill="#0b1224" />
+  <rect x="320" y="70" width="260" height="400" rx="40" fill="#0f172a" stroke="#22c55e" stroke-opacity="0.4" />
+  <rect x="350" y="120" width="200" height="80" rx="16" fill="#22c55e" opacity="0.18" />
+  <rect x="350" y="220" width="200" height="80" rx="16" fill="#0ea5e9" opacity="0.18" />
+  <rect x="350" y="320" width="200" height="80" rx="16" fill="#a855f7" opacity="0.2" />
+  <text x="360" y="160" fill="#e2e8f0" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700">Prompt lanes</text>
+  <text x="360" y="260" fill="#e2e8f0" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700">Eval pings</text>
+  <text x="360" y="360" fill="#e2e8f0" font-size="18" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700">Alerts</text>
+</svg>

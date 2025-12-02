@@ -1,0 +1,40 @@
+---
+title: "Realtime eval beat: staying ahead of drift"
+description: "Daily latency, safety, and drift snapshots tailored to edge deployments so you can fix issues before users feel them."
+date: 2024-06-08
+category: "AI Ops"
+language: en
+thumbnail: "/images/posts/realtime-eval-beat-thumb.svg"
+graphics:
+  - "/images/posts/realtime-eval-beat-graphic1.svg"
+  - "/images/posts/realtime-eval-beat-graphic2.svg"
+  - "/images/posts/realtime-eval-beat-graphic3.svg"
+tags:
+  - evals
+  - observability
+  - safety
+---
+
+Eval dashboards often feel like homework. The Realtime Eval Beat trims them into a one-screen snapshot: safety score, latency, and drift risk in clear language. The data refreshes every hour and stays light enough for spot-checking over LTE.
+
+![Scoreboard showing safety and latency](/images/posts/realtime-eval-beat-graphic1.svg)
+
+## The signals we keep
+
+- **Safety evals.** We run canned prompts through your current model and show the pass/fail rate alongside guardrail notes.
+- **Latency trend.** P95 and P99 values across your two fastest providers so you can reroute before the pager sings.
+- **Model health.** A quick glance at guardrails, filters, and fallback rules in case of abuse or spike traffic.
+
+![Latency trend lines](/images/posts/realtime-eval-beat-graphic2.svg)
+
+## Shipping tips
+
+- Keep the JSON feed cached on device; if you go offline, you still have the last known good state.
+- Pair this with your logging stack; we already format timestamps for BigQuery and ClickHouse.
+- Add your own prompts to the suite and send us a PR—we’ll roll them into the next drop.
+
+![Safety pulse and model health circles](/images/posts/realtime-eval-beat-graphic3.svg)
+
+## Why this matters
+
+Edge deployments fail quietly. A minimal, mobile-first eval beat keeps you honest without requiring a MacBook and a desk. The best builders treat it like brushing teeth: two minutes a day, no excuses.
