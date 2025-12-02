@@ -230,7 +230,7 @@ export default function Home() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-white/90 leading-relaxed mb-4 italic">"{testimonial.quote}"</p>
+                <p className="text-white/90 leading-relaxed mb-4 italic">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div className="border-t border-white/10 pt-4">
                   <p className="font-semibold text-white">{testimonial.author}</p>
                   <p className="text-sm text-white/60">{testimonial.role}</p>
