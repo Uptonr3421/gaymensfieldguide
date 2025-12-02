@@ -7,7 +7,8 @@
     "build": "next build",
     "preview": "next build && next start",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy:prod": "vercel deploy --prod --yes --prebuilt --token $VERCEL_TOKEN --scope $VERCEL_ORG_ID --project $VERCEL_PROJECT_ID"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
@@ -37,5 +38,8 @@
     "three": "^0.181.2",
     "typescript": "5.0.4",
     "unified": "^11.0.5"
+  },
+  "devDependencies": {
+    "vercel": "^48.12.0"
   }
 }
