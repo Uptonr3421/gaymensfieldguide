@@ -8,9 +8,9 @@ import { NeonAnimation } from "@/components/NeonAnimation"
 import { formatDate } from "@/lib/utils"
 
 export const metadata: Metadata = {
-  title: "Gay Men's Field Guide | Sophisticated Adventure for Gay Men",
+  title: "Gay Men's Field Guide | Editorial hub for carry and tech",
   description:
-    "Explore the Gay Men's Field Guide: cinematic storytelling, curated shop picks, and community resources built for modern gay adventurers.",
+    "A cinematic blog for gay men covering carry gear, travel kits, and the tech that keeps us moving.",
 }
 
 const sortedPosts = allPosts
@@ -31,7 +31,7 @@ export default function Home() {
           <div className="text-center max-w-3xl">
             <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 backdrop-blur-sm">
               <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
-              <span className="text-sm font-medium text-white/80">Cinematic digital magazine • Built for gay men</span>
+              <span className="text-sm font-medium text-white/80">Editorial blog • Carry, tech, and culture</span>
             </div>
 
             <h1
@@ -42,7 +42,7 @@ export default function Home() {
             </h1>
 
             <p className="mb-12 text-lg sm:text-xl text-white/80 leading-relaxed">
-              Sophisticated adventure meets modern masculinity. Now tuned for vibe coders, LLM edge explorers, and anyone who wants the fastest AI news without losing the cinematic feel.
+              A cinematic article hub for gay men who obsess over carry systems, travel kits, and the tech that keeps us connected. Read thoughtful editorials with the polish of a magazine and the depth of a field manual.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -50,38 +50,38 @@ export default function Home() {
                 href="/blog"
                 className="group relative inline-flex items-center gap-3 rounded-full bg-white text-black px-6 py-3 text-base font-semibold transition hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
-                <span>Latest stories</span>
+                <span>Read the latest</span>
                 <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
               </Link>
               <Link
-                href="/shop"
+                href="/about"
                 className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-base font-semibold text-white/90 transition hover:border-white/60 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
-                Shop the edit
+                About the guide
               </Link>
             </div>
           </div>
 
           <div className="mt-16 grid w-full max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
-            {["Editorial", "Shop", "Guides"].map((pillar) => (
+            {["Editorials", "Reviews", "Guides"].map((pillar) => (
               <div
                 key={pillar}
                 className="rounded-2xl border border-white/10 bg-white/5 p-6 text-left shadow-lg backdrop-blur-sm"
               >
                 <div className="mb-2 text-sm uppercase tracking-[0.2em] text-white/60">{pillar}</div>
                 <p className="text-lg font-semibold text-white mb-2">
-                  {pillar === "Editorial"
-                    ? "Cinematic features and culture deep-dives"
-                    : pillar === "Shop"
-                      ? "Performance-ready gear curated for the journey"
-                      : "City, trail, and resource guides built for community"}
+                  {pillar === "Editorials"
+                    ? "Cinematic essays on carry culture and modern queer life"
+                    : pillar === "Reviews"
+                      ? "Hands-on looks at bags, tools, and tech setups"
+                      : "Routes, checklists, and resources tailored for our community"}
                 </p>
                 <p className="text-sm text-white/70 leading-relaxed">
-                  {pillar === "Editorial"
-                    ? "Mobile-first storytelling with a premium, magazine-quality reading experience."
-                    : pillar === "Shop"
-                      ? "Future-ready commerce with quick views, ethical sourcing, and a thumb-friendly cart."
-                      : "Handpicked places, campsites, and services crafted to help you belong wherever you roam."}
+                  {pillar === "Editorials"
+                    ? "Magazine polish, mobile-first typography, and substance over hype."
+                    : pillar === "Reviews"
+                      ? "What works, what fails, and how to pack smarter without losing the vibe."
+                      : "Belong anywhere with queer-led itineraries and trusted community picks."}
                 </p>
               </div>
             ))}
@@ -110,15 +110,15 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.2fr_1fr] items-start">
             <div className="space-y-6">
               <p className="text-sm uppercase tracking-[0.25em] text-white/60">The mission</p>
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight">A cinematic home for modern gay adventure</h2>
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">An editorial home for carry and tech</h2>
               <p className="text-lg text-white/80 leading-relaxed">
-                We&apos;re building Gay Men&apos;s Field Guide into a premium, mobile-first destination that blends editorial storytelling, elevated e-commerce, and a curated resource hub. Every page is designed for thumb-friendly navigation, luminous imagery, and clear calls to action.
+                Gay Men&apos;s Field Guide is a mobile-first article hub devoted to thoughtful essays, gear breakdowns, and travel-ready tech coverage. Every feature is designed to read beautifully on the go with luminous imagery, tight headlines, and clear calls to action.
               </p>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                {["Performance-first builds", "Lighthouse-ready accessibility", "Responsive imagery", "Parallax-ready hero moments"].map((item) => (
+                {["Editorial clarity", "Lighthouse-ready accessibility", "Responsive imagery", "Pack smarter, not heavier"].map((item) => (
                   <div key={item} className="rounded-xl border border-white/10 bg-white/5 p-4">
                     <p className="font-semibold text-white mb-1">{item}</p>
-                    <p className="text-sm text-white/70">Crafted to hit 90+ scores, keep pages fast, and look incredible on any device.</p>
+                    <p className="text-sm text-white/70">Crafted to keep stories clear, pages fast, and insights useful for real travel and workdays.</p>
                   </div>
                 ))}
               </div>
@@ -155,10 +155,10 @@ export default function Home() {
         <section className="relative mx-auto max-w-6xl px-6 pb-12">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-white/60">Live blog</p>
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight">Thumbnail carousel for the latest drops</h2>
+              <p className="text-sm uppercase tracking-[0.25em] text-white/60">Latest editorials</p>
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">Swipe through fresh carry and tech stories</h2>
               <p className="text-white/75 mt-2 max-w-3xl">
-                Built for mobile-first browsing: swipe through the freshest posts covering AI news, model updates, and edge-ready rituals for vibe coders.
+                Built for mobile-first browsing: swipe through new essays on everyday carry, travel kits, and the tech shaping queer adventures.
               </p>
             </div>
             <Link
@@ -213,9 +213,9 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
             <div>
               <p className="text-sm uppercase tracking-[0.25em] text-white/60">Navigation</p>
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight">Pick your next move</h2>
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">Pick your next read</h2>
               <p className="text-white/75 mt-3 max-w-3xl">
-                Shortcut into the parts of the Field Guide built for vibe coders, LLM tinkerers, and adventure planners. Every lane is tuned for mobile fingers and late-night inspiration.
+                Shortcut into the parts of the Field Guide built for gear nerds, tech storytellers, and travelers who want queer-informed perspectives. Every lane is tuned for mobile fingers and late-night inspiration.
               </p>
             </div>
             <Link
@@ -229,24 +229,24 @@ export default function Home() {
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {[{
-              label: "Inside co-ops",
-              href: "/posts/inside-co-ops-for-vibe-coders",
-              description: "Blueprints for sharing cloud credits, prompts, and rituals with your crew.",
-            },
-            {
-              label: "Latest dispatches",
+              label: "Latest stories",
               href: "/blog",
-              description: "A curated home for field notes, prompt recipes, and culture pieces.",
+              description: "Catch up on new editorials spanning carry culture, travel, and tech.",
             },
             {
-              label: "Shop the edit",
+              label: "Deep-dive archive",
+              href: "/posts",
+              description: "Browse every essay, briefing, and feature by topic and date.",
+            },
+            {
+              label: "Carry gear picks",
               href: "/shop",
-              description: "Gear and goods that keep the essays ad-free and the campfire burning.",
+              description: "Curated essentials that pair with the stories and keep the lights on.",
             },
             {
               label: "Meet the editor",
               href: "/about",
-              description: "Understand the ethos behind the Field Guide and how to collaborate.",
+              description: "Learn the ethos behind the Field Guide and how to collaborate.",
             }].map((item) => (
               <Link
                 key={item.label}
@@ -268,9 +268,9 @@ export default function Home() {
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-sm uppercase tracking-[0.25em] text-white/60">Article carousel</p>
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight">Eight live AI + edge updates</h2>
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">Eight fresh reads on carry and tech</h2>
               <p className="text-white/75 mt-2 max-w-3xl">
-                Covering model updates, vibe coding rituals, and ops notes for edge users. Scroll sideways on mobile or tap through on desktop.
+                Covering everyday carry setups, travel-ready workflows, and the tech shaping queer life. Scroll sideways on mobile or tap through on desktop.
               </p>
             </div>
             <Link
@@ -362,7 +362,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
               <p className="text-sm uppercase tracking-[0.25em] text-white/60">What&apos;s coming</p>
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight">Content pillars at launch</h2>
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">Editorial pillars</h2>
             </div>
             <Link
               href="/blog"
@@ -374,17 +374,17 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {["Adventure-ready shop", "Editorial features", "Community guides"].map((heading, index) => (
+            {["Carry gear breakdowns", "Tech culture editorials", "Community guides"].map((heading, index) => (
               <div key={heading} className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 shadow-lg">
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-green-900/10" aria-hidden />
                 <div className="relative flex h-full flex-col gap-3">
                   <p className="text-sm uppercase tracking-[0.2em] text-white/60">{`0${index + 1}`}</p>
                   <h3 className="text-2xl font-semibold text-white">{heading}</h3>
                   <p className="text-white/75 leading-relaxed">
-                    {heading === "Adventure-ready shop"
-                      ? "Responsive product grids, quick views, and a frictionless cart tuned for mobile hands."
-                      : heading === "Editorial features"
-                        ? "Long-form stories with sticky TOCs, cinematic headers, and accessible typography."
+                    {heading === "Carry gear breakdowns"
+                      ? "What to pack, why it works, and how to keep essentials ready for the next trip."
+                      : heading === "Tech culture editorials"
+                        ? "Long-form stories connecting queer life, digital tools, and the way we build community."
                         : "Curated routes, campsites, and city picks with embeddable maps and community notes."}
                   </p>
                   <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-white/80">
@@ -399,33 +399,32 @@ export default function Home() {
 
         <section className="relative mx-auto max-w-6xl px-6 pb-16">
           <div className="mb-10">
-            <p className="text-sm uppercase tracking-[0.25em] text-white/60">For the Innovators</p>
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight">Vibe Coding &amp; The LLM Edge</h2>
+            <p className="text-sm uppercase tracking-[0.25em] text-white/60">Carry Tech Handbook</p>
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight">Pack smarter with queer-led notes</h2>
             <p className="text-white/75 mt-3 max-w-3xl">
-              Dive into the world of &ldquo;vibe coding&rdquo; and explore the cutting edge of Large Language Models. This space is dedicated
-              to developers and creators who are pushing the boundaries of what&rsquo;s possible with code and AI.
+              Essays and breakdowns that keep your daily kit ready: from mobile studios to leather care, these reads balance style with utility.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <Link
-              href="/blog/vibe-coding-intro"
+              href="/posts/vibe-coder-mobile-studio"
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:-translate-y-0.5 hover:border-white/30"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-blue-900/10 opacity-0 transition-opacity group-hover:opacity-100" aria-hidden />
               <div className="relative space-y-2">
-                <p className="text-sm font-semibold text-white">What is Vibe Coding?</p>
-                <p className="text-sm text-white/75">An introduction to the philosophy and practice of coding with intuition and creativity.</p>
+                <p className="text-sm font-semibold text-white">Build a mobile studio</p>
+                <p className="text-sm text-white/75">Pack a portable setup that balances audio gear, chargers, and the carry you actually want to shoulder.</p>
                 <span className="inline-flex items-center gap-2 text-xs font-semibold text-white/80">Read More <span aria-hidden>→</span></span>
               </div>
             </Link>
             <Link
-              href="/blog/llm-edge-applications"
+              href="/posts/leather-care-101"
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:-translate-y-0.5 hover:border-white/30"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-purple-900/10 opacity-0 transition-opacity group-hover:opacity-100" aria-hidden />
               <div className="relative space-y-2">
-                <p className="text-sm font-semibold text-white">LLMs at the Edge</p>
-                <p className="text-sm text-white/75">Exploring practical applications and new frontiers for language models in modern development.</p>
+                <p className="text-sm font-semibold text-white">Care for leather carry</p>
+                <p className="text-sm text-white/75">Keep your favorite bags and wallets supple with quick routines and products that actually work.</p>
                 <span className="inline-flex items-center gap-2 text-xs font-semibold text-white/80">Read More <span aria-hidden>→</span></span>
               </div>
             </Link>
