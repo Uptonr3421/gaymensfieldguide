@@ -26,7 +26,6 @@ export default function Home() {
   const feedArticles = EDITORIAL_FEED.slice(3); // Rest of feed
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 font-sans selection:bg-orange-500 selection:text-white">
       
       {/* Subtle Grid Texture for "Crisp White" feel */}
@@ -34,15 +33,6 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-12 px-6 border-b border-zinc-200 dark:border-zinc-800 bg-white/50 backdrop-blur-sm z-10">
-=======
-    <div className="min-h-screen bg-black text-white">
-      {/* Hero */}
-      <section 
-        className="relative bg-cover bg-center" 
-        style={{ backgroundImage: "url('/images/ai-memory/hero_image.png')" }}
-      >
-        <HeroAnimation />
->>>>>>> 8b72cb615716d94284734e472138cda7e2a698a7
         
         {/* Header Text */}
         <div className="max-w-7xl mx-auto mb-12 flex flex-col items-center text-center">
