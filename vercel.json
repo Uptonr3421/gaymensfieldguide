@@ -1,5 +1,4 @@
 {
-  "projectId": "prj_5t0qrMPZtrhSpsvfxBdZRohecAA3",
   "installCommand": "npm install",
   "buildCommand": "next build",
   "framework": "nextjs"
