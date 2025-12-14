@@ -17,7 +17,8 @@ export default function Header() {
           
           <nav className="hidden md:flex items-center gap-6">
             <NavLink href="/manifesto" label="Manifesto" />
-            <NavLink href="/arsenal" label="Hardware" />
+            {/* <NavLink href="/arsenal" label="Hardware" /> */}
+
             <NavLink href="/blog" label="Blog" />
           </nav>
         </div>

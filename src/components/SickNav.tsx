@@ -9,7 +9,7 @@ const NAV_ITEMS = [
   { label: './HOME', href: '/' },
   { label: './ARTICLES', href: '/blog' },
   { label: './MANIFESTO', href: '/manifesto' },
-  { label: './ARSENAL', href: '/arsenal' },
+  // { label: './ARSENAL', href: '/arsenal' }, // Hidden: Store Closed
 ];
 
 export default function SickNav() {
@@ -25,7 +25,7 @@ export default function SickNav() {
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300 pointer-events-none",
-      scrolled ? "py-4" : "py-6"
+      scrolled ? "py-2" : "py-4"
     )}>
       <div className={cn(
         "max-w-7xl mx-auto px-4 md:px-6 transition-all duration-500",
@@ -47,9 +47,9 @@ export default function SickNav() {
                 <span className="font-bold text-sm tracking-tighter text-zinc-200 group-hover/logo:text-white transition-all">
                   GMFG<span className="text-zinc-600">_OS</span>
                 </span>
-                <span className="font-mono text-[9px] text-zinc-500 uppercase tracking-widest hidden md:block">
+                {/* <span className="font-mono text-[9px] text-zinc-500 uppercase tracking-widest hidden md:block">
                   v2.0.4 [STABLE]
-                </span>
+                </span> */}
              </div>
           </Link>
 
