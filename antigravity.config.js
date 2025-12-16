@@ -45,7 +45,9 @@ const config = {
     status: "verified",
     source: "Google Cloud Credits (My Billing Account 1)",
     api_key_ref: "GOOGLE_GEMINI_API",
-    service_account: "vertex-ai-cadence-key.json"
+    // Service account key should be stored as env var GOOGLE_APPLICATION_CREDENTIALS
+    // NEVER commit service account JSON files to git!
+    service_account_env: "GOOGLE_APPLICATION_CREDENTIALS"
   },
   arsenal: {
     grounding: { enabled: true, source: "google_search" },
