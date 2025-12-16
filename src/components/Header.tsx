@@ -24,7 +24,11 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-4">
-          <button className="bg-zinc-900 text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs font-mono font-bold uppercase hover:opacity-80 transition-opacity">
+          <button 
+            type="button"
+            aria-label="Connect with us"
+            className="bg-zinc-900 text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs font-mono font-bold uppercase hover:opacity-80 transition-opacity"
+          >
             Connect
           </button>
         </div>

@@ -1,28 +1,42 @@
+import Image from 'next/image';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import { TuringTest } from '@/components/Antigravity/TuringTest';
 import { ContextCollapse } from '@/components/Antigravity/ContextCollapse';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "Standing Desks Are They A Scam: The Nano Banana Perspective",
-  description: "An deep dive into Standing Desks Are They A Scam. Vibe coded for your pleasure.",
+  description: "A deep dive into Standing Desks Are They A Scam. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/standing-desk-hero.png'],
+    tags: ['standing desk', 'ergonomics', 'office setup', 'productivity', 'health', 'workspace']
   }
 };
 
+<SchemaBuilder 
+  article={{
+    headline: "Standing Desks Are They A Scam: The Nano Banana Perspective",
+    description: "A deep dive into Standing Desks Are They A Scam. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/standing-desk-hero.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Standing Desks", item: "/blog/standing-desks-are-they-a-scam" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/standing-desk-hero.png" alt="STANDING_DESK_HERO" fill className="object-cover" priority />
+</div>
+
 Okay, buckle up, buttercups! The Vibe Coder is ON, locked, and loaded with a Nano Banana aesthetic to tackle the *real* questions about standing desks and AI overlords. Let's get this MDX masterpiece rollin'.
 
-```mdx
----
-title: Standing Desks: Are They a Scam? (And a GPT-5.2 Update!)
-description: A deep dive into the standing desk debate, AI model testing credentials, and the magic of Mixture of Experts. Plus, OpenAI's new GPT-5.2 "Garlic"!
----
+## THE COVER STORY: "OpenAI Announced GPT-5.2 (Garlic)"
 
-# THE COVER STORY: "OpenAI Announced GPT-5.2 (Garlic)"
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: STANDING-DESKS-ARE-THEY-A-SCAM.MDX]</p>
-</div>
 
 
 Hold onto your hats, folks, because OpenAI just dropped GPT-5.2, codenamed "Garlic," on **December 11th, 2025**! (Sources: [1, 5, 6, 7, 8]). Apparently, after Google's Gemini 3 started flexin' its AI muscles, Sam Altman hit the "code red" button (Source: [1, 5]). Gotta love a little healthy competition, right?
@@ -35,7 +49,7 @@ Interestingly, Disney invested a cool $1 billion in OpenAI and gets to use Sora 
 
 Oh, and about that "Garlic" codename? Some whisper it was a separate, parallel project, a strategic reserve model ready to be unleashed. *Intrigue intensifies.* (Source: [8]).
 
-# THE CREDENTIALS: A Deep Dive into AI Model Testing and AGI Certification
+## THE CREDENTIALS: A Deep Dive into AI Model Testing and AGI Certification
 
 Alright, let's talk about trust. How do we *know* these AI models are legit and not about to turn us all into paperclips? That's where AI model testing credentials and AGI certifications come in.
 
@@ -55,7 +69,7 @@ As for AGI (Artificial General Intelligence) certification, that's a whole other
 
 Are we victims? Maybe. Maybe not. The key is transparency, rigorous testing, and ongoing monitoring. We need to hold these AI systems accountable and make sure they're aligned with human values.
 
-# MIXTURE OF EXPERTS: We Are Firm Believers
+## MIXTURE OF EXPERTS: We Are Firm Believers
 
 Okay, let's get a little nerdy. Mixture of Experts (MoE) is a machine learning technique where multiple "expert" networks work together to solve a problem. (Sources: [2, 4, 11]). Instead of one giant, monolithic AI, you have a team of specialists, each handling a specific task.
 
@@ -84,7 +98,7 @@ Why are we "firm believers"? Because MoE allows for larger, more powerful models
 
 ***CALLOUT:*** Did you know the concept of Mixture of Experts was first introduced in **1991** by Robert Jacobs and Geoffrey Hinton?! (Sources: [2, 3, 4, 9]). Their paper, "Adaptive Mixture of Local Experts," proposed dividing tasks among smaller, specialized networks to reduce training times and computational requirements. (Sources: [2, 3]). AI history: Making AI history a recurring "thing".
 
-# THE VERDICT
+## THE VERDICT
 
 So, are standing desks a scam? Well, that's for another article. But when it comes to AI, here's the deal:
 
@@ -93,4 +107,3 @@ So, are standing desks a scam? Well, that's for another article. But when it com
 *   **Embrace the Future:** AI is here to stay, and it's going to change the world. Let's make sure it changes it for the better.
 
 Until next time, stay vibin'!
-```

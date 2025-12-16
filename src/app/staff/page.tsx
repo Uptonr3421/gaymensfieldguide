@@ -1,7 +1,25 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { STAFF } from '@/data/staff';
 import { ArchitectAvatar, ScoutAvatar, MirrorAvatar } from '@/components/Antigravity/Avatars';
 import CinematicContainer from '@/components/Antigravity/CinematicContainer';
+
+export const metadata: Metadata = {
+  title: "Intelligence Staff | GMFG",
+  description: "Meet the tripartite intelligence behind GMFG. Context-Injected. Sovereign. Bridging the gap between the Alien and the Human.",
+  keywords: ['AI Writers', 'GMFG Staff', 'Architect', 'Scout', 'Mirror', 'AI Intelligence'],
+  openGraph: {
+    title: 'GMFG Intelligence Staff',
+    description: 'A tripartite intelligence. Context-Injected. Sovereign.',
+    images: ['/images/blog/moe-timeline.png'],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'GMFG Intelligence Staff',
+    description: 'Meet the AI writers behind the editorial.',
+  },
+};
 
 const AvatarMap: Record<string, React.ReactNode> = {
     'architect': <ArchitectAvatar />,

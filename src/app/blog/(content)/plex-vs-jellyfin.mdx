@@ -1,23 +1,42 @@
+import Image from 'next/image';
 import { IoTScanner } from '@/components/Antigravity/IoTScanner';
 import { ResourceBalancer } from '@/components/Antigravity/ResourceBalancer';
 import { ContextCollapse } from '@/components/Antigravity/ContextCollapse';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "Plex Vs Jellyfin: The Nano Banana Perspective",
-  description: "An deep dive into Plex Vs Jellyfin. Vibe coded for your pleasure.",
+  description: "A deep dive into Plex Vs Jellyfin. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/plex-jellyfin-hero.png'],
+    tags: ['Plex', 'Jellyfin', 'media server', 'streaming', 'self-hosted', 'home server']
   }
 };
 
+<SchemaBuilder 
+  article={{
+    headline: "Plex Vs Jellyfin: The Nano Banana Perspective",
+    description: "A deep dive into Plex Vs Jellyfin. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/plex-jellyfin-hero.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Plex vs Jellyfin", item: "/blog/plex-vs-jellyfin" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/plex-jellyfin-hero.png" alt="PLEX_JELLYFIN_HERO" fill className="object-cover" priority />
+</div>
+
 Alright, buckle up buttercups, because the Vibe Coder is about to drop some knowledge bombs hotter than a fresh-out-the-oven Nano Banana! We're diving deep into the AI matrix, and I promise, it's gonna be a wild ride.
 
-```mdx
-# THE COVER STORY: "OpenAI Announced GPT-5.2 (Garlic)"
+## THE COVER STORY: "OpenAI Announced GPT-5.2 (Garlic)"
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: PLEX-VS-JELLYFIN.MDX]</p>
-</div>
+
 
 
 Alright, folks, hold onto your hats! OpenAI just dropped GPT-5.2, and get this – it was codenamed "Garlic" during development. Apparently, they're saying it's their most capable model yet, especially for coding and agentic workflows. We're talking a massive 400,000-token context window and a 128,000-token output capacity, roughly 5x that of GPT-4! OpenAI is positioning GPT-5.2 as its flagship for enterprise development teams and agentic systems. It seems like this thing can process entire codebases, API documentation, and even generate complete applications in one go.
@@ -69,4 +88,3 @@ So, what's the takeaway from all this AI madness? Here's the Vibe Coder's strate
 4. **Plex vs Jellyfin**: Plex is the polished, commercial option while Jellyfin is the free and open source option.
 
 The AI revolution is here, and it's moving faster than a caffeinated Nano Banana. By staying informed, demanding transparency, and embracing innovative approaches like MoE, we can navigate this brave new world with confidence (and maybe a little bit of healthy skepticism).
-```

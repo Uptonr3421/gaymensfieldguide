@@ -45,12 +45,14 @@ export default function HeroCarousel({ featuredArticles }: HeroCarouselProps) {
       <div className="absolute top-1/2 -left-4 -right-4 -translate-y-1/2 flex justify-between z-20 pointer-events-none px-4">
         <button 
           onClick={prevSlide}
+          aria-label="Previous slide"
           className="pointer-events-auto p-4 bg-zinc-900 border border-zinc-700 text-white hover:border-orange-500 hover:text-orange-500 hover:shadow-[0_0_20px_rgba(249,115,22,0.3)] transition-all group"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button 
           onClick={nextSlide}
+          aria-label="Next slide"
           className="pointer-events-auto p-4 bg-zinc-900 border border-zinc-700 text-white hover:border-orange-500 hover:text-orange-500 hover:shadow-[0_0_20px_rgba(249,115,22,0.3)] transition-all group"
         >
           <ChevronRight className="w-6 h-6" />

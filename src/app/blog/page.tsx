@@ -5,7 +5,19 @@ import HeroAnimation from '@/components/HeroAnimation';
 
 export const metadata: Metadata = {
   title: 'Blog // The Field Guide',
-  description: 'Notes from the field. Engineering vibe in the post-code era.',
+  description: 'Notes from the field. Engineering vibe in the post-code era. Technical deep dives, philosophical musings, and hardware reviews.',
+  keywords: ['Tech Blog', 'AI', 'Vibe Coding', 'Local LLM', 'Privacy', 'Hardware', 'Software'],
+  openGraph: {
+    title: 'GMFG Blog // Transmissions',
+    description: 'Field notes, technical deep dives, and philosophical musings from the post-code era.',
+    images: ['/images/blog/moe-timeline.png'],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'GMFG Blog',
+    description: 'Notes from the field. Engineering vibe.',
+  },
 };
 
 export default function BlogIndex() {

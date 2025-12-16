@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 import { InteractiveContainer } from '@/components/Antigravity/InteractiveContainer';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
@@ -39,7 +40,6 @@ export const metadata = {
     <span>SYNTAX: OPTIONAL</span>
     <span>FEELING: CRITICAL</span>
   </div>
-</div>
 
 {/* IMAGE PROMPT:
 [SUBJECT]: A retro 80s computer terminal displaying "VIBE CHECK PASSED" in neon text, surrounded by tropical plants and vaporwave aesthetics.
@@ -47,8 +47,8 @@ export const metadata = {
 [MOOD]: Chill but technical.
 */}
 <div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 flex items-center justify-center overflow-hidden group">
-  <div className="absolute inset-0 bg-scanlines opacity-20 pointer-events-none" />
-  <p className="font-mono text-xs text-zinc-500">[IMAGE_PLACEHOLDER: VAPORWAVE_TERMINAL]</p>
+  <Image src="/images/blog/vaporwave-terminal.png" alt="VAPORWAVE_TERMINAL" fill className="object-cover" priority />
+</div>
 </div>
 
 ## The Death of Syntax

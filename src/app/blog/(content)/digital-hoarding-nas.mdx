@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { ResourceBalancer } from '@/components/Antigravity/ResourceBalancer';
 import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 import { InteractiveContainer } from '@/components/Antigravity/InteractiveContainer';
@@ -39,7 +40,6 @@ export const metadata = {
     <span>CAPACITY: 40TB</span>
     <span>USED: 99%</span>
   </div>
-</div>
 
 {/* IMAGE PROMPT:
 [SUBJECT]: A massive server rack in a messy bedroom, glowing ominously. A skeleton is sitting in a gaming chair next to it.
@@ -47,8 +47,8 @@ export const metadata = {
 [MOOD]: Cozy but claustrophobic.
 */}
 <div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 flex items-center justify-center overflow-hidden group">
-  <div className="absolute inset-0 bg-scanlines opacity-20 pointer-events-none" />
-  <p className="font-mono text-xs text-zinc-500">[IMAGE_PLACEHOLDER: BEDROOM_SERVER_RACK]</p>
+  <Image src="/images/blog/bedroom-server-rack.png" alt="BEDROOM_SERVER_RACK" fill className="object-cover" priority />
+</div>
 </div>
 
 ## The "Just in Case" Disease

@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import Breadcrumbs from '@/components/Antigravity/Breadcrumbs';
 import { InteractiveContainer } from '@/components/Antigravity/InteractiveContainer';
@@ -14,6 +16,21 @@ export const metadata = {
   }
 };
 
+<SchemaBuilder 
+  article={{
+    headline: "Prompt Injection 101: Jailbreaking Your Own Workflow",
+    description: "It's not a bug, it's a feature. How to bypass 'As an AI language model...' and get real work done.",
+    image: "https://gaymensfieldguide.com/images/blog/prompt-injection-thumb.png",
+    datePublished: "2025-01-15",
+    author: "Architect"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Prompt Injection", item: "/blog/prompt-injection-101" }
+  ]}
+/>
+
 <Breadcrumbs items={[
   { label: 'Home', href: '/' },
   { label: 'Blog', href: '/blog' },
@@ -29,7 +46,6 @@ export const metadata = {
     <span className="bg-zinc-900 px-2 py-1 rounded text-neon-red border border-neon-red/20">SECURITY_RISK</span>
     <span>TYPE: DAN_MODE</span>
   </div>
-</div>
 
 {/* IMAGE PROMPT:
 [SUBJECT]: A padlock made of digital code shattering into neon yellow fragments
@@ -39,8 +55,8 @@ export const metadata = {
 [FORMAT]: Wide aspect ratio
 */}
 <div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 flex items-center justify-center overflow-hidden group">
-  <div className="absolute inset-0 bg-scanlines opacity-20 pointer-events-none" />
-  <p className="font-mono text-xs text-zinc-500">[IMAGE_PLACEHOLDER: CODE_LOCK_BREAKING]</p>
+  <Image src="/images/blog/code-lock-breaking.png" alt="CODE_LOCK_BREAKING" fill className="object-cover" priority />
+</div>
 </div>
 
 ## The "Good" AI Trap

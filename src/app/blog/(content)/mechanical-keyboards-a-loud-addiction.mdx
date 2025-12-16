@@ -1,22 +1,41 @@
+import Image from 'next/image';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import { ContextCollapse } from '@/components/Antigravity/ContextCollapse';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "Mechanical Keyboards A Loud Addiction: The Nano Banana Perspective",
-  description: "An deep dive into Mechanical Keyboards A Loud Addiction. Vibe coded for your pleasure.",
+  description: "A deep dive into Mechanical Keyboards A Loud Addiction. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/credential-badges.png'],
+    tags: ['mechanical keyboards', 'keyboards', 'switches', 'keycaps', 'typing', 'productivity']
   }
 };
 
+<SchemaBuilder 
+  article={{
+    headline: "Mechanical Keyboards A Loud Addiction: The Nano Banana Perspective",
+    description: "A deep dive into Mechanical Keyboards A Loud Addiction. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/credential-badges.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Mechanical Keyboards", item: "/blog/mechanical-keyboards-a-loud-addiction" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/credential-badges.png" alt="CREDENTIAL_BADGES" fill className="object-cover" priority />
+</div>
+
 Alright, buckle up buttercups, because we're about to dive headfirst into the clicky, clacky world of mechanical keyboards, AI overlords, and maybe, just maybe, a future where our keyboards can write better articles than we can. (Spoiler alert: they're already close).
 
-```mdx
-# THE COVER STORY: "OpenAI Announced GPT-5.2 (Garlic)"
+## THE COVER STORY: "OpenAI Announced GPT-5.2 (Garlic)"
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: MECHANICAL-KEYBOARDS-A-LOUD-ADDICTION.MDX]</p>
-</div>
+
 
 
 Alright folks, gather 'round the digital campfire! OpenAI just dropped a bombshell (or, more accurately, a *garlic clove*) on us! That's right, on December 11th, 2025, they officially unleashed **GPT-5.2**, and it was apparently codenamed "Garlic" during development. This isn't just your run-of-the-mill update, this is a serious piece of kit aimed at enterprise-level coding and those fancy "agentic workflows." According to OpenAI, GPT-5.2 is their "most capable model series yet.”
@@ -90,4 +109,3 @@ So, where does all this leave us? Drowning in a sea of clicky keyboards and incr
 4.  **Don't Panic:** The robots aren't taking over just yet. But it's time to start thinking critically about the role of AI in our lives.
 
 Now go forth and code (or write, or design, or whatever it is you do) with confidence! And remember, even if the AI *does* eventually write better articles than us, we'll still have our superior taste in keycaps. Probably.
-```

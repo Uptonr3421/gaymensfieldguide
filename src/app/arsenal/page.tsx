@@ -6,8 +6,20 @@ import { SimulatorEngine } from '@/components/Antigravity/SimulatorEngine';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: "Hardware | GMFG",
-  description: "Tactical hardware for the modern Vibe Coder. Tools, not toys.",
+  title: "Hardware Arsenal | GMFG",
+  description: "Tactical hardware for the modern Vibe Coder. Curated tools for privacy, security, and local AI development.",
+  keywords: ['Flipper Zero', 'Raspberry Pi', 'Hardware Wallet', 'Privacy Tools', 'Local LLM', 'Vibe Coder'],
+  openGraph: {
+    title: 'Hardware Arsenal // GMFG',
+    description: 'Tactical hardware for the modern Vibe Coder. Tools, not toys.',
+    images: ['/images/blog/gpu-rig-thumb.png'],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Hardware Arsenal // GMFG',
+    description: 'Tactical hardware for the modern Vibe Coder.',
+  },
 };
 
 export default function ArsenalPage() {

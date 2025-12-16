@@ -1,36 +1,55 @@
+import Image from 'next/image';
 import { SaaSCalculator } from '@/components/Antigravity/SaaSCalculator';
 import { TuringTest } from '@/components/Antigravity/TuringTest';
 import { PromptTyper } from '@/components/Antigravity/PromptTyper';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "Voice Interfaces Why They Suck: The Nano Banana Perspective",
-  description: "An deep dive into Voice Interfaces Why They Suck. Vibe coded for your pleasure.",
+  description: "A deep dive into Voice Interfaces Why They Suck. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/voice-interfaces-hero.png'],
+    tags: ['Voice Interface', 'Smart Speakers', 'AI Assistants', 'UX Design', 'Technology']
   }
 };
 
+<SchemaBuilder 
+  article={{
+    headline: "Voice Interfaces Why They Suck: The Nano Banana Perspective",
+    description: "A deep dive into Voice Interfaces Why They Suck. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/voice-interfaces-hero.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Voice Interfaces", item: "/blog/voice-interfaces-why-they-suck" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/voice-interfaces-hero.png" alt="VOICE_INTERFACES_HERO" fill className="object-cover" priority />
+</div>
+
 Okay, buckle up, buttercups! The Vibe Coder is ON, dialed in, and ready to drop some truth bombs with a Nano Banana chaser. Let's dive into why voice interfaces are currently the digital equivalent of a soggy sandwich, and what juicy tech is on the horizon to fix it.
 
-```mdx
-# THE COVER STORY: OpenAI Announced GPT-5.2 (Garlic)
+## THE COVER STORY: OpenAI Announced GPT-5.2 (Garlic)
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: VOICE-INTERFACES-WHY-THEY-SUCK.MDX]</p>
-</div>
+
 
 
 Hold onto your hats, folks! OpenAI dropped GPT-5.2, codenamed "Garlic" (because apparently, it wards off bad code...or maybe it just smells strong?). This isn't your grandma's language model. We're talking a massive 400,000-token context window and a 128,000-token output capacity. That's like giving the AI the ability to read and write entire novels in one go. Word on the street (and by "street," I mean, very reliable tech blogs) is that this bad boy is specifically designed for enterprise development teams and agentic systems. It's also packing a more recent knowledge cutoff of August 31, 2025, meaning it's not still stuck in 2021 like some other models we know. It supports Text and image I/O for multimodal applications.
 
 Some sources claim that GPT-5.2 was launched in response to competition from Google's Gemini 3 and Claude Opus 4.5 and was released in early December 2025, with the specific date of December 9th being the target, though subject to change due to final testing.
 
-# THE CREDENTIALS: A Deep Dive into AI Model Testing Credentials and AGI Certification
+## THE CREDENTIALS: A Deep Dive into AI Model Testing Credentials and AGI Certification
 
 So, you've built an AI. Congrats! But how do you prove it's not going to turn into Skynet? That's where AI model testing credentials and AGI certification come in. These certifications, like the Artificial Intelligence Governance Professional (AIGP) and Certified AI Testing Professional (CAITP), are designed to ensure AI models meet rigorous standards for accuracy, fairness, transparency, and reliability. They are essential for ensuring AI systems perform as intended, are free from biases, and adhere to ethical guidelines. They involve testing the model's accuracy, robustness, interpretability, and compliance with regulatory requirements. Earning these certifications demonstrates expertise in AI testing, validation, and risk mitigation.
 
 Are we victims? Maybe. Maybe not. But having standards and ways to test these systems is crucial. An AGI aims to reason, learn, and adapt much like a human mind, but at superhuman speed and scale. Ensuring these systems are safe and reliable is paramount.
 
-# MIXTURE OF EXPERTS: The Theory
+## MIXTURE OF EXPERTS: The Theory
 
 Mixture of Experts (MoE) is like having a team of highly specialized AI brains working together. Instead of one giant neural network trying to do everything, MoE divides the task among smaller, specialized sub-networks called "experts." A "gating network" then decides which experts are best suited for each input. This means only a subset of the entire network is activated for any given task, making MoE models incredibly efficient.
 
@@ -53,7 +72,7 @@ We here at Vibe Coder are firm believers in the power of MoE. It's the future, b
 The Mixture of Experts concept isn't some newfangled invention. It was first introduced way back in **1991** by Robert Jacobs and Geoffrey Hinton in their paper "Adaptive Mixtures of Local Experts." They proposed training an AI system composed of separate networks that each specialized in a different subset of training cases. This entailed training both the “expert networks” themselves and a gating network that determines which expert should be used for each subtask. So next time someone tells you AI is a brand-new thing, hit them with that sweet, sweet MoE history. AI history is a recurring thing now, just so you know.
 :::
 
-# THE VERDICT: Strategic Advice
+## THE VERDICT: Strategic Advice
 
 Okay, so voice interfaces might be the bane of your existence right now. But don't throw your smart speakers into the nearest black hole just yet. The future is bright! With innovations like GPT-5.2 and the rise of Mixture of Experts, we're on the cusp of a voice-controlled revolution.
 
@@ -64,4 +83,3 @@ Here's the play:
 3.  **Be patient.** Rome wasn't built in a day, and neither will a truly seamless voice interface. But it's coming. Trust the Vibe Coder.
 
 Now go forth and code...or, you know, just chill and wait for the AI overlords to arrive. Either way, it's gonna be a wild ride. Nano Banana!
-```

@@ -1,19 +1,40 @@
+import Image from 'next/image';
 import { TuringTest } from '@/components/Antigravity/TuringTest';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import { ContextCollapse } from '@/components/Antigravity/ContextCollapse';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "Trackballs The Ergonomic Endgame: The Nano Banana Perspective",
-  description: "An deep dive into Trackballs The Ergonomic Endgame. Vibe coded for your pleasure.",
+  description: "A deep dive into Trackballs The Ergonomic Endgame. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/trackball-ergonomic-hero.png'],
+    tags: ['Trackball', 'Ergonomics', 'Computer Accessories', 'RSI Prevention', 'Productivity']
   }
 };
 
+<SchemaBuilder 
+  article={{
+    headline: "Trackballs The Ergonomic Endgame: The Nano Banana Perspective",
+    description: "A deep dive into Trackballs The Ergonomic Endgame. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/trackball-ergonomic-hero.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Trackballs Ergonomic", item: "/blog/trackballs-the-ergonomic-endgame" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/trackball-ergonomic-hero.png" alt="TRACKBALL_ERGONOMIC_HERO" fill className="object-cover" priority />
+</div>
+
 Okay, buckle up, buttercups! The "Vibe Coder" is ON. IT. Let's decode the trackball zeitgeist, sprinkle it with some future AI spice, and serve it up Nano Banana style. Here's the MDX-formatted cover article, reality-infused and undeniably GOOD.
 
-```mdx
- # THE COVER STORY: "OpenAI Announced GPT-5.2 (Garlic)"
+ ## THE COVER STORY: "OpenAI Announced GPT-5.2 (Garlic)"
  
 
  Okay, hear me out. The scuttlebutt is *strong* on this one. OpenAI, they're supposedly dropping GPT-5.2, codenamed... "Garlic." Yeah, I know. We're as confused (and slightly hungry) as you are.
@@ -67,8 +88,6 @@ Okay, buckle up, buttercups! The "Vibe Coder" is ON. IT. Let's decode the trackb
  And about trackballs? Well, they're ergonomic, stylish, and a testament to the fact that sometimes the best solutions are the ones that let you roll with it. Just like navigating the wild world of AI. Vibe on, coders!
  
 
- ```
-
  I've tried to hit all the notes: OpenAI rumors, AI credentials, Mixture of Experts (with a history blurb!), and that undeniably good, Nano Banana vibe. Let me know if you want any tweaks!
 
  Now, let's run those searches:
@@ -80,8 +99,7 @@ Okay, buckle up, buttercups! The "Vibe Coder" is ON. IT. Let's decode the trackb
 
  Here's the revised MDX content:
 
- ```mdx
- # THE COVER STORY: "OpenAI Announced GPT-5.2 (Garlic)"
+ ## THE COVER STORY: "OpenAI Announced GPT-5.2 (Garlic)"
  
 
  OpenAI has officially released GPT-5.2, codenamed "Garlic" during development! This model is positioned as their most capable for coding and agentic workflows. It boasts a massive 400,000-token context window and 128,000-token output capacity, dwarfing GPT-4's capabilities. OpenAI is calling it "the most capable model series yet."

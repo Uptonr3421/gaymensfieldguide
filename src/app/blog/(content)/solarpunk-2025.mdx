@@ -1,9 +1,11 @@
+import Image from 'next/image';
 import { IoTScanner } from '@/components/Antigravity/IoTScanner';
 import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 import { InteractiveContainer } from '@/components/Antigravity/InteractiveContainer';
 import { ResourceBalancer } from '@/components/Antigravity/ResourceBalancer';
 import { TechHead2Head } from '@/components/Antigravity/TechHead2Head';
 import { PromptTyper } from '@/components/Antigravity/PromptTyper';
+import { FAQSchema } from '@/components/Antigravity/FAQSchema';
 
 export const metadata = {
   title: "Solarpunk 2025: Why Cyberpunk is a Warning, Not a Guide",
@@ -39,7 +41,6 @@ export const metadata = {
     <span>OPTIMISM: REQUIRED</span>
     <span>AESTHETIC: LEAFY</span>
   </div>
-</div>
 
 {/* IMAGE PROMPT:
 [SUBJECT]: A futuristic city where skyscrapers are covered in vertical forests. Solar glass everywhere. No smog.
@@ -47,8 +48,8 @@ export const metadata = {
 [MOOD]: Hopeful.
 */}
 <div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 flex items-center justify-center overflow-hidden group">
-  <div className="absolute inset-0 bg-dots opacity-10 pointer-events-none" />
-  <p className="font-mono text-xs text-zinc-500">[IMAGE_PLACEHOLDER: SOLARPUNK_CITY_RENDER]</p>
+  <Image src="/images/blog/solarpunk-city-render.png" alt="SOLARPUNK_CITY_RENDER" fill className="object-cover" priority />
+</div>
 </div>
 
 ## We Are Stuck in *Blade Runner*

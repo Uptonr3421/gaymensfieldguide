@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import { InteractiveContainer } from './InteractiveContainer';
 
@@ -11,7 +12,10 @@ interface TuringTestProps {
   }[];
 }
 
-export function TuringTest({ scenarios }: TuringTestProps) {
+export function TuringTest({ scenarios = [
+  { id: 1, transcript: "I'm not sure specifically, but I think it was around 2 PM.", isAI: true, reveal: "Slight hesitation was simulated." },
+  { id: 2, transcript: "Uhh, let me check the schedule real quick.", isAI: false, reveal: "The 'uhh' was organic." }
+] }: TuringTestProps) {
   const [current, setCurrent] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [score, setScore] = useState(0);

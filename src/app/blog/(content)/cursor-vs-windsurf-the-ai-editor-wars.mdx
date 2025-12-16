@@ -1,26 +1,41 @@
+import Image from 'next/image';
 import { SaaSCalculator } from '@/components/Antigravity/SaaSCalculator';
 import { ContextCollapse } from '@/components/Antigravity/ContextCollapse';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "Cursor Vs Windsurf The Ai Editor Wars: The Nano Banana Perspective",
-  description: "An deep dive into Cursor Vs Windsurf The Ai Editor Wars. Vibe coded for your pleasure.",
+  description: "A deep dive into Cursor Vs Windsurf The AI Editor Wars. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/samurai-editor-war.png'],
+    tags: ['AI Editors', 'Cursor', 'Windsurf', 'GPT-5', 'Vibe Coding']
   }
 };
 
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/samurai-editor-war.png" alt="SAMURAI_EDITOR_WAR" fill className="object-cover" priority />
+</div>
+
+<SchemaBuilder 
+  article={{
+    headline: "Cursor Vs Windsurf The AI Editor Wars: The Nano Banana Perspective",
+    description: "A deep dive into Cursor Vs Windsurf The AI Editor Wars. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/samurai-editor-war.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "AI Editor Wars", item: "/blog/cursor-vs-windsurf-the-ai-editor-wars" }
+  ]}
+/>
+
 Okay, buckle up, buttercups! The Vibe Coder is ON, dialed into maximum reality distortion (the good kind!). Prepare for a wild ride through the AI editor wars, "Nano Banana" style. Let's decode this digital deliciousness.
 
-```mdx
----
-title: "Cursor vs. Windsurf: The AI Editor Wars"
----
+## THE COVER STORY: "OpenAI Announced GPT-5.2 (Garlic)"
 
-# THE COVER STORY: "OpenAI Announced GPT-5.2 (Garlic)"
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: CURSOR-VS-WINDSURF-THE-AI-EDITOR-WARS.MDX]</p>
-</div>
 
 
 Hold onto your hats, folks! OpenAI just dropped GPT-5.2, codenamed "Garlic" during development, and it's hotter than a jalapeño in July! Sources confirm this coding maestro boasts a massive 400,000-token context window and a 128,000-token output capacity – roughly *five times* the context of GPT-4. Talk about having a memory like an elephant… or, well, a really advanced AI.
@@ -51,22 +66,15 @@ We are *firm believers* in the Mixture of Experts (MoE) approach. In a nutshell,
 
 This means that instead of one giant, monolithic model, you have a team of specialists working together. Think of it like hiring a diverse group of freelancers for a project – each brings their unique skills to the table, resulting in a better final product. MoE architectures enable large-scale models to greatly reduce computation costs during pre-training and achieve faster performance during inference time. This efficiency is achieved through selectively activating only the specific experts needed for a given task, rather than activating the entire neural network for every task.
 
-<Callout>
-
-
 <SaaSCalculator />
 
-
-
-<SaaSCalculator />
-
-
-<ContextCollapse />
+<ContextCollapse>
 
 ## Fun History Section
 
 Did you know that the concept of MoE was first introduced in **1991** by Robert Jacobs and Geoffrey Hinton in their paper "Adaptive Mixtures of Local Experts"? This paper proposed dividing tasks among smaller, specialized networks to reduce training times and computational requirements. See, AI history *can* be fun!
-</Callout>
+
+</ContextCollapse>
 
 # THE VERDICT: Strategic Advice
 
@@ -78,4 +86,3 @@ So, what does all this mean for you, the discerning reader? Here's the lowdown:
 *   **Demand Transparency:** Advocate for ethical AI development and deployment.
 
 The AI editor wars may be heating up, but with a little knowledge and a lot of "Nano Banana" vibes, we can all ride this wave to a brighter, more efficient future. Now go forth and code… responsibly!
-```

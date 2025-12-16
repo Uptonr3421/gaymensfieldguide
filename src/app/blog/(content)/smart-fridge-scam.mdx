@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 import { InteractiveContainer } from '@/components/Antigravity/InteractiveContainer';
 import { IoTScanner } from '@/components/Antigravity/IoTScanner';
@@ -47,8 +48,7 @@ export const metadata = {
 [STYLE]: 80s Horror Movie Poster / Dark Synthwave.
 */}
 <div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-12 flex items-center justify-center overflow-hidden group">
-  <div className="absolute inset-0 bg-noise opacity-30 pointer-events-none" />
-  <p className="font-mono text-xs text-red-500/50 animate-pulse">[IMAGE_PLACEHOLDER: KILLER_FRIDGE_RANSOMWARE]</p>
+  <Image src="/images/blog/killer-fridge-ransomware.png" alt="KILLER_FRIDGE_RANSOMWARE" fill className="object-cover" priority />
 </div>
 
 {/* IMAGE PROMPT:
@@ -57,7 +57,7 @@ export const metadata = {
 [STYLE]: Technical Blueprint, glowing blue on black grid.
 */}
 <div className="relative w-full aspect-[21/9] bg-zinc-950 border-win95-inset mb-8 flex items-center justify-center overflow-hidden">
-    <p className="font-mono text-[10px] text-zinc-600">[IMAGE_PLACEHOLDER: TOASTER_BLUEPRINT]</p>
+    <Image src="/images/blog/toaster-blueprint.png" alt="TOASTER_BLUEPRINT" fill className="object-cover" />
 </div>
 
 ## The "S" in IoT Stands for Security

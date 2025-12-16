@@ -1,8 +1,10 @@
+import Image from 'next/image';
 import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 import { InteractiveContainer } from '@/components/Antigravity/InteractiveContainer';
 import { SimulatorEngine } from '@/components/Antigravity/SimulatorEngine';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import { PromptTyper } from '@/components/Antigravity/PromptTyper';
+import { FAQSchema } from '@/components/Antigravity/FAQSchema';
 
 export const metadata = {
   title: "The Flipper Zero is a Tamagotchi for Cybercrime",
@@ -38,7 +40,6 @@ export const metadata = {
     <span>THREAT_LEVEL: HIGH</span>
     <span>VIBE: 100%</span>
   </div>
-</div>
 
 {/* IMAGE PROMPT:
 [SUBJECT]: The Flipper Zero device floating in a void, surrounded by glowing orange radio waves.
@@ -46,8 +47,8 @@ export const metadata = {
 [MOOD]: Mischievous.
 */}
 <div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 flex items-center justify-center overflow-hidden group">
-  <div className="absolute inset-0 bg-dots opacity-20 pointer-events-none" />
-  <p className="font-mono text-xs text-zinc-500">[IMAGE_PLACEHOLDER: FLIPPER_ZERO_NEON_WAVES]</p>
+  <Image src="/images/blog/flipper-zero-neon-waves.png" alt="FLIPPER_ZERO_NEON_WAVES" fill className="object-cover" priority />
+</div>
 </div>
 
 ## The "Toy" That Breaks In

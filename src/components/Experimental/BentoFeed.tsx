@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Article } from '@/data/editorial';
 import { VibeBento, BentoItem } from '../Antigravity/VibeBento';
+import Image from 'next/image';
 
 interface BentoFeedProps {
   articles: Article[];
@@ -42,13 +43,17 @@ export default function BentoFeed({ articles }: BentoFeedProps) {
            <div className={`relative w-full overflow-hidden ${
              article.gridArea === 'large' ? 'h-64' : 'h-32'
            }`}>
-             <div className="absolute inset-0 bg-zinc-900 animate-pulse" /> {/* Placeholder/Loading Skeleton */}
              {article.image && (
-                 <img 
-                   src={article.image} 
-                   alt={article.title}
-                   className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500 filter sepia-[0.5] group-hover:sepia-0"
-                 />
+                <div className="relative w-full h-full"> 
+                   <div className="absolute inset-0 bg-zinc-900 animate-pulse" />
+                   <Image 
+                     src={article.image} 
+                     alt={article.title}
+                     fill
+                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                     className="object-cover transform group-hover:scale-105 transition-transform duration-500 filter sepia-[0.5] group-hover:sepia-0"
+                   />
+                </div>
              )}
              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 to-transparent opacity-80" />
            </div>

@@ -1,8 +1,10 @@
+import Image from 'next/image';
 import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 import { InteractiveContainer } from '@/components/Antigravity/InteractiveContainer';
 import { TechHead2Head } from '@/components/Antigravity/TechHead2Head';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import { PromptTyper } from '@/components/Antigravity/PromptTyper';
+import { FAQSchema } from '@/components/Antigravity/FAQSchema';
 
 
 export const metadata = {
@@ -39,7 +41,6 @@ export const metadata = {
     <span>RISK: HIGH</span>
     <span>ROI: ???</span>
   </div>
-</div>
 
 {/* IMAGE PROMPT:
 [SUBJECT]: A futuristic dashcam (Hivemapper) on a dashboard, projecting a holographic slot machine UI onto the windshield. 
@@ -47,8 +48,8 @@ export const metadata = {
 [PALETTE]: Orange, Gold, Black.
 */}
 <div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 flex items-center justify-center overflow-hidden group">
-  <div className="absolute inset-0 bg-scanlines opacity-20 pointer-events-none" />
-  <p className="font-mono text-xs text-zinc-500">[IMAGE_PLACEHOLDER: HIVEMAPPER_SLOT_MACHINE]</p>
+  <Image src="/images/blog/hivemapper-slot-machine.png" alt="HIVEMAPPER_SLOT_MACHINE" fill className="object-cover" priority />
+</div>
 </div>
 
 ## The "Free Money" Trap
@@ -94,22 +95,22 @@ I built this calculator so you don't have to learn Excel.
 <InteractiveContainer title="ROI_SIMULATOR_v1.0" type="simulation">
   <div className="p-6 bg-zinc-950/50 space-y-4 font-mono">
     <div className="grid grid-cols-2 gap-4">
-        <div>
-            <label className="text-xs text-zinc-500">HARDWARE_COST ($)</label>
-            <input type="number" className="w-full bg-zinc-900 border border-zinc-700 p-2 text-white" defaultValue="300" />
-        </div>
-        <div>
-            <label className="text-xs text-zinc-500">TOKEN_PRICE ($)</label>
-            <input type="number" className="w-full bg-zinc-900 border border-zinc-700 p-2 text-white" defaultValue="0.15" />
-        </div>
+      <div>
+        <label className="text-xs text-zinc-500">HARDWARE_COST ($)</label>
+        <input type="number" className="w-full bg-zinc-900 border border-zinc-700 p-2 text-white" defaultValue="300" />
+      </div>
+      <div>
+        <label className="text-xs text-zinc-500">TOKEN_PRICE ($)</label>
+        <input type="number" className="w-full bg-zinc-900 border border-zinc-700 p-2 text-white" defaultValue="0.15" />
+      </div>
     </div>
     <div className="border-t border-dashed border-zinc-800 my-4" />
     <div className="text-center">
-        <p className="text-xs text-zinc-500 mb-1">DAYS_TO_BREAK_EVEN</p>
-        <p className="text-4xl font-bold text-neon-red">248 DAYS</p>
+      <p className="text-xs text-zinc-500 mb-1">DAYS_TO_BREAK_EVEN</p>
+      <p className="text-4xl font-bold text-neon-red">248 DAYS</p>
     </div>
     <div className="bg-neon-yellow/10 border border-neon-yellow/20 p-2 text-xs text-neon-yellow text-center">
-        WARNING: VOLATILITY NOT FACTORED. DO NOT QUIT YOUR DAY JOB.
+      WARNING: VOLATILITY NOT FACTORED. DO NOT QUIT YOUR DAY JOB.
     </div>
   </div>
 </InteractiveContainer>

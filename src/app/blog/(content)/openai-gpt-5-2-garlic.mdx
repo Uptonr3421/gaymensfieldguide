@@ -1,23 +1,42 @@
+import Image from 'next/image';
 import { ResourceBalancer } from '@/components/Antigravity/ResourceBalancer';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import { ContextCollapse } from '@/components/Antigravity/ContextCollapse';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "Openai Gpt 5 2 Garlic: The Nano Banana Perspective",
-  description: "An deep dive into Openai Gpt 5 2 Garlic. Vibe coded for your pleasure.",
+  description: "A deep dive into Openai Gpt 5 2 Garlic. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/openai-gpt-garlic-hero.png'],
+    tags: ['OpenAI', 'GPT-5', 'AI', 'artificial intelligence', 'LLM', 'language model']
   }
 };
 
+<SchemaBuilder 
+  article={{
+    headline: "Openai Gpt 5 2 Garlic: The Nano Banana Perspective",
+    description: "A deep dive into Openai Gpt 5 2 Garlic. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/openai-gpt-garlic-hero.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "GPT-5.2 Garlic", item: "/blog/openai-gpt-5-2-garlic" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/openai-gpt-garlic-hero.png" alt="OPENAI_GPT_GARLIC_HERO" fill className="object-cover" priority />
+</div>
+
 Okay, buckle up, buttercups! The Vibe Coder is ON, diving deep into the ergonomic wonderland of trackballs, the enigma of AI testing, and, of course, the juiciest AI gossip. Prepare for a Nano Banana flavored adventure!
 
-```mdx
-# THE COVER STORY: OpenAI Announced GPT-5.2 (Garlic)
+## THE COVER STORY: OpenAI Announced GPT-5.2 (Garlic)
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: OPENAI-GPT-5-2-GARLIC.MDX]</p>
-</div>
+
 
 
 Hold the Nano Bananas! OpenAI just dropped GPT-5.2, codenamed "Garlic" during development, on December 11, 2025! Seems like Altman and crew heard the whispers about Google's Gemini 3 and decided to unleash some serious heat. This isn't just another version bump, folks; it's a statement. According to OpenAI, GPT-5.2 is the "most capable model series yet" for coding and agentic workflows. Forget those pesky polished files, though; Altman admits it can't do *everything* (Source: PCMag).
@@ -28,7 +47,7 @@ Pricing is $1.75 per million input tokens and $14 per million output tokens, whi
 
 Word on the street (aka, the internet) is that Disney invested a cool $1 billion in OpenAI and is becoming the first major content partner for Sora. Mickey Mouse and Darth Vader in AI-generated shorts? The future is wild, y'all!
 
-# THE CREDENTIALS: AI Model Testing and AGI Certification - Are We Doomed?
+## THE CREDENTIALS: AI Model Testing and AGI Certification - Are We Doomed?
 
 Okay, let's talk about the grown-up stuff – AI model testing credentials and AGI certification. What do these even *mean* in our rapidly evolving AI landscape? Are they a safety net, or just another layer of complexity in a world we barely understand?
 
@@ -48,7 +67,7 @@ But here's the Nano Banana question: Are these certifications enough to protect 
 
 The truth is, it's complicated. Certifications are a good start, providing a framework for responsible AI development. However, they are not a silver bullet. Continuous monitoring, ethical considerations, and ongoing research are crucial to ensure AI benefits humanity, not destroys it.
 
-# MIXTURE OF EXPERTS: The Secret Sauce?
+## MIXTURE OF EXPERTS: The Secret Sauce?
 
 Mixture of Experts (MoE) is an AI architecture that divides a model into multiple specialized sub-networks, or "experts," each trained to handle specific types of data or tasks within the model. These experts work under the guidance of a "gating network," which selects and activates the most relevant experts for each input.
 
@@ -77,7 +96,7 @@ Think of it like this: instead of one giant brain trying to do everything, you h
 
 Did you know that the concept of Mixture of Experts was first introduced in **1991**? Robert Jacobs and Geoffrey Hinton proposed dividing tasks among smaller, specialized networks to reduce training times and computational requirements. Fast forward to today, and MoE is employed in some of the largest deep learning models, including Google's Switch Transformers and Mistral's Mixtral (Source: Metaschool, IBM, Forbes). See, AI history *can* be fun!
 
-# THE VERDICT: Strategic Advice
+## THE VERDICT: Strategic Advice
 
 So, what's the takeaway from all this?
 
@@ -87,4 +106,3 @@ So, what's the takeaway from all this?
 4.  **Be Ethical:** Always consider the ethical implications of AI. Ensure that AI systems are fair, unbiased, and aligned with human values.
 
 The AI revolution is here, folks. It's time to buckle up, stay informed, and demand a responsible and ethical AI future. And maybe invest in a good trackball for those long hours of coding and AI wrangling. 😉
-```

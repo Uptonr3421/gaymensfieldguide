@@ -92,6 +92,23 @@ This key is linked to your billed project, so you should no longer hit free-tier
 
 ---
 
+## Generating Vertex AI Service Account Keys (for System Integrations)
+
+For Vertex AI, especially for programmatic access like Imagen generation, you often need a Service Account Key (a JSON file).
+
+**Steps:**
+1.  Go to [IAM & Admin -> Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts?project=bespokeethos-analytics-475007) in the Google Cloud Console.
+2.  Select or create a Service Account (ensure it has the `Vertex AI User` role).
+3.  Click the 'Actions' (three dots) menu for the Service Account, select 'Manage keys', then 'ADD KEY' -> 'Create new key' -> 'JSON'.
+4.  Download the JSON key file and save it securely.
+5.  Set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to the **path** of this JSON file in your `.env.local`:
+    `GOOGLE_APPLICATION_CREDENTIALS=/path/to/your/service-account-key.json`
+
+**Important Note on Organizational Policy:**
+If you encounter an error like "Key creation is not allowed on this service account" (e.g., `constraints/iam.disableServiceAccountKeyCreation`), this is an Organizational Policy set by your Google Cloud Administrator. You will need to contact them to relax this policy or provide an existing key.
+
+---
+
 ## Google Cloud Console Links
 - [Billing Dashboard](https://console.cloud.google.com/billing?project=bespokeethos-analytics-475007)
 - [Enable APIs](https://console.cloud.google.com/apis/library?project=bespokeethos-analytics-475007)

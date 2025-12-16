@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 import { IoTScanner } from '@/components/Antigravity/IoTScanner';
 import { SaaSCalculator } from '@/components/Antigravity/SaaSCalculator';
 import { ContextCollapse } from '@/components/Antigravity/ContextCollapse';
@@ -6,17 +8,35 @@ export const metadata = {
   title: "Right To Repair The War On Glue: The Nano Banana Perspective",
   description: "An deep dive into Right To Repair The War On Glue. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/right-to-repair-hero.png'],
+    tags: ['Right to Repair', 'Consumer Rights', 'Hardware', 'Repairability', 'Planned Obsolescence']
   }
 };
+
+<SchemaBuilder 
+  article={{
+    headline: "Right To Repair: The War On Glue",
+    description: "An deep dive into Right To Repair The War On Glue. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/right-to-repair-hero.png",
+    datePublished: "2025-01-15",
+    author: "Architect"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Right to Repair", item: "/blog/right-to-repair-the-war-on-glue" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/right-to-repair-hero.png" alt="RIGHT_TO_REPAIR_HERO" fill className="object-cover" priority />
+</div>
 
 Okay, buckle up, buttercups! The "Vibe Coder" is ON and ready to drop some truth bombs laced with fun, all wrapped in a Nano Banana aesthetic. Get ready for a wild ride through the world of AI, right to repair, and maybe a little glue-sniffing along the way (kidding… mostly).
 
 # MDX Output
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: RIGHT-TO-REPAIR-THE-WAR-ON-GLUE.MDX]</p>
-</div>
+
 
 
 # THE COVER STORY (H1)

@@ -13,6 +13,9 @@ export interface Article {
   image: string; // Added image field
 }
 
+// Type alias for backwards compatibility
+export type BlogPost = Article;
+
 export const EDITORIAL_FEED: Article[] = [
   {
     id: '000-GARLIC',
@@ -39,7 +42,7 @@ export const EDITORIAL_FEED: Article[] = [
     gridArea: 'wide',
     slug: 'dead-internet-theory',
     date: '2025-10-12',
-    image: '/images/blog/dead-internet-thumb.png'
+    image: '/images/blog/dead-internet-server-farm.png'
   },
   {
     id: '002',
@@ -52,7 +55,7 @@ export const EDITORIAL_FEED: Article[] = [
     gridArea: 'standard',
     slug: 'smart-fridge-scam',
     date: '2025-10-10',
-    image: '/images/blog/smart-fridge-thumb.png'
+    image: '/images/blog/killer-fridge-ransomware.png'
   },
   {
     id: '003-RIG',
@@ -64,7 +67,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'obsidian',
     slug: 'god-tier-local-llm-rig',
     date: '2025-10-08',
-    image: '/images/blog/gpu-rig-thumb.png'
+    image: '/images/blog/dual-3090-monster.png'
   },
   {
     id: '004-RABBIT',
@@ -76,7 +79,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'voltage',
     slug: 'rabbit-r1-e-waste',
     date: '2025-10-05',
-    image: '/images/blog/rabbit-r1-thumb.png'
+    image: '/images/blog/rabbit-teardown-xray.png'
   },
   {
     id: '005-POISON',
@@ -88,7 +91,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'holo',
     slug: 'nightshade-data-poisoning',
     date: '2025-10-01',
-    image: '/images/blog/nightshade-thumb.png'
+    image: '/images/blog/glitched-art-dog-cat.png'
   },
   {
     id: '006-FINGER',
@@ -100,7 +103,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'obsidian',
     slug: 'browser-fingerprinting-2025',
     date: '2025-09-28',
-    image: '/images/blog/fingerprint-thumb.png'
+    image: '/images/blog/binary-fingerprint-scanner.png'
   },
   {
     id: '007-FLIPPER',
@@ -112,7 +115,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'voltage',
     slug: 'flipper-zero-agents',
     date: '2025-09-25',
-    image: '/images/blog/flipper-thumb.png'
+    image: '/images/blog/flipper-zero-neon-waves.png'
   },
   {
     id: '008-MESH',
@@ -124,7 +127,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'obsidian',
     slug: 'apocalyspenet-meshtastic',
     date: '2025-09-20',
-    image: '/images/blog/meshtastic-thumb.png'
+    image: '/images/blog/smiling-waveform.png'
   },
   {
     id: '009-JARVIS',
@@ -136,7 +139,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'voltage',
     slug: 'building-jarvis-local',
     date: '2025-09-18',
-    image: '/images/blog/local-llm-thumb.png'
+    image: '/images/blog/local-jarvis-desk.png'
   },
   {
     id: '010-CURSOR',
@@ -148,7 +151,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'holo',
     slug: 'cursor-vs-windsurf',
     date: '2025-09-15',
-    image: '/images/blog/cursor-vs-windsurf-thumb.png'
+    image: '/images/blog/samurai-editor-war.png'
   },
   {
     id: '011-DARK',
@@ -160,7 +163,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'obsidian',
     slug: 'dark-patterns-2025',
     date: '2025-09-12',
-    image: '/images/blog/dark-patterns-thumb.png'
+    image: '/images/blog/impossible-maze-render.png'
   },
   {
     id: '012-HOARD',
@@ -172,7 +175,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'voltage',
     slug: 'digital-hoarding-nas',
     date: '2025-09-10',
-    image: '/images/blog/nas-thumb.png'
+    image: '/images/blog/digital-eviction-notice.png'
   },
   {
     id: '013-DEPIN',
@@ -208,7 +211,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'voltage',
     slug: 'post-saas-era',
     date: '2025-09-02',
-    image: '/images/blog/saas-thumb.png'
+    image: '/images/blog/code-lock-breaking.png'
   },
   {
     id: '016-PROMPT',
@@ -232,7 +235,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'obsidian',
     slug: 'raspberry-pi-ai-cluster',
     date: '2025-08-28',
-    image: '/images/blog/pi-cluster-thumb.png'
+    image: '/images/blog/rpi-cluster-mess.png'
   },
   {
     id: '018-OPEN',
@@ -244,7 +247,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'voltage',
     slug: 'sleeping-giants-opensource',
     date: '2025-08-25',
-    image: '/images/blog/opensource-thumb.png'
+    image: '/images/blog/opensource-future-hero.png'
   },
   {
     id: '019-SOLAR',
@@ -268,7 +271,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'voltage',
     slug: 'the-future-of-vibe-coding-and-15-evergreen-trends',
     date: '2025-08-20',
-    image: '/images/blog/vibe-coding-thumb.png'
+    image: '/images/blog/vibe-coder-rise-hero.png'
   },
   {
     id: '021-VOICE',
@@ -280,7 +283,331 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'obsidian',
     slug: 'uncanny-valley-voice',
     date: '2025-08-18',
+    image: '/images/blog/smiling-waveform.png'
+  },
+  {
+    id: 'GEN-100',
+    title: 'AI Is Augmenting Memory',
+    subtitle: 'Deep dive into how AI extends human recall. Optimized for the Nano Banana aesthetics.',
+    authorId: 'mirror',
+    tag: 'HARDWARE',
+    readTime: '7 MIN',
+    variant: 'holo',
+    slug: 'ai-is-augmenting-memory',
+    date: '2025-08-15',
+    image: '/images/blog/hallucination-city.png'
+  },
+  {
+    id: 'GEN-101',
+    title: 'Ambient Computing: Interaction Without Screens',
+    subtitle: 'The future is invisible. Computing that surrounds you.',
+    authorId: 'architect',
+    tag: 'HARDWARE',
+    readTime: '6 MIN',
+    variant: 'obsidian',
+    slug: 'ambient-computing-interaction-without-screens',
+    date: '2025-08-15',
+    image: '/images/blog/voice-interfaces-hero.png'
+  },
+  {
+    id: 'GEN-103',
+    title: 'Blockchain Gaming: A Ponzi Scheme?',
+    subtitle: 'Play to earn, or play to lose? The economics of digital assets.',
+    authorId: 'scout',
+    tag: 'FUTURE',
+    readTime: '9 MIN',
+    variant: 'holo',
+    slug: 'blockchain-gaming-a-ponzi-scheme',
+    date: '2025-08-15',
+    image: '/images/blog/moe-dragon-rpg.png'
+  },
+  {
+    id: 'GEN-106',
+    title: 'Cursor vs Windsurf: The AI Editor Wars',
+    subtitle: 'Two titans clash in the battle for your codebase.',
+    authorId: 'mirror',
+    tag: 'SOFTWARE',
+    readTime: '8 MIN',
+    variant: 'voltage',
+    slug: 'cursor-vs-windsurf-the-ai-editor-wars',
+    date: '2025-08-15',
+    image: '/images/blog/cursor-vs-windsurf-thumb.png'
+  },
+  {
+    id: 'GEN-110',
+    title: 'DePin: Distributed Physical Infrastructure',
+    subtitle: 'Building real-world networks with crypto incentives.',
+    authorId: 'scout',
+    tag: 'DYSTOPIA',
+    readTime: '6 MIN',
+    variant: 'holo',
+    slug: 'depin-distributed-physical-infrastructure',
+    date: '2025-08-15',
+    image: '/images/blog/hivemapper-thumb.png'
+  },
+  {
+    id: 'GEN-112',
+    title: 'Docker: It Works On My Machine',
+    subtitle: 'The container revolution and why it is still sometimes painful.',
+    authorId: 'scout',
+    tag: 'DYSTOPIA',
+    readTime: '8 MIN',
+    variant: 'voltage',
+    slug: 'docker-it-works-on-my-machine',
+    date: '2025-08-15',
+    image: '/images/blog/cloud-collapse-render.png'
+  },
+  {
+    id: 'GEN-115',
+    title: 'Helium Mobile: Free 5G?',
+    subtitle: 'Is decentralized wireless a reality or a pipe dream?',
+    authorId: 'architect',
+    tag: 'HARDWARE',
+    readTime: '9 MIN',
+    variant: 'obsidian',
+    slug: 'helium-mobile-free-5g',
+    date: '2025-08-15',
+    image: '/images/blog/meshtastic-thumb.png'
+  },
+  {
+    id: 'GEN-117',
+    title: 'Home Assistant: The Rabbit Hole',
+    subtitle: 'The ultimate smart home platform for those who love config files.',
+    authorId: 'scout',
+    tag: 'HARDWARE',
+    readTime: '6 MIN',
+    variant: 'holo',
+    slug: 'home-assistant-the-rabbit-hole',
+    date: '2025-08-15',
+    image: '/images/blog/zigbee-matter-hero.png'
+  },
+  {
+    id: 'GEN-118',
+    title: 'Kubernetes: Overkill For Your Blog',
+    subtitle: 'Why you probably do not need a K8s cluster for a static site.',
+    authorId: 'mirror',
+    tag: 'DYSTOPIA',
+    readTime: '9 MIN',
+    variant: 'voltage',
+    slug: 'kubernetes-overkill-for-your-blog',
+    date: '2025-08-15',
+    image: '/images/blog/pi-cluster-thumb.png'
+  },
+  {
+    id: 'GEN-119',
+    title: 'Linux Desktop 2026: Finally?',
+    subtitle: 'Is the year of the Linux desktop finally upon us?',
+    authorId: 'architect',
+    tag: 'FUTURE',
+    readTime: '5 MIN',
+    variant: 'holo',
+    slug: 'linux-desktop-2026-finally',
+    date: '2025-08-15',
+    image: '/images/blog/opensource-future-hero.png'
+  },
+  {
+    id: 'GEN-120',
+    title: 'Local LLMs: The Ultimate Privacy Shield',
+    subtitle: 'Running AI on your own hardware keeps your secrets safe.',
+    authorId: 'architect',
+    tag: 'AI',
+    readTime: '5 MIN',
+    variant: 'holo',
+    slug: 'local-llms-the-ultimate-privacy-shield',
+    date: '2025-08-15',
+    image: '/images/blog/local-llm-thumb.png'
+  },
+  {
+    id: 'GEN-122',
+    title: 'macOS: The Walled Garden Is Comfy',
+    subtitle: 'Why we stay in the ecosystem despite the restrictions.',
+    authorId: 'architect',
+    tag: 'AI',
+    readTime: '7 MIN',
+    variant: 'holo',
+    slug: 'macos-the-walled-garden-is-comfy',
+    date: '2025-08-15',
+    image: '/images/blog/mac-studio-thumb.png'
+  },
+  {
+    id: 'GEN-123',
+    title: 'Mechanical Keyboards: A Loud Addiction',
+    subtitle: 'Clicky, tactile, or linear? The pursuit of the perfect thock.',
+    authorId: 'scout',
+    tag: 'VIBE',
+    readTime: '8 MIN',
+    variant: 'holo',
+    slug: 'mechanical-keyboards-a-loud-addiction',
+    date: '2025-08-15',
+    image: '/images/blog/toaster-blueprint.png'
+  },
+  {
+    id: 'GEN-126',
+    title: 'Plex vs Jellyfin',
+    subtitle: 'The battle for your home media server.',
+    authorId: 'architect',
+    tag: 'SOFTWARE',
+    readTime: '9 MIN',
+    variant: 'holo',
+    slug: 'plex-vs-jellyfin',
+    date: '2025-08-15',
+    image: '/images/blog/plex-jellyfin-hero.png'
+  },
+  {
+    id: 'GEN-131',
+    title: 'Right To Repair: The War On Glue',
+    subtitle: 'Fighting for the right to fix our own devices.',
+    authorId: 'architect',
+    tag: 'DYSTOPIA',
+    readTime: '9 MIN',
+    variant: 'voltage',
+    slug: 'right-to-repair-the-war-on-glue',
+    date: '2025-08-15',
+    image: '/images/blog/right-to-repair-hero.png'
+  },
+  {
+    id: 'GEN-135',
+    title: 'Standing Desks: Are They A Scam?',
+    subtitle: 'Ergonomics or marketing hype? We investigate.',
+    authorId: 'mirror',
+    tag: 'AI',
+    readTime: '7 MIN',
+    variant: 'holo',
+    slug: 'standing-desks-are-they-a-scam',
+    date: '2025-08-15',
+    image: '/images/blog/standing-desk-hero.png'
+  },
+  {
+    id: 'GEN-136',
+    title: 'Starlink: The Sky Is Full Of Satellites',
+    subtitle: 'Global internet coverage at the cost of the night sky.',
+    authorId: 'architect',
+    tag: 'TECH',
+    readTime: '5 MIN',
+    variant: 'holo',
+    slug: 'starlink-the-sky-is-full-of-satellites',
+    date: '2025-08-15',
+    image: '/images/blog/starlink-sky-hero.png'
+  },
+  {
+    id: 'GEN-137',
+    title: 'The Dead Internet Theory: Are We Alone?',
+    subtitle: 'Exploring the theory that most internet traffic is bots.',
+    authorId: 'mirror',
+    tag: 'TECH',
+    readTime: '6 MIN',
+    variant: 'voltage',
+    slug: 'the-dead-internet-theory-are-we-alone',
+    date: '2025-08-15',
+    image: '/images/blog/dead-internet-thumb.png'
+  },
+  {
+    id: 'GEN-138',
+    title: 'The Future Of Open Source',
+    subtitle: 'Sustainability, funding, and the corporate takeover.',
+    authorId: 'architect',
+    tag: 'VIBE',
+    readTime: '6 MIN',
+    variant: 'voltage',
+    slug: 'the-future-of-open-source',
+    date: '2025-08-15',
+    image: '/images/blog/opensource-thumb.png'
+  },
+  {
+    id: 'GEN-140',
+    title: 'The Rise Of The Vibe Coder',
+    subtitle: 'Coding by feeling, assisted by AI.',
+    authorId: 'scout',
+    tag: 'DYSTOPIA',
+    readTime: '7 MIN',
+    variant: 'holo',
+    slug: 'the-rise-of-the-vibe-coder',
+    date: '2025-08-15',
+    image: '/images/blog/vibe-coding-thumb.png'
+  },
+  {
+    id: 'GEN-141',
+    title: 'Trackballs: The Ergonomic Endgame',
+    subtitle: 'Why you should ditch your mouse for a ball.',
+    authorId: 'mirror',
+    tag: 'SOFTWARE',
+    readTime: '7 MIN',
+    variant: 'holo',
+    slug: 'trackballs-the-ergonomic-endgame',
+    date: '2025-08-15',
+    image: '/images/blog/trackball-ergonomic-hero.png'
+  },
+  {
+    id: 'GEN-143',
+    title: 'Vertical Monitors: Why You Need One',
+    subtitle: 'Maximize your code viewing area.',
+    authorId: 'architect',
+    tag: 'AI',
+    readTime: '8 MIN',
+    variant: 'voltage',
+    slug: 'vertical-monitors-why-you-need-one',
+    date: '2025-08-15',
+    image: '/images/blog/vertical-monitor-hero.png'
+  },
+  {
+    id: 'GEN-144',
+    title: 'Voice Interfaces: Why They Suck',
+    subtitle: 'Navigating the frustrations of talking to computers.',
+    authorId: 'architect',
+    tag: 'AI',
+    readTime: '7 MIN',
+    variant: 'holo',
+    slug: 'voice-interfaces-why-they-suck',
+    date: '2025-08-15',
     image: '/images/blog/uncanny-voice-thumb.png'
+  },
+  {
+    id: 'GEN-145',
+    title: 'Why I Deleted My Cloud Backups',
+    subtitle: 'Taking control of data sovereignty.',
+    authorId: 'architect',
+    tag: 'TECH',
+    readTime: '6 MIN',
+    variant: 'voltage',
+    slug: 'why-i-deleted-my-cloud-backups',
+    date: '2025-08-15',
+    image: '/images/blog/cloud-backups-deleted-hero.png'
+  },
+  {
+    id: 'GEN-146',
+    title: 'Why Your Smart Fridge Wants To Kill You',
+    subtitle: 'The security nightmare of IoT appliances.',
+    authorId: 'scout',
+    tag: 'DYSTOPIA',
+    readTime: '7 MIN',
+    variant: 'holo',
+    slug: 'why-your-smart-fridge-wants-to-kill-you',
+    date: '2025-08-15',
+    image: '/images/blog/smart-fridge-thumb.png'
+  },
+  {
+    id: 'GEN-147',
+    title: 'Windows 12: Spyware Edition',
+    subtitle: 'What to expect from the next version of Windows.',
+    authorId: 'scout',
+    tag: 'FUTURE',
+    readTime: '8 MIN',
+    variant: 'voltage',
+    slug: 'windows-12-spyware-edition',
+    date: '2025-08-15',
+    image: '/images/blog/windows12-spyware-hero.png'
+  },
+  {
+    id: 'GEN-148',
+    title: 'Zigbee vs Z-Wave vs Matter',
+    subtitle: 'Protocol wars in the smart home.',
+    authorId: 'architect',
+    tag: 'FUTURE',
+    readTime: '7 MIN',
+    variant: 'obsidian',
+    slug: 'zigbee-vs-z-wave-vs-matter',
+    date: '2025-08-15',
+    image: '/images/blog/zigbee-matter-hero.png'
   }
 ];
 

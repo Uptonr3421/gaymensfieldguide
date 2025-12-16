@@ -1,21 +1,41 @@
+import Image from 'next/image';
 import { IoTScanner } from '@/components/Antigravity/IoTScanner';
 import { VibeSnake } from '@/components/Antigravity/VibeSnake';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "Windows 12 Spyware Edition: The Nano Banana Perspective",
   description: "An deep dive into Windows 12 Spyware Edition. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/windows12-spyware-hero.png'],
+    tags: ['Windows 12', 'Privacy', 'Spyware', 'Microsoft', 'Operating System']
   }
 };
+
+<SchemaBuilder 
+  article={{
+    headline: "Windows 12 Spyware Edition: The Nano Banana Perspective",
+    description: "An deep dive into Windows 12 Spyware Edition. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/windows12-spyware-hero.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Windows 12 Spyware", item: "/blog/windows-12-spyware-edition" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/windows12-spyware-hero.png" alt="WINDOWS12_SPYWARE_HERO" fill className="object-cover" priority />
+</div>
 
 Okay, buckle up, buttercups! The Vibe Coder is ON. We're diving headfirst into the wild world of Windows 12: Spyware Edition, with a pit stop at OpenAI's potential GPT-5.2 "Garlic," AI certifications, and a healthy dose of Mixture of Experts theory. Let's get this Nano Banana party started!
 
 # WINDOWS 12: SPYWARE EDITION
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: WINDOWS-12-SPYWARE-EDITION.MDX]</p>
-</div>
+
 
 
 Get ready for the future, folks, because it's looking *intensely* data-driven. Windows 12 is here, and let's just say your privacy settings might need a serious upgrade. But hey, on the bright side, maybe personalized ads will *finally* start showing you things you actually want! (Like that solid gold Nano Banana statue you've been eyeing).

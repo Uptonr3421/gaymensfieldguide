@@ -1,21 +1,41 @@
+import Image from 'next/image';
 import { IoTScanner } from '@/components/Antigravity/IoTScanner';
 import { VibeSnake } from '@/components/Antigravity/VibeSnake';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "The Future Of Open Source: The Nano Banana Perspective",
   description: "An deep dive into The Future Of Open Source. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/opensource-future-hero.png'],
+    tags: ['Open Source', 'Software Development', 'Programming', 'Technology', 'Community']
   }
 };
+
+<SchemaBuilder 
+  article={{
+    headline: "The Future Of Open Source: The Nano Banana Perspective",
+    description: "An deep dive into The Future Of Open Source. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/opensource-future-hero.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Future of Open Source", item: "/blog/the-future-of-open-source" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/opensource-future-hero.png" alt="OPENSOURCE_FUTURE_HERO" fill className="object-cover" priority />
+</div>
 
 Okay, buckle up, buttercups! The Vibe Coder is ON, and we're diving headfirst into the swirling vortex of open source's future! Get ready for some Nano Banana-flavored real talk.
 
 # MDX
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: THE-FUTURE-OF-OPEN-SOURCE.MDX]</p>
-</div>
+
 
 
 # THE COVER STORY

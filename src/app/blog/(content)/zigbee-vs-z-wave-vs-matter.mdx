@@ -1,14 +1,36 @@
+import Image from 'next/image';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import { ResourceBalancer } from '@/components/Antigravity/ResourceBalancer';
 import { VibeSnake } from '@/components/Antigravity/VibeSnake';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "Zigbee Vs Z Wave Vs Matter: The Nano Banana Perspective",
   description: "An deep dive into Zigbee Vs Z Wave Vs Matter. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/zigbee-matter-hero.png'],
+    tags: ['Zigbee', 'Z-Wave', 'Matter', 'Smart Home', 'IoT Protocols']
   }
 };
+
+<SchemaBuilder 
+  article={{
+    headline: "Zigbee Vs Z Wave Vs Matter: The Nano Banana Perspective",
+    description: "An deep dive into Zigbee Vs Z Wave Vs Matter. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/zigbee-matter-hero.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Zigbee vs Z-Wave vs Matter", item: "/blog/zigbee-vs-z-wave-vs-matter" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/zigbee-matter-hero.png" alt="ZIGBEE_ZWAVE_MATTER_HERO" fill className="object-cover" priority />
+</div>
 
 Okay, buckle up buttercups, because we're diving headfirst into the tech-tangle of Zigbee, Z-Wave, and the shiny new kid on the block, Matter! And, because I'm your friendly neighborhood Vibe Coder, we're gonna do it with a Nano Banana twist. Let's get this show on the road!
 

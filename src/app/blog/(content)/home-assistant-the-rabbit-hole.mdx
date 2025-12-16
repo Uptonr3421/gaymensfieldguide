@@ -1,14 +1,36 @@
+import Image from 'next/image';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import { IoTScanner } from '@/components/Antigravity/IoTScanner';
 import { ContextCollapse } from '@/components/Antigravity/ContextCollapse';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "Home Assistant The Rabbit Hole: The Nano Banana Perspective",
-  description: "An deep dive into Home Assistant The Rabbit Hole. Vibe coded for your pleasure.",
+  description: "A deep dive into Home Assistant The Rabbit Hole. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/local-jarvis-desk.png'],
+    tags: ['home assistant', 'smart home', 'automation', 'IoT', 'home automation', 'open source']
   }
 };
+
+<SchemaBuilder 
+  article={{
+    headline: "Home Assistant The Rabbit Hole: The Nano Banana Perspective",
+    description: "A deep dive into Home Assistant The Rabbit Hole. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/local-jarvis-desk.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Home Assistant", item: "/blog/home-assistant-the-rabbit-hole" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/local-jarvis-desk.png" alt="LOCAL_JARVIS_DESK" fill className="object-cover" priority />
+</div>
 
 Alright, buckle up buttercups, because we're diving headfirst into the rabbit hole of AI, automation, and a whole lot of Nano Banana vibes! Prepare yourselves for a rollercoaster ride of information, speculation, and just a touch of existential dread (don't worry, it's the fun kind).
 

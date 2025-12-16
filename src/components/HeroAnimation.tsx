@@ -60,3 +60,4 @@ function FrameCounter() {
   }, []);
 
   return <div>FRAMES: {frames}</div>;
+}

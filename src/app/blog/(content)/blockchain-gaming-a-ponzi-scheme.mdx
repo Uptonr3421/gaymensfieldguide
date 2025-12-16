@@ -1,23 +1,42 @@
+import Image from 'next/image';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import { TuringTest } from '@/components/Antigravity/TuringTest';
 import { PromptTyper } from '@/components/Antigravity/PromptTyper';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "Blockchain Gaming A Ponzi Scheme: The Nano Banana Perspective",
   description: "An deep dive into Blockchain Gaming A Ponzi Scheme. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/moe-dragon-rpg.png'],
+    tags: ['Blockchain Gaming', 'NFT', 'Crypto', 'Ponzi Scheme', 'Play-to-Earn']
   }
 };
 
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/moe-dragon-rpg.png" alt="MOE_DRAGON_RPG" fill className="object-cover" priority />
+</div>
+
+<SchemaBuilder 
+  article={{
+    headline: "Blockchain Gaming A Ponzi Scheme: The Nano Banana Perspective",
+    description: "An deep dive into Blockchain Gaming A Ponzi Scheme. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/moe-dragon-rpg.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Blockchain Gaming", item: "/blog/blockchain-gaming-a-ponzi-scheme" }
+  ]}
+/>
+
 Alright, buckle up, Nano Bananas! The Vibe Coder is here to drop some truth bombs wrapped in a fun, undeniably good package. Let's dive headfirst into the wild world of AI and blockchain gaming, shall we?
 
-```mdx
 # THE COVER STORY
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: BLOCKCHAIN-GAMING-A-PONZI-SCHEME.MDX]</p>
-</div>
+
 
 
 ## OpenAI Announced GPT-5.2 (Garlic)
@@ -82,4 +101,3 @@ So, what's the strategic advice, Vibe Coders? Here's the real deal:
 4.  **Have Fun!** AI is a wild ride, so enjoy the journey.
 
 And as always, stay vibing, Nano Bananas! The future is uncertain, but one thing's for sure: it's going to be interesting.
-```

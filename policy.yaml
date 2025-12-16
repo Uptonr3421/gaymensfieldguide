@@ -1,0 +1,4 @@
+name: projects/gen-lang-client-0957286112/policies/iam.disableServiceAccountKeyCreation
+spec:
+  rules:
+  - enforce: false

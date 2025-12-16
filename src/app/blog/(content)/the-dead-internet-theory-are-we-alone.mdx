@@ -1,23 +1,42 @@
+import Image from 'next/image';
 import { IoTScanner } from '@/components/Antigravity/IoTScanner';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import { ContextCollapse } from '@/components/Antigravity/ContextCollapse';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "The Dead Internet Theory Are We Alone: The Nano Banana Perspective",
-  description: "An deep dive into The Dead Internet Theory Are We Alone. Vibe coded for your pleasure.",
+  description: "A deep dive into The Dead Internet Theory Are We Alone. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/dead-internet-theory-hero.png'],
+    tags: ['Dead Internet Theory', 'Bots', 'AI', 'Digital Society', 'Conspiracy']
   }
 };
 
+<SchemaBuilder 
+  article={{
+    headline: "The Dead Internet Theory Are We Alone: The Nano Banana Perspective",
+    description: "A deep dive into The Dead Internet Theory Are We Alone. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/dead-internet-theory-hero.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Dead Internet Theory", item: "/blog/the-dead-internet-theory-are-we-alone" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/dead-internet-theory-hero.png" alt="DEAD_INTERNET_THEORY_HERO" fill className="object-cover" priority />
+</div>
+
 Okay, buckle up, buttercups! The Vibe Coder is ON and ready to drop some truth bombs wrapped in a Nano Banana aesthetic. Prepare for a wild ride through the existential dread of the Dead Internet Theory, all fueled by the juiciest AI gossip and a sprinkle of historical context. Let's DO this!
 
-```mdx
-# THE COVER STORY: OpenAI Announced GPT-5.2 (Garlic)
+## THE COVER STORY: OpenAI Announced GPT-5.2 (Garlic)
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: THE-DEAD-INTERNET-THEORY-ARE-WE-ALONE.MDX]</p>
-</div>
+
 
 
 Okay, friends, let's spill the tea! OpenAI just dropped GPT-5.2, and word on the street (err, internet) is that it was codenamed "Garlic" during development. This bad boy is apparently their most capable model *ever* for coding and those spicy agentic workflows. We're talking a MONSTROUS 400,000-token context window and a 128,000-token output capacity, which is like, 5x bigger than GPT-4. Whoa!
@@ -85,4 +104,3 @@ So, what's the takeaway from all this?
 *   **Don't panic:** The Dead Internet Theory might be a bit of a downer, but it's also a call to action. Let's make the internet a place for real connection and creativity.
 
 And remember, stay vibey, stay curious, and never stop questioning the algorithm! Peace out, Nano Bananas!
-```

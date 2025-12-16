@@ -34,9 +34,9 @@ export default function Footer() {
              <div className="space-y-4">
                 <h3 className="text-zinc-500">Legal</h3>
                 <ul className="space-y-2 text-zinc-300">
-                   <li><a href="#" className="hover:text-white transition-colors opacity-50 cursor-not-allowed">Privacy</a></li>
-                   <li><a href="#" className="hover:text-white transition-colors opacity-50 cursor-not-allowed">Terms</a></li>
-                   <li><a href="#" className="hover:text-white transition-colors opacity-50 cursor-not-allowed">Sitemap</a></li>
+                   <li><Link href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</Link></li>
+                   <li><span className="opacity-50 cursor-not-allowed" aria-label="Privacy policy coming soon">Privacy</span></li>
+                   <li><span className="opacity-50 cursor-not-allowed" aria-label="Terms of service coming soon">Terms</span></li>
                 </ul>
              </div>
           </div>

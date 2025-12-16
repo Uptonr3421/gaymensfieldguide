@@ -3,6 +3,8 @@ import { InteractiveContainer } from '@/components/Antigravity/InteractiveContai
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import { TechHead2Head } from '@/components/Antigravity/TechHead2Head';
 import { ContextCollapse } from '@/components/Antigravity/ContextCollapse';
+import Image from 'next/image';
+import { FAQSchema } from '@/components/Antigravity/FAQSchema';
 
 export const metadata = {
   title: "ApocalypseNet: Why You Need an Off-Grid AI Mesh",
@@ -38,7 +40,6 @@ export const metadata = {
     <span>FREQ: 915MHz</span>
     <span>RANGE: 5km+</span>
   </div>
-</div>
 
 {/* IMAGE PROMPT 1:
 [SUBJECT]: A rugged Meshtastic device (Heltec V3) strapped to a tactical backpack, glowing green screen displaying encrypted text
@@ -48,8 +49,8 @@ export const metadata = {
 [FORMAT]: Wide aspect ratio
 */}
 <div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 flex items-center justify-center overflow-hidden group">
-  <div className="absolute inset-0 bg-scanlines opacity-20 pointer-events-none" />
-  <p className="font-mono text-xs text-zinc-500">[IMAGE_PLACEHOLDER: MESHTASTIC_Tactical_Glow]</p>
+  <Image src="/images/blog/meshtastic-thumb.png" alt="MESHTASTIC_DEVICE" fill className="object-cover" priority />
+</div>
 </div>
 
 ## The "Scenario"

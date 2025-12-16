@@ -1,22 +1,42 @@
+import Image from 'next/image';
 import { ResourceBalancer } from '@/components/Antigravity/ResourceBalancer';
 import { SaaSCalculator } from '@/components/Antigravity/SaaSCalculator';
 import { VibeSnake } from '@/components/Antigravity/VibeSnake';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "The Rise Of The Vibe Coder: The Nano Banana Perspective",
   description: "An deep dive into The Rise Of The Vibe Coder. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/vibe-coder-rise-hero.png'],
+    tags: ['Vibe Coding', 'AI Programming', 'Developer Culture', 'Technology', 'Coding']
   }
 };
+
+<SchemaBuilder 
+  article={{
+    headline: "The Rise Of The Vibe Coder: The Nano Banana Perspective",
+    description: "An deep dive into The Rise Of The Vibe Coder. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/vibe-coder-rise-hero.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Rise of the Vibe Coder", item: "/blog/the-rise-of-the-vibe-coder" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/vibe-coder-rise-hero.png" alt="VIBE_CODER_RISE_HERO" fill className="object-cover" priority />
+</div>
 
 Okay, buckle up, buttercups! The Vibe Coder is ON THE SCENE. I’m juiced to crank out this cover article. "Undeniably good, infused with reality, real voice, fun, Nano Banana aesthetic"... Challenge accepted. Let’s dive into the rise of the Vibe Coder, powered by yours truly (and a dash of Antigravity prototype).
 
 # THE COVER STORY: OpenAI Announced GPT-5.2 (Garlic)
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: THE-RISE-OF-THE-VIBE-CODER.MDX]</p>
-</div>
+
 
 
 Hot off the presses! OpenAI dropped GPT-5.2 "Garlic" just yesterday, December 11, 2025! This isn't just a minor version bump, folks. We're talking a flagship model specifically designed for enterprise-level coding and agentic workflows. Forget your measly GPT-4 context windows; "Garlic" boasts a whopping 400,000-token context window with a 128,000-token output capacity! That's like, five times bigger than GPT-4!

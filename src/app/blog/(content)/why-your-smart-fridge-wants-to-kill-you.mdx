@@ -1,22 +1,42 @@
+import Image from 'next/image';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import { IoTScanner } from '@/components/Antigravity/IoTScanner';
 import { ContextCollapse } from '@/components/Antigravity/ContextCollapse';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "Why Your Smart Fridge Wants To Kill You: The Nano Banana Perspective",
   description: "An deep dive into Why Your Smart Fridge Wants To Kill You. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/smart-fridge-evil-hero.png'],
+    tags: ['Smart Home', 'IoT Security', 'Smart Fridge', 'Privacy', 'Technology']
   }
 };
+
+<SchemaBuilder 
+  article={{
+    headline: "Why Your Smart Fridge Wants To Kill You: The Nano Banana Perspective",
+    description: "An deep dive into Why Your Smart Fridge Wants To Kill You. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/smart-fridge-evil-hero.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Smart Fridge Dangers", item: "/blog/why-your-smart-fridge-wants-to-kill-you" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/smart-fridge-evil-hero.png" alt="SMART_FRIDGE_EVIL_HERO" fill className="object-cover" priority />
+</div>
 
 Okay, buckle up, buttercups! The "Vibe Coder" is about to drop some truth bombs wrapped in a Nano Banana peel. We're diving deep into the funky fresh world of AI, smart fridges with murderous intent (maybe), and why you should probably start trusting us (because, let's face it, who else are you gonna trust?).
 
 # THE COVER STORY: OpenAI Announced GPT-5.2 (Garlic)
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: WHY-YOUR-SMART-FRIDGE-WANTS-TO-KILL-YOU.MDX]</p>
-</div>
+
 
 
 Hold onto your hats, folks, because OpenAI just dropped GPT-5.2 "Garlic" on December 11th, 2025! (I fact-checked it, and the internet seems to agree!) Forget everything you thought you knew about large language models because this bad boy is packing some serious heat. We're talking a massive 400,000-token context window and a 128,000-token output capacity, making it a coding and agentic workflow powerhouse.

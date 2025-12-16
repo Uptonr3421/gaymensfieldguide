@@ -14,3 +14,7 @@ export * from './UnsubscribeMaze';
 export * from './StackBuilder';
 export * from './LatencySimulator';
 export * from './IoTScanner';
+export { default as Callout } from './Callout';
+export { VibeSnake } from './VibeSnake';
+export { PromptTyper } from './PromptTyper';
+export { ContextCollapse } from './ContextCollapse';

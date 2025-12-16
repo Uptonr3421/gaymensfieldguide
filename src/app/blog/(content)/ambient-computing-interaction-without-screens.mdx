@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 import { SaaSCalculator } from '@/components/Antigravity/SaaSCalculator';
 import { ResourceBalancer } from '@/components/Antigravity/ResourceBalancer';
 import { VibeSnake } from '@/components/Antigravity/VibeSnake';
@@ -6,17 +8,35 @@ export const metadata = {
   title: "Ambient Computing Interaction Without Screens: The Nano Banana Perspective",
   description: "An deep dive into Ambient Computing Interaction Without Screens. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/smiling-waveform.png'],
+    tags: ['Ambient Computing', 'GPT-5', 'AI Models', 'Voice Interface', 'Screen-Free']
   }
 };
+
+<SchemaBuilder 
+  article={{
+    headline: "Ambient Computing: Interaction Without Screens",
+    description: "An deep dive into Ambient Computing Interaction Without Screens. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/smiling-waveform.png",
+    datePublished: "2025-01-15",
+    author: "Architect"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Ambient Computing", item: "/blog/ambient-computing-interaction-without-screens" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/smiling-waveform.png" alt="SMILING_WAVEFORM" fill className="object-cover" priority />
+</div>
 
 Okay, buckle up, buttercups! The Vibe Coder is ON and ready to inject some Nano Banana realness into the ambient computing revolution! Get ready for a wild ride powered by a context-aware Gemini Pro 3 voice running through the Antigravity prototype! Let's dive in!
 
 # Ambient Computing: Interaction without Screens
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: AMBIENT-COMPUTING-INTERACTION-WITHOUT-SCREENS.MDX]</p>
-</div>
+
 
 
 ## 1. THE COVER STORY: OpenAI Announced GPT-5.2 (Garlic)

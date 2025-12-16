@@ -1,23 +1,42 @@
+import Image from 'next/image';
 import { ResourceBalancer } from '@/components/Antigravity/ResourceBalancer';
 import { IoTScanner } from '@/components/Antigravity/IoTScanner';
 import { PromptTyper } from '@/components/Antigravity/PromptTyper';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "Macos The Walled Garden Is Comfy: The Nano Banana Perspective",
-  description: "An deep dive into Macos The Walled Garden Is Comfy. Vibe coded for your pleasure.",
+  description: "A deep dive into Macos The Walled Garden Is Comfy. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/glitched-art-dog-cat.png'],
+    tags: ['macOS', 'Apple', 'walled garden', 'operating system', 'Mac', 'Apple ecosystem']
   }
 };
 
+<SchemaBuilder 
+  article={{
+    headline: "Macos The Walled Garden Is Comfy: The Nano Banana Perspective",
+    description: "A deep dive into Macos The Walled Garden Is Comfy. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/glitched-art-dog-cat.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "macOS Walled Garden", item: "/blog/macos-the-walled-garden-is-comfy" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/glitched-art-dog-cat.png" alt="GLITCHED_ART" fill className="object-cover" priority />
+</div>
+
 Alright, buckle up, buttercups! The Vibe Coder is ON, dialed into max fun, and ready to drop some truth bombs wrapped in a Nano Banana aesthetic. We're diving headfirst into the wild world of macOS, AI, and everything in between. Let's do this!
 
-```mdx
-# THE COVER STORY: OpenAI Announced GPT-5.2 (Garlic)
+## THE COVER STORY: OpenAI Announced GPT-5.2 (Garlic)
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: MACOS-THE-WALLED-GARDEN-IS-COMFY.MDX]</p>
-</div>
+
 
 
 Hold onto your hats, folks! OpenAI just dropped GPT-5.2, codenamed "Garlic," and the AI world is buzzing like a Nano Banana convention. This isn't just another incremental update; it's a full-blown strategic power-play against the likes of Google's Gemini and Anthropic's Claude. Word on the street (or, you know, the internet) is that CEO Sam Altman himself called a "code red" to fast-track this release.
@@ -76,4 +95,3 @@ So, what's the takeaway from all this madness? Here's the Vibe Coder's strategic
 5.  **Have Fun!** This stuff is exciting! Embrace the possibilities and enjoy the ride.
 
 Alright, that's all for now, folks! Stay vibey, stay curious, and keep coding!
-```

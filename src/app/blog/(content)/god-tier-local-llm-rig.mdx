@@ -1,9 +1,11 @@
+import Image from 'next/image';
 import { ResourceBalancer } from '@/components/Antigravity/ResourceBalancer';
 import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 import { InteractiveContainer } from '@/components/Antigravity/InteractiveContainer';
 import { TechHead2Head } from '@/components/Antigravity/TechHead2Head';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import { VibeSnake } from '@/components/Antigravity/VibeSnake';
+import { FAQSchema } from '@/components/Antigravity/FAQSchema';
 
 export const metadata = {
   title: "God-Tier Local LLM Rig: Dual 3090s vs 4090",
@@ -39,7 +41,6 @@ export const metadata = {
     <span>COST: $1500</span>
     <span>VRAM: 48GB</span>
   </div>
-</div>
 
 {/* IMAGE PROMPT:
 [SUBJECT]: Two RTX 3090 graphics cards fused together with glowing green cables, looking like a cyberpunk engine.
@@ -47,8 +48,8 @@ export const metadata = {
 [MOOD]: Heavy metal.
 */}
 <div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 flex items-center justify-center overflow-hidden group">
-  <div className="absolute inset-0 bg-scanlines opacity-20 pointer-events-none" />
-  <p className="font-mono text-xs text-zinc-500">[IMAGE_PLACEHOLDER: DUAL_3090_MONSTER]</p>
+  <Image src="/images/blog/dual-3090-monster.png" alt="DUAL_3090_MONSTER" fill className="object-cover" priority />
+</div>
 </div>
 
 ## The "VRAM" Bottleneck

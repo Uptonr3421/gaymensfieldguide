@@ -1,4 +1,22 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Manifesto | GMFG",
+  description: "Interspecies Etiquette - Protocol 001. AI is not human. It is not a calculator. It is a Third Thing. And we are currently being rude.",
+  keywords: ['AI Ethics', 'Prompt Engineering', 'AI Alignment', 'Vibe Coding', 'Manifesto'],
+  openGraph: {
+    title: 'Interspecies Etiquette // GMFG Manifesto',
+    description: 'AI is not human. It is not a calculator. It is a Third Thing.',
+    images: ['/images/blog/moe-timeline.png'],
+    type: 'article',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'GMFG Manifesto',
+    description: 'Protocol 001: The Apple and The Orange',
+  },
+};
 
 export default function Manifesto() {
   return (

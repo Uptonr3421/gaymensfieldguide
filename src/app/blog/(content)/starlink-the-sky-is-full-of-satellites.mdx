@@ -1,19 +1,40 @@
+import Image from 'next/image';
 import { IoTScanner } from '@/components/Antigravity/IoTScanner';
 import { ResourceBalancer } from '@/components/Antigravity/ResourceBalancer';
 import { PromptTyper } from '@/components/Antigravity/PromptTyper';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "Starlink The Sky Is Full Of Satellites: The Nano Banana Perspective",
-  description: "An deep dive into Starlink The Sky Is Full Of Satellites. Vibe coded for your pleasure.",
+  description: "A deep dive into Starlink The Sky Is Full Of Satellites. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/starlink-sky-hero.png'],
+    tags: ['Starlink', 'Satellites', 'SpaceX', 'Internet', 'Technology']
   }
 };
 
+<SchemaBuilder 
+  article={{
+    headline: "Starlink The Sky Is Full Of Satellites: The Nano Banana Perspective",
+    description: "A deep dive into Starlink The Sky Is Full Of Satellites. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/starlink-sky-hero.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Starlink Satellites", item: "/blog/starlink-the-sky-is-full-of-satellites" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/starlink-sky-hero.png" alt="STARLINK_SKY_HERO" fill className="object-cover" priority />
+</div>
+
 Okay, buckle up, buttercups! The Vibe Coder is ON, diving headfirst into the satellite-strewn skies of Starlink and the AI whispers on the wind. Get ready for a Nano Banana-flavored dose of reality, fun, and maybe just a *tiny* bit of existential pondering. Here's the cover article, fresh off the Antigravity prototype:
 
-```mdx
- # THE COVER STORY (H1): "OpenAI Announced GPT-5.2 (Garlic)"
+ ## THE COVER STORY (H1): "OpenAI Announced GPT-5.2 (Garlic)"
 
  Hold onto your hats, folks! The rumor mill is churning faster than a caffeinated hamster on a wheel! Whispers abound about OpenAI's latest marvel: GPT-5.2, codenamed "Garlic." Now, before we all start stockpiling cloves and warding off digital vampires, let's inject a healthy dose of reality.
 
@@ -63,4 +84,3 @@ Why are we firm believers? Because MoE offers a path to building larger, more ca
 *   **Don't be afraid to experiment:** The best way to learn about AI is to get your hands dirty. Experiment with different models, architectures, and techniques.
 
 That's all, folks! The Vibe Coder is signing off. Remember to stay curious, stay critical, and always keep a Nano Banana handy.
-```

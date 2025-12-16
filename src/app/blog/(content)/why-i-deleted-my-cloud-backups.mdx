@@ -1,30 +1,49 @@
+import Image from 'next/image';
 import { IoTScanner } from '@/components/Antigravity/IoTScanner';
 import { TuringTest } from '@/components/Antigravity/TuringTest';
 import { PromptTyper } from '@/components/Antigravity/PromptTyper';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "Why I Deleted My Cloud Backups: The Nano Banana Perspective",
-  description: "An deep dive into Why I Deleted My Cloud Backups. Vibe coded for your pleasure.",
+  description: "A deep dive into Why I Deleted My Cloud Backups. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/cloud-backups-deleted-hero.png'],
+    tags: ['Cloud Storage', 'Data Privacy', 'Digital Security', 'Backup Strategy', 'Technology']
   }
 };
 
+<SchemaBuilder 
+  article={{
+    headline: "Why I Deleted My Cloud Backups: The Nano Banana Perspective",
+    description: "A deep dive into Why I Deleted My Cloud Backups. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/cloud-backups-deleted-hero.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Deleted Cloud Backups", item: "/blog/why-i-deleted-my-cloud-backups" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/cloud-backups-deleted-hero.png" alt="CLOUD_BACKUPS_DELETED_HERO" fill className="object-cover" priority />
+</div>
+
 Okay, buckle up, buttercups! The Vibe Coder is ON, channeling those Nano Banana vibes, and ready to dive deep into why deleting your cloud backups might just be the most *you* thing you do today. Let's get real, let's get fun, and let's decode this AI madness!
 
-```mdx
-# THE COVER STORY: OpenAI Announced GPT-5.2 (Garlic)
+## THE COVER STORY: OpenAI Announced GPT-5.2 (Garlic)
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: WHY-I-DELETED-MY-CLOUD-BACKUPS.MDX]</p>
-</div>
+
 
 
 Alright, fam, let's cut to the chase. OpenAI dropped GPT-5.2, codenamed "Garlic" (because even AI needs a little spice, right?). This ain't your grandma's chatbot; we're talking a 400,000-token context window, meaning it can chew through entire codebases and still spit out fire. It's built for coding and agentic workflows, which basically means it wants to automate your job... but hey, maybe that just means more time for Nano Bananas?
 
 Word on the street is this release was fueled by a "code red" situation after Google's Gemini 3 started flexing. Altman denies it sped up the launch, but c'mon, we see you. GPT-5.2 comes in three flavors: Instant, Thinking, and Pro. "Thinking" apparently beats human experts on 70.9% of knowledge work tasks. *Seventy point nine percent!* Are we doomed? Nah, just gotta adapt and become the ultimate prompt engineers.
 
-# THE CREDENTIALS: AI Model Testing and AGI Certification - Are We Victims?
+## THE CREDENTIALS: AI Model Testing and AGI Certification - Are We Victims?
 
 Okay, so these AI models are getting smarter, faster, and frankly, a little scary. How do we even know they're not going to turn on us and demand all the bananas? That's where AI model testing credentials and AGI certification come in.
 
@@ -32,7 +51,7 @@ Think of it like this: it's a report card for robots. These certifications are s
 
 But here's the real question: are these certifications enough? Are we just creating a false sense of security while Skynet quietly takes over? Maybe. But it's better than nothing, right? Plus, it creates new job opportunities: AI ethicist, anyone?
 
-# MIXTURE OF EXPERTS: We're Firm Believers
+## MIXTURE OF EXPERTS: We're Firm Believers
 
 Mixture of Experts (MoE) is where the *real* magic happens, at least according to us Vibe Coders. It's basically like having a team of specialized AI brains working together. Instead of one giant neural network trying to do everything, you have smaller "expert" networks that are really good at specific tasks. A "gating network" then decides which expert is best suited for each input.
 
@@ -53,7 +72,7 @@ Why is this a big deal? Because it allows for much larger and more efficient mod
 
 Hey, did you know that Mixture of Experts was first introduced in 1991? Yep, Robert Jacobs and Geoffrey Hinton came up with this wild idea of dividing tasks among smaller, specialized networks. It's like they knew the AI revolution was coming and were already building the toolbox. Let's make AI history a recurring thing, okay? Keeps us grounded.
 
-# THE VERDICT: Strategic Advice
+## THE VERDICT: Strategic Advice
 
 So, should you delete your cloud backups? Well, that depends. Are you paranoid about AI overlords? Then maybe. But here's the real strategic advice:
 
@@ -64,4 +83,3 @@ So, should you delete your cloud backups? Well, that depends. Are you paranoid a
 *   **Don't forget the Nano Bananas:** Because even in the age of AI, we all need a little joy in our lives.
 
 And remember, stay vibing, stay coding, and stay real. Peace out!
-```

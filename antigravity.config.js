@@ -1,9 +1,19 @@
 // Antigravity Configuration
 // Enforcing usage of specifically granted billing-backed models.
+// PRIMARY PROJECT: Cadence-Chatbot (gen-lang-client-0957286112)
+// BACKUP PROJECT: BespokeEthos (bespokeethos-analytics-475007)
 
 const config = {
-  project_id: "bespokeethos-analytics-475007",
+  // Primary project with billing credits
+  project_id: "gen-lang-client-0957286112",
   location: "us-central1",
+  
+  // Backup project for rate limit fallback
+  backup: {
+    project_id: "bespokeethos-analytics-475007",
+    api_key_ref: "GOOGLE_GEMINI_API_BACKUP_1"
+  },
+  
   models: {
     // High-intelligence model (The "Brain") - "Nano Banana 3" 
     // UPGRADED to Gemini 2.5 Pro for best reasoning + higher rate limits
@@ -23,10 +33,19 @@ const config = {
     legacy_pro: "models/gemini-1.5-pro",
     legacy_flash: "models/gemini-1.5-flash"
   },
+  
+  // IMAGE GENERATION: Nano Banana 3 primary, Imagen 3 fallback
+  imageGen: {
+    primary: "gemini-2.0-flash-exp",      // Nano Banana 3 native image gen
+    fallback: "imagen-3.0-generate-001",  // Imagen 3 for high-quality fallback
+    location: "us-central1"
+  },
+  
   billing: {
     status: "verified",
-    source: "Google Cloud Credits",
-    api_key_ref: "GOOGLE_GEMINI_API"
+    source: "Google Cloud Credits (My Billing Account 1)",
+    api_key_ref: "GOOGLE_GEMINI_API",
+    service_account: "vertex-ai-cadence-key.json"
   },
   arsenal: {
     grounding: { enabled: true, source: "google_search" },

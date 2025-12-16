@@ -2,156 +2,105 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #111827; /* Deep Industrial */
-  --foreground: #F3F4F6; /* Light Grey Text */
-  --font-mono: 'JetBrains Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
-  
-  --neon-yellow: #FACC15;
-  --neon-blue: #3B82F6;
-  --neon-red: #EF4444;
-}
+@layer base {
+  :root {
+    --background: 0 0% 3.9%; /* Zinc 950 */
+    --foreground: 0 0% 98%;   /* Zinc 50 */
+    
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+ 
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+ 
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+ 
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
 
-/* Typography Balance */
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
-}
+  body {
+    @apply bg-zinc-950 text-zinc-100 antialiased selection:bg-neon-lime selection:text-black;
+  }
 
-/* 8-Bit Night Global Styles */
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-mono);
-  overflow-x: hidden;
-  background-image: 
-    radial-gradient(circle at 50% 50%, rgba(10, 10, 10, 0.95), rgba(0, 0, 0, 1));
-}
-
-/* CRT Scanline Effect Overlay - REDUCED for "Tone It Down" Request */
-body::after {
-  content: "";
-  pointer-events: none; 
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(
-    rgba(18, 16, 16, 0) 50%,
-    rgba(0, 0, 0, 0.05) 50%
-  );
-  background-size: 100% 4px; /* Scanline spacing */
-  z-index: 9999;
-  opacity: 0.1; /* Reduced from 0.6 */
-  mix-blend-mode: overlay;
-}
-
-/* Custom Scrollbar (Zinc Vibe) */
-::-webkit-scrollbar {
-  width: 6px;
-  background: #09090b; /* zinc-950 */
-}
-
-::-webkit-scrollbar-thumb {
-  background: #27272a; /* zinc-800 */
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46; /* zinc-700 */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-white;
+  }
 }
 
 @layer utilities {
-  .bg-scanlines-container {
-    background: linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.25) 50%), linear-gradient(90deg, rgba(255,0,0,0.06), rgba(0,255,0,0.02), rgba(0,0,255,0.06));
-    background-size: 100% 2px, 3px 100%;
-  }
-
-  .text-shadow-neon {
-    text-shadow: 0 0 5px rgba(250, 204, 21, 0.5), 0 0 10px rgba(250, 204, 21, 0.3);
-  }
-
-  .border-neon-yellow {
-    border-color: #FACC15;
-    box-shadow: 0 0 5px rgba(250, 204, 21, 0.3);
+  .text-balance {
+    text-wrap: balance;
   }
   
-  .border-neon-blue {
-    border-color: #3B82F6;
-    box-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
-  }
-
-  .border-neon-red {
-    border-color: #EF4444;
-    box-shadow: 0 0 5px rgba(239, 68, 68, 0.3);
-  }
-
-  /* Glitch Text Animation Utility */
-  .glitch-text:hover {
-    animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
-  }
-}
-
-@keyframes glitch {
-  0% { transform: translate(0) }
-  20% { transform: translate(-2px, 2px) }
-  40% { transform: translate(-2px, -2px) }
-  60% { transform: translate(2px, 2px) }
-  80% { transform: translate(2px, -2px) }
-  100% { transform: translate(0) }
-}
-
-/* 80s/90s Throwback Pack */
-@layer utilities {
-  .animate-crt-flicker {
-    animation: flicker 0.15s infinite;
-    opacity: 0.95;
+  /* CRT Scanline Effect for Retro Feel */
+  .scanlines {
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0),
+      rgba(255,255,255,0) 50%,
+      rgba(0,0,0,0.2) 50%,
+      rgba(0,0,0,0.2)
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
   }
   
+  .neon-text {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px currentcolor;
+  }
+  
+  /* Windows 95 Style Borders - Raised Effect */
   .border-win95 {
-    border-top: 2px solid #374151;
-    border-left: 2px solid #374151;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
+    border: 2px solid;
+    border-color: #71717a #3f3f46 #3f3f46 #71717a;
   }
   
+  /* Windows 95 Style Borders - Inset Effect */
   .border-win95-inset {
-    border-top: 2px solid #000;
-    border-left: 2px solid #000;
-    border-right: 2px solid #374151;
-    border-bottom: 2px solid #374151;
+    border: 2px solid;
+    border-color: #27272a #52525b #52525b #27272a;
   }
   
+  /* Text Glow Effects */
   .text-glow-green {
-    text-shadow: 0 0 5px rgba(74, 222, 128, 0.5), 0 0 10px rgba(74, 222, 128, 0.3);
+    text-shadow: 0 0 8px rgba(34, 197, 94, 0.8), 0 0 16px rgba(34, 197, 94, 0.4);
   }
-
-  .text-glow-orange {
-    text-shadow: 0 0 5px rgba(249, 115, 22, 0.5), 0 0 10px rgba(249, 115, 22, 0.3);
+  
+  .text-glow-yellow {
+    text-shadow: 0 0 8px rgba(250, 204, 21, 0.8), 0 0 16px rgba(250, 204, 21, 0.4);
   }
-}
-
-@keyframes flicker {
-  0% { opacity: 0.97; }
-  50% { opacity: 1; }
-  100% { opacity: 0.98; }
-}
-
-@layer utilities {
-  .typing-effect {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid transparent;
-    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  
+  .text-glow-red {
+    text-shadow: 0 0 8px rgba(239, 68, 68, 0.8), 0 0 16px rgba(239, 68, 68, 0.4);
   }
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
 }
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #22c55e; }
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
 }

@@ -1,22 +1,42 @@
+import Image from 'next/image';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import { SaaSCalculator } from '@/components/Antigravity/SaaSCalculator';
 import { VibeSnake } from '@/components/Antigravity/VibeSnake';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "Vertical Monitors Why You Need One: The Nano Banana Perspective",
   description: "An deep dive into Vertical Monitors Why You Need One. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/vertical-monitor-hero.png'],
+    tags: ['Vertical Monitor', 'Productivity', 'Workspace Setup', 'Coding', 'Ergonomics']
   }
 };
+
+<SchemaBuilder 
+  article={{
+    headline: "Vertical Monitors Why You Need One: The Nano Banana Perspective",
+    description: "An deep dive into Vertical Monitors Why You Need One. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/vertical-monitor-hero.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Vertical Monitors", item: "/blog/vertical-monitors-why-you-need-one" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/vertical-monitor-hero.png" alt="VERTICAL_MONITOR_HERO" fill className="object-cover" priority />
+</div>
 
 Okay, buckle up buttercups, because your reality is about to get a SERIOUS upgrade! I'm your Vibe Coder Editor, juiced up on pure Nano Banana energy, and ready to drop some truth bombs wrapped in fun. We're diving deep into the vertical dimension, peeling back the layers of AI certification, and remixing history like a cosmic DJ. Let's get this MDX party started!
 
 # THE COVER STORY
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: VERTICAL-MONITORS-WHY-YOU-NEED-ONE.MDX]</p>
-</div>
+
 
 
 ## OpenAI Announced GPT-5.2 (Garlic)

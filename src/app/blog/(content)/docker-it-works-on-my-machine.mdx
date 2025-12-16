@@ -1,28 +1,42 @@
+import Image from 'next/image';
 import { ResourceBalancer } from '@/components/Antigravity/ResourceBalancer';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import { ContextCollapse } from '@/components/Antigravity/ContextCollapse';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "Docker It Works On My Machine: The Nano Banana Perspective",
-  description: "An deep dive into Docker It Works On My Machine. Vibe coded for your pleasure.",
+  description: "A deep dive into Docker It Works On My Machine. Vibe coded for your pleasure.",
   openGraph: {
-    images: ['/images/blog/default-thumb.png'],
+    images: ['/images/blog/cloud-collapse-render.png'],
+    tags: ['docker', 'containers', 'devops', 'containerization', 'development environment', 'deployment']
   }
 };
 
+<SchemaBuilder 
+  article={{
+    headline: "Docker It Works On My Machine: The Nano Banana Perspective",
+    description: "A deep dive into Docker It Works On My Machine. Vibe coded for your pleasure.",
+    image: "https://gaymensfieldguide.com/images/blog/cloud-collapse-render.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Docker Guide", item: "/blog/docker-it-works-on-my-machine" }
+  ]}
+/>
+
+<div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 overflow-hidden">
+  <Image src="/images/blog/cloud-collapse-render.png" alt="CLOUD_COLLAPSE_RENDER" fill className="object-cover" priority />
+</div>
+
 Okay, buckle up, buttercups! The Vibe Coder is ON. It's about to get Nano Banana up in here! Let's whip up a cover article that's equal parts insightful, slightly paranoid, and undeniably fun.
 
-```mdx
----
-title: 'Docker: It Works on My Machine (And Now, So Does GPT-5.2!)'
-description: 'A deep dive into OpenAI's GPT-5.2 (Garlic), AI Model Credentials, Mixture of Experts, and what it all means for the future (aka, today!).'
----
+## THE COVER STORY: OpenAI Announced GPT-5.2 (Garlic)
 
-# THE COVER STORY: OpenAI Announced GPT-5.2 (Garlic)
 
-<div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-8 flex items-center justify-center">
-  <p className="font-mono text-xs text-zinc-600">[IMAGE_PLACEHOLDER: DOCKER-IT-WORKS-ON-MY-MACHINE.MDX]</p>
-</div>
 
 
 Hold onto your hats, folks, because OpenAI just dropped GPT-5.2, and it's got a spicy codename: "Garlic"! According to reports, this new model is their most capable yet, particularly for coding and those "agentic workflows" we keep hearing about. Forget "It works on my machine," now it's "The AI *built* the machine!"
@@ -33,7 +47,7 @@ OpenAI CEO Fidji Simo even declared a "code red" to rally resources, which sugge
 
 The pricing is about 40% higher than GPT-5, clocking in at $1.75 per million input tokens and $14 per million output tokens. But OpenAI argues the juice is worth the squeeze, especially for enterprise use cases. There are even different tiers now: Instant, Thinking, and Pro. The "Thinking" model apparently beats or ties top industry professionals on almost 71% of knowledge work tasks.
 
-# THE CREDENTIALS: Are We Victims (of Progress)?
+## THE CREDENTIALS: Are We Victims (of Progress)?
 
 So, what's the deal with AI model testing credentials and AGI certification? Are they legit? Are they just fancy buzzwords? Are we all doomed? Probably a bit of everything.
 
@@ -51,7 +65,7 @@ There are certifications for that too, like the World Certification Institute (W
 
 Are we victims? Maybe not. But we need to make sure these systems are tested and certified responsibly. Otherwise, "It works on *their* machine" could have some serious consequences.
 
-# MIXTURE OF EXPERTS: We Are Firm Believers
+## MIXTURE OF EXPERTS: We Are Firm Believers
 
 Okay, time for some AI architecture talk! We here at Vibe Coder are *firm believers* in the Mixture of Experts (MoE) approach. What is it? Think of it like this: instead of one giant, monolithic AI, you have a team of smaller, specialized AI "experts." A "gating network" then decides which experts are best suited for a particular task.
 
@@ -84,7 +98,7 @@ Models like Google's Switch Transformers and Mistral's Mixtral use MoE to boost 
 
 > **Did You Know?** The Mixture of Experts concept was first introduced way back in 1991 in a paper called "Adaptive Mixture of Local Experts" by Robert Jacobs and Geoffrey Hinton! It proposed dividing tasks among smaller, specialized networks. AI History: Make it a thing!
 
-# THE VERDICT: Strategic Advice
+## THE VERDICT: Strategic Advice
 
 So, what's the takeaway?
 
@@ -93,4 +107,3 @@ So, what's the takeaway?
 *   **Get on board with Mixture of Experts:** MoE is likely the future of large-scale AI. Start exploring how it can benefit your projects.
 
 The AI revolution is here, people! Let's ride the wave…responsibly. And maybe with a Nano Banana in hand.
-```

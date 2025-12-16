@@ -1,8 +1,10 @@
+import Image from 'next/image';
 import { SaaSCalculator } from '@/components/Antigravity/SaaSCalculator';
 import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 import { InteractiveContainer } from '@/components/Antigravity/InteractiveContainer';
 import { TuringTest } from '@/components/Antigravity/TuringTest';
 import { VibeSnake } from '@/components/Antigravity/VibeSnake';
+import { FAQSchema } from '@/components/Antigravity/FAQSchema';
 
 export const metadata = {
   title: "Uncanny Valley Voice: Why 'Polite' AI Freaks Me Out",
@@ -38,7 +40,6 @@ export const metadata = {
     <span>REALISM: 99%</span>
     <span>COMFORT: 0%</span>
   </div>
-</div>
 
 {/* IMAGE PROMPT:
 [SUBJECT]: An audio waveform that turns into a human smile mid-wave.
@@ -46,8 +47,8 @@ export const metadata = {
 [MOOD]: Disturbing.
 */}
 <div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 flex items-center justify-center overflow-hidden group">
-  <div className="absolute inset-0 bg-noise opacity-10 pointer-events-none" />
-  <p className="font-mono text-xs text-zinc-500">[IMAGE_PLACEHOLDER: SMILING_WAVEFORM]</p>
+  <Image src="/images/blog/smiling-waveform.png" alt="SMILING_WAVEFORM" fill className="object-cover" priority />
+</div>
 </div>
 
 ## The "Umm" Protocol

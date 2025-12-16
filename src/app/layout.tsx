@@ -30,7 +30,15 @@ export const metadata: Metadata = {
     default: 'GMFG: The Vibe Coding Editorial',
   },
   description: 'The definitive editorial for the post-code era. We engineer vibe. Featuring the latest on GPT-5.2 "Garlic" and the Mixture of Experts.',
-  keywords: ['Vibe Coding', 'AI', 'GPT-5.2', 'Garlic', 'Mixture of Experts', 'Nano Banana', 'Gay Mens Field Guide'],
+  keywords: ['Vibe Coding', 'AI', 'GPT-5.2', 'Garlic', 'Mixture of Experts', 'Nano Banana', 'Gay Mens Field Guide', 'Local LLM', 'Privacy', 'Tech Editorial'],
+  authors: [{ name: 'GMFG Editorial', url: 'https://gaymensfieldguide.com' }],
+  creator: 'GMFG',
+  publisher: 'Gay Mens Field Guide',
+  manifest: '/manifest.json',
+  icons: {
+    icon: '/icon.svg',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'GMFG // Antigravity',
     description: 'We don\'t "prompt." We engineer vibe. The definitive editorial for the post-code era.',
@@ -38,13 +46,32 @@ export const metadata: Metadata = {
     siteName: 'Gay Mens Field Guide',
     locale: 'en_US',
     type: 'website',
+    images: [{
+      url: '/images/blog/moe-timeline.png',
+      width: 1200,
+      height: 630,
+      alt: 'GMFG - The Vibe Coding Editorial',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'GMFG // The Vibe Coding Editorial',
+    description: 'The definitive editorial for the post-code era.',
+    images: ['/images/blog/moe-timeline.png'],
   },
   verification: {
-    google: 'google-site-verification=YOUR_VERIFICATION_CODE', // User to Replace
+    google: 'google1cd91746b71a2414',
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -54,7 +81,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`antialiased scroll-smooth ${inter.variable} ${mono.variable}`}>
+    <html lang="en" className={`antialiased scroll-smooth dark ${inter.variable} ${mono.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <meta name="theme-color" content="#FACC15" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+      </head>
       <body className="min-h-screen font-sans bg-paper dark:bg-paper-dark text-industrial-900 dark:text-industrial-50 bg-noise selection:bg-banana selection:text-black">
         <SkipLink />
         <SickNav />

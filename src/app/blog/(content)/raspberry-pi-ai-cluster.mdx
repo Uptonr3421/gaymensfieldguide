@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 import Breadcrumbs from '@/components/Antigravity/Breadcrumbs';
 import { InteractiveContainer } from '@/components/Antigravity/InteractiveContainer';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
@@ -11,6 +13,21 @@ export const metadata = {
     tags: ['Raspberry Pi', 'Homebrew', 'Llama-3', 'Cluster']
   }
 };
+
+<SchemaBuilder 
+  article={{
+    headline: "The Raspberry Pi AI Cluster: A Toaster That Thinks?",
+    description: "We chained 8 Raspberry Pi 5s together to run Llama-3. It's slow. It's stupid. It's magnificent.",
+    image: "https://gaymensfieldguide.com/images/blog/pi-cluster-thumb.png",
+    datePublished: "2025-01-15",
+    author: "Architect"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Pi AI Cluster", item: "/blog/raspberry-pi-ai-cluster" }
+  ]}
+/>
 
 <Breadcrumbs items={[
   { label: 'Home', href: '/' },
@@ -28,7 +45,6 @@ export const metadata = {
     <span>NODES: 8</span>
     <span>SPEED: 2 t/s</span>
   </div>
-</div>
 
 {/* IMAGE PROMPT:
 [SUBJECT]: A stack of 8 Raspberry Pi circuit boards with glowing LEDs and messy rainbow ribbon cables
@@ -38,8 +54,8 @@ export const metadata = {
 [FORMAT]: Wide aspect ratio
 */}
 <div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 flex items-center justify-center overflow-hidden group">
-  <div className="absolute inset-0 bg-scanlines opacity-20 pointer-events-none" />
-  <p className="font-mono text-xs text-zinc-500">[IMAGE_PLACEHOLDER: RPI_CLUSTER_MESS]</p>
+  <Image src="/images/blog/rpi-cluster-mess.png" alt="RPI_CLUSTER_MESS" fill className="object-cover" priority />
+</div>
 </div>
 
 ## Why? (Because We Can)
@@ -66,20 +82,20 @@ We used a project called [Distributed Llama](https://github.com/b4rtaz/distribut
       <span className="w-20 text-right text-zinc-500">GPU VRAM</span>
       <div className="flex-1 h-2 bg-zinc-800 rounded overflow-hidden">
          <div className="h-full bg-neon-green w-full animate-pulse"></div>
-      </div>
       <span className="w-24 text-neon-green">1,000 GB/s</span>
     </div>
     <div className="flex items-center gap-4">
       <span className="w-20 text-right text-zinc-500">Ethernet</span>
       <div className="flex-1 h-2 bg-zinc-800 rounded overflow-hidden">
          <div className="h-full bg-banana-500 w-[1%]"></div>
-      </div>
       <span className="w-24 text-banana-500">0.1 GB/s</span>
     </div>
-  </div>
   <p className="mt-4 text-center text-zinc-400 italic">
     "Trying to run an LLM over Ethernet is like trying to drink a milkshake through a coffee stirrer."
   </p>
+  </div>
+  </div>
+  </div>
 </InteractiveContainer>
 
 <QuizEngine 

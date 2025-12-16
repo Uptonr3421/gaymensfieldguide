@@ -1,9 +1,11 @@
+import Image from 'next/image';
 import { ResourceBalancer } from '@/components/Antigravity/ResourceBalancer';
 import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 import { InteractiveContainer } from '@/components/Antigravity/InteractiveContainer';
 import { SimulatorEngine } from '@/components/Antigravity/SimulatorEngine';
 import { TechHead2Head } from '@/components/Antigravity/TechHead2Head';
 import { ContextCollapse } from '@/components/Antigravity/ContextCollapse';
+import { FAQSchema } from '@/components/Antigravity/FAQSchema';
 
 export const metadata = {
   title: "The AI Editor Civil War: Cursor vs. Windsurf vs. Copilot",
@@ -39,7 +41,6 @@ export const metadata = {
     <span>DEPENDENCY: CRITICAL</span>
     <span>LOGIC: OUTSOURCED</span>
   </div>
-</div>
 
 {/* IMAGE PROMPT:
 [SUBJECT]: Three cybernetic samurais drawing swords (glowing blue, purple, orange) in a code editor interface.
@@ -47,8 +48,8 @@ export const metadata = {
 [MOOD]: Intense standoff.
 */}
 <div className="relative w-full aspect-video bg-zinc-900 border border-zinc-800 mb-12 flex items-center justify-center overflow-hidden group">
-  <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" />
-  <p className="font-mono text-xs text-zinc-500">[IMAGE_PLACEHOLDER: SAMURAI_EDITOR_WAR]</p>
+  <Image src="/images/blog/samurai-editor-war.png" alt="SAMURAI_EDITOR_WAR" fill className="object-cover" priority />
+</div>
 </div>
 
 ## The "Tab" Addiction

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import { InteractiveContainer } from './InteractiveContainer';
 
@@ -6,7 +7,7 @@ interface ResourceBalancerProps {
   initialNature: number;
 }
 
-export function ResourceBalancer({ initialTech, initialNature }: ResourceBalancerProps) {
+export function ResourceBalancer({ initialTech = 50, initialNature = 50 }: ResourceBalancerProps) {
   const [tech, setTech] = useState(initialTech);
   const [nature, setNature] = useState(initialNature);
   const [year, setYear] = useState(2025);

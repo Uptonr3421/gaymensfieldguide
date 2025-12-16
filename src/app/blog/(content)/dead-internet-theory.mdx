@@ -1,7 +1,9 @@
+import Image from 'next/image';
 import { IoTScanner } from '@/components/Antigravity/IoTScanner';
 import Breadcrumbs from '@/components/Antigravity/Breadcrumbs';
 import { InteractiveContainer } from '@/components/Antigravity/InteractiveContainer';
 import { ContextCollapse } from '@/components/Antigravity/ContextCollapse';
+import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 
 export const metadata = {
   title: "The 'Dead Internet' is Here: 90% of This Traffic is Bots",
@@ -11,6 +13,21 @@ export const metadata = {
     tags: ['Philosophy', 'Dead Internet', 'Bots', 'Society']
   }
 };
+
+<SchemaBuilder 
+  article={{
+    headline: "The 'Dead Internet' is Here: 90% of This Traffic is Bots",
+    description: "You're probably a bot. I might be a bot. The internet isn't a town hall anymore; it's an automated echo chamber.",
+    image: "https://gaymensfieldguide.com/images/blog/dead-internet-thumb.png",
+    datePublished: "2025-01-15",
+    author: "Vibe Coder"
+  }}
+  breadcrumbs={[
+    { name: "Home", item: "/" },
+    { name: "Blog", item: "/blog" },
+    { name: "Dead Internet Theory", item: "/blog/dead-internet-theory" }
+  ]}
+/>
 
 <Breadcrumbs items={[
   { label: 'Home', href: '/' },
@@ -37,8 +54,7 @@ export const metadata = {
 [STYLE]: 8-bit Noir / Dark Industrial.
 */}
 <div className="relative w-full aspect-video bg-zinc-900 border-win95 mb-12 flex items-center justify-center overflow-hidden group">
-  <div className="absolute inset-0 bg-scanlines opacity-20 pointer-events-none" />
-  <p className="font-mono text-xs text-green-500/50 animate-pulse">[IMAGE_PLACEHOLDER: DEAD_INTERNET_SERVER_FARM]</p>
+  <Image src="/images/blog/dead-internet-server-farm.png" alt="DEAD_INTERNET_SERVER_FARM" fill className="object-cover" priority />
 </div>
 
 {/* IMAGE PROMPT:
@@ -48,7 +64,7 @@ export const metadata = {
 [STYLE]: Low-poly PS1 graphics.
 */}
 <div className="relative w-full aspect-[21/9] bg-zinc-950 border-win95-inset mb-8 flex items-center justify-center overflow-hidden">
-    <p className="font-mono text-[10px] text-zinc-600">[IMAGE_PLACEHOLDER: LONELY_BOT_LIKING_ITSELF]</p>
+    <Image src="/images/blog/lonely-bot-liking-itself.png" alt="LONELY_BOT_LIKING_ITSELF" fill className="object-cover" />
 </div>
 
 ## The 51% Threshold (Now 76%)

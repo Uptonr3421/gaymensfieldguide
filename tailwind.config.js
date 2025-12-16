@@ -19,6 +19,8 @@ module.exports = {
           blue: '#3B82F6',
           red: '#EF4444',
           green: '#22C55E',
+          lime: '#84CC16', // Added for selection highlight
+          purple: '#A855F7', // Neon purple for AI reveals
         },
         industrial: {
           DEFAULT: '#4B5563', 
@@ -36,11 +38,13 @@ module.exports = {
       },
       backgroundImage: {
         'scanlines': "linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06))",
+        'scanlines-container': "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.3) 2px, rgba(0, 0, 0, 0.3) 4px)",
       },
       animation: {
         'spin-slow': 'spin 20s linear infinite',
         'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'glitch': 'glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite',
+        'crt-flicker': 'crt-flicker 0.15s ease-in-out infinite alternate',
       },
       keyframes: {
         glitch: {
@@ -50,11 +54,16 @@ module.exports = {
           '60%': { transform: 'translate(2px, 2px)' },
           '80%': { transform: 'translate(2px, -2px)' },
           '100%': { transform: 'translate(0)' },
+        },
+        'crt-flicker': {
+          '0%': { opacity: '0.8' },
+          '100%': { opacity: '1' },
         }
       }
     },
   },
   plugins: [
     require('tailwindcss-animate'),
+    require('@tailwindcss/typography'),
   ],
 }
