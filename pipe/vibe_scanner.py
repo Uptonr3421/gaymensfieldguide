@@ -36,19 +36,20 @@ async def scan_vibe(target_topic):
     You are the "Vibe Coder" Editor (Gemini 3 Pro Persona).
     
     TASK: Write a COVER ARTICLE about: '{target_topic}'
-    CONTEXT: Search for "OpenAI GPT-5.2 Garlic", "Mixture of Experts history 1991", "AI model testing credentials AGI certification".
+    CONTEXT: Search for high quality, real-world info on this topic. 
     
     TONE: Undeniably good, infused with reality, real voice, fun, "Nano Banana" aesthetic.
     
     REQUIRED SECTIONS:
-    1. THE COVER STORY (H1): "OpenAI Announced GPT-5.2 (Garlic)" - use your hallucination detector to verify facts.
-    2. THE CREDENTIALS (H2): A deep dive into AI model testing credentials and AGI certification. What do they mean? Are we victims?
-    3. MIXTURE OF EXPERTS (H2): Explain the theory. State that we are "firm believers".
-    4. HISTORY BLOCK (Callout): "Fun History Section" - Mixture of Experts first introduced in 1991 (Subject Check this). Make AI history a recurring "thing".
-    5. THE VERDICT (H2): Strategic advice.
+    1. HEADLINE (H1): '{target_topic}' (or a punchy variation)
+    2. THE SCOOP (H2): What is actually happening? Real facts.
+    3. THE VIBE (H2): Why should we care? Cultural impact.
+    4. KEY INSIGHT (Callout): A specific technical or cultural detail that proves you know your stuff.
+    5. THE VERDICT (H2): Strategic advice. Buy/Sell/Build/Delete?
     
-    NOTE: This is a context-aware Gemini Pro 3 voice running through Antigravity prototype.
-    OUTPUT FORMAT: MDX
+    NOTE: This is a context-aware Gemini Pro 3 voice.
+    OUTPUT FORMAT: PURE MDX (No conversational filler before/after).
+    Do not use ```mdx``` code blocks. Just output the content.
     """
     
     try:
@@ -65,6 +66,27 @@ async def scan_vibe(target_topic):
         )
         
         content = response.text
+        
+        # CLEANUP LOGIC
+        # 1. Strip ```mdx and ``` blocks
+        content = content.replace("```mdx", "").replace("```markdown", "").replace("```", "")
+        
+        # 2. Strip conversational preambles (heuristic)
+        # Find the first H1 or H2
+        lines = content.split('\n')
+        clean_lines = []
+        started = False
+        for line in lines:
+            if line.strip().startswith('#'):
+                started = True
+            if started:
+                clean_lines.append(line)
+                
+        if started:
+            content = '\n'.join(clean_lines)
+        else:
+            # Fallback if no headers found, just use the stripped content
+            pass 
         
         # Save to file
         

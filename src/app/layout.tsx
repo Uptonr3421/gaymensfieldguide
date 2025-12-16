@@ -73,6 +73,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function RootLayout({
@@ -99,7 +102,7 @@ export default function RootLayout({
         <ReadingProgress />
         <OrganizationSchema />
         <Analytics />
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ''} />
+        <GoogleAnalytics gaId="G-QMLM24T4QK" />
       </body>
     </html>
   );

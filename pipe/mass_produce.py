@@ -6,7 +6,7 @@ import time
 from asyncio import Semaphore
 
 # Configuration
-TOPICS_FILE = "pipe/topics.json"
+TOPICS_FILE = "pipe/topics_missing.json"
 MAX_CONCURRENT = 5 # Avoid hitting rate limits too hard, even with billing
 VIBE_SCANNER_SCRIPT = "pipe/vibe_scanner.py"
 

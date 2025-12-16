@@ -13,6 +13,11 @@ const config = {
     project_id: "bespokeethos-analytics-475007",
     api_key_ref: "GOOGLE_GEMINI_API_BACKUP_1"
   },
+
+  deployment: {
+    vercel_project_id: "prj_5t0qrMPZtrhSpsvfxBdZRohecAA3",
+    github_repo: "https://github.com/Uptonr3421/gaymensfieldguide"
+  },
   
   models: {
     // High-intelligence model (The "Brain") - "Nano Banana 3" 

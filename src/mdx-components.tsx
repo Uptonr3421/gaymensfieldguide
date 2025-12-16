@@ -1,6 +1,7 @@
 import type { MDXComponents } from 'mdx/types'
 import Image from 'next/image'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -28,6 +29,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
        </span>
     ),
     // Allow custom components to be passed through
+    TableOfContents: dynamic(() => import('@/components/Antigravity/TableOfContents').then(mod => mod.TableOfContents), { 
+      ssr: false,
+      loading: () => <div className="h-32 bg-zinc-900/50 animate-pulse rounded-xl my-8" />
+    }),
     ...components,
   }
 }

@@ -26,7 +26,7 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
   const currentArticle = featuredArticles[currentIndex];
 
   return (
-    <section className="relative min-h-[85vh] pt-24 border-b-4 border-orange-500">
+    <section className="relative min-h-[85vh] pt-32 lg:pt-40 border-b-4 border-orange-500">
       
       {/* Background Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(249,115,22,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(249,115,22,0.02)_1px,transparent_1px)] bg-[size:40px_40px]" />
@@ -175,7 +175,7 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
                   key={idx}
                   onClick={() => { setIsAutoPlaying(false); setCurrentIndex(idx); }}
                   aria-label={`Go to slide ${idx + 1}: ${article.title}`}
-                  aria-selected={idx === currentIndex}
+                  aria-controls={`slide-${idx}`}
                   role="tab"
                   className={cn(
                     "h-1 transition-all",

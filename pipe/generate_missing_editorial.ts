@@ -3,16 +3,10 @@ import fs from 'fs';
 import path from 'path';
 
 // Mock the existing slugs to avoid duplication
-const existingSlugs = [
-  'openai-gpt-5-2-garlic', 'dead-internet-theory', 'smart-fridge-scam', 
-  'god-tier-local-llm-rig', 'rabbit-r1-e-waste', 'nightshade-data-poisoning', 
-  'browser-fingerprinting-2025', 'flipper-zero-agents', 'apocalyspenet-meshtastic', 
-  'building-jarvis-local', 'cursor-vs-windsurf', 'dark-patterns-2025', 
-  'digital-hoarding-nas', 'hivemapper-depin-casino', 'mac-studio-paperweight', 
-  'post-saas-era', 'prompt-injection-101', 'raspberry-pi-ai-cluster', 
-  'sleeping-giants-opensource', 'solarpunk-2025', 
-  'the-future-of-vibe-coding-and-15-evergreen-trends', 'uncanny-valley-voice'
-];
+// Read editorial.ts to get real existing slugs
+import { EDITORIAL_FEED } from '../src/data/editorial';
+const existingSlugs = EDITORIAL_FEED.map(article => article.slug);
+console.log(`Found ${existingSlugs.length} existing articles.`);
 
 const authors = ['architect', 'scout', 'mirror'];
 const variants = ['holo', 'voltage', 'obsidian'];
@@ -37,7 +31,7 @@ files.forEach((file, index) => {
     const subtitle = subtitleMatch ? subtitleMatch[1] : 'Automated transmission from the field.';
     
     newArticles.push({
-        id: `GEN-${index + 100}`,
+        id: `GEN-${index + 200}`, // Safety buffer for IDs
         title: title,
         subtitle: subtitle,
         authorId: authors[Math.floor(Math.random() * authors.length)],
@@ -45,9 +39,52 @@ files.forEach((file, index) => {
         readTime: `${Math.floor(Math.random() * 5) + 5} MIN`,
         variant: variants[Math.floor(Math.random() * variants.length)],
         slug: slug,
-        date: '2025-08-15', // Backdated slightly
-        image: '/images/blog/default-thumb.png'
+        date: '2025-08-15',
+        image: '/images/blog/default-thumb.png',
+        featured: false,
+        gridArea: 'standard'
     });
 });
 
-console.log(JSON.stringify(newArticles, null, 2));
+if (newArticles.length > 0) {
+    console.log(`📝 Generated ${newArticles.length} new entries.`);
+    
+    // Format as TS objects (not just JSON)
+    // We want to avoid quotes on keys if possible, but JSON is valid JS.
+    // However, let's try to match the style or just use JSON5-ish format.
+    // Simple JSON stringify is fine for imports.
+    
+    const newEntriesString = newArticles.map(article => {
+        return `  {
+    id: '${article.id}',
+    title: ${JSON.stringify(article.title)},
+    subtitle: ${JSON.stringify(article.subtitle)},
+    authorId: '${article.authorId}',
+    tag: '${article.tag}',
+    readTime: '${article.readTime}',
+    variant: '${article.variant}',
+    slug: '${article.slug}',
+    date: '${article.date}',
+    image: '${article.image}',
+    gridArea: 'standard'
+  }`;
+    }).join(',\n');
+
+    const editorialPath = path.join(process.cwd(), 'src/data/editorial.ts');
+    let editorialContent = fs.readFileSync(editorialPath, 'utf8');
+    
+    // Find the end of the array
+    const lastBracketIndex = editorialContent.lastIndexOf('];');
+    
+    if (lastBracketIndex !== -1) {
+        const updatedContent = editorialContent.substring(0, lastBracketIndex) + 
+                              ',\n' + newEntriesString + 
+                              '\n];';
+        fs.writeFileSync(editorialPath, updatedContent, 'utf8');
+        console.log("✅ Appended to src/data/editorial.ts");
+    } else {
+        console.error("❌ Could not find closing bracket in editorial.ts");
+    }
+} else {
+    console.log("No new articles found.");
+}

@@ -1,7 +1,7 @@
 
 import { Metadata } from 'next';
 
-export function getArticleMetadata(title: string, description: string, image?: string): Metadata {
+export function getArticleMetadata(title: string, description: string, image?: string, slug?: string): Metadata {
   return {
     title: `${title} // The Field Guide`,
     description: description,
@@ -17,5 +17,8 @@ export function getArticleMetadata(title: string, description: string, image?: s
       description: description,
       images: image ? [image] : [],
     },
+    alternates: slug ? {
+      canonical: `/blog/${slug}`,
+    } : undefined,
   };
 }

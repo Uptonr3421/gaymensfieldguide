@@ -57,3 +57,4 @@ model_dump.txt
 *-key.json
 *.credentials.json
 service-account*.json
+.env.analytics

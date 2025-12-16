@@ -26,6 +26,7 @@ import { Callout } from '@/components/Antigravity/Callout';
 import { VibeSnake } from '@/components/Antigravity/VibeSnake';
 import { PromptTyper } from '@/components/Antigravity/PromptTyper';
 import { ContextCollapse } from '@/components/Antigravity/ContextCollapse';
+import { TableOfContents } from '@/components/Antigravity/TableOfContents';
 
 const COMPONENTS = {
   Image,
@@ -50,6 +51,7 @@ const COMPONENTS = {
   VibeSnake,
   PromptTyper,
   ContextCollapse,
+  TableOfContents,
 };
 
 interface PageProps {
