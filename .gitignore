@@ -44,8 +44,6 @@ pipe/.venv/
 
 .vercel
 
-# Generated content (if not intended for commit)
-/public/images/blog/*.png
 model_dump.txt
 
 # Log and temporary files
