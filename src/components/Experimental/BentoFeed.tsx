@@ -61,7 +61,7 @@ export default function BentoFeed({ articles }: BentoFeedProps) {
 
             <div className="flex flex-col flex-grow justify-between relative z-10 p-4 -mt-8">
               <div className="flex justify-between items-start mb-2">
-                 <span className="text-[10px] font-mono text-zinc-500 uppercase">
+                 <span className="text-[10px] font-mono text-zinc-400 uppercase">
                     //{article.readTime}
                  </span>
                  {article.featured && (

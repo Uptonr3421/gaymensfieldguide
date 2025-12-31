@@ -50,7 +50,7 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
             
             {/* Title */}
             <div className="text-center lg:text-left">
-              <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-zinc-500 block mb-4">
+              <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-zinc-400 block mb-4">
                 VIBE_CODED // 2025
               </span>
               <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.85]">
@@ -111,45 +111,51 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
               </div>
             </div>
             
-            {/* Main Featured Image */}
-            <Link href={`/blog/${currentArticle.slug}`} className="relative block aspect-video bg-black border-2 border-zinc-800 overflow-hidden group mb-6">
-              <Image
-                src={currentArticle.image}
-                alt={currentArticle.title}
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                priority
-              />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-              
-              {/* Tag */}
-              <div className="absolute top-4 left-4">
-                <span className="px-2 py-1 bg-orange-500/90 text-black text-[10px] font-bold uppercase tracking-wider">
-                  {currentArticle.tag}
-                </span>
-              </div>
-              
-              {/* Title Overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tight leading-tight group-hover:text-orange-500 transition-colors">
-                  {currentArticle.title}
-                </h3>
-                <p className="text-sm text-zinc-400 mt-2 line-clamp-2">
-                  {currentArticle.subtitle}
-                </p>
-              </div>
-            </Link>
+            {/* Main Featured Image - Slide Panel */}
+            <div 
+              id={`slide-${currentIndex}`} 
+              role="tabpanel" 
+              aria-labelledby={`tab-${currentIndex}`}
+              className="mb-6"
+            >
+              <Link href={`/blog/${currentArticle.slug}`} className="relative block aspect-video bg-black border-2 border-zinc-800 overflow-hidden group">
+                <Image
+                  src={currentArticle.image}
+                  alt={currentArticle.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  priority
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                
+                {/* Tag */}
+                <div className="absolute top-4 left-4">
+                  <span className="px-2 py-1 bg-orange-500/90 text-black text-[10px] font-bold uppercase tracking-wider">
+                    {currentArticle.tag}
+                  </span>
+                </div>
+                
+                {/* Title Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tight leading-tight group-hover:text-orange-500 transition-colors">
+                    {currentArticle.title}
+                  </h3>
+                  <p className="text-sm text-zinc-400 mt-2 line-clamp-2">
+                    {currentArticle.subtitle}
+                  </p>
+                </div>
+              </Link>
+            </div>
             
-            {/* Thumbnail Strip */}
-            <div className="flex gap-3">
+            {/* Thumbnail Strip - Visual Preview */}
+            <div className="flex gap-3" aria-hidden="true">
               {featuredArticles.map((article, idx) => (
                 <button
                   key={article.id}
                   onClick={() => { setIsAutoPlaying(false); setCurrentIndex(idx); }}
-                  aria-label={`View article: ${article.title}`}
-                  aria-pressed={idx === currentIndex}
+                  tabIndex={-1}
                   className={cn(
                     "relative flex-1 aspect-video bg-zinc-900 border-2 overflow-hidden transition-all",
                     idx === currentIndex 
@@ -174,8 +180,10 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
               {featuredArticles.map((article, idx) => (
                 <button
                   key={idx}
+                  id={`tab-${idx}`}
                   onClick={() => { setIsAutoPlaying(false); setCurrentIndex(idx); }}
-                  aria-label={`Article ${idx + 1} of ${featuredArticles.length}: ${article.title}`}
+                  aria-label={`Go to slide ${idx + 1}: ${article.title}`}
+                  aria-controls={`slide-${idx}`}
                   aria-selected={idx === currentIndex}
                   role="tab"
                   className={cn(

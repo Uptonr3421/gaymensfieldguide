@@ -41,7 +41,7 @@ export function BentoItem({ children, className, span = 1, title }: BentoItemPro
       {/* Header if Title exists */}
       {title && (
         <div className="absolute top-0 left-0 right-0 bg-zinc-950 border-b border-zinc-800 p-1 z-10 flex justify-between items-center px-3">
-           <span className="font-mono text-[9px] uppercase text-zinc-500 group-hover:text-green-400 group-hover:text-glow-green transition-colors tracking-widest">
+           <span className="font-mono text-[9px] uppercase text-zinc-400 group-hover:text-green-400 group-hover:text-glow-green transition-colors tracking-widest">
              [{title}]
            </span>
            <div className="w-1.5 h-1.5 bg-zinc-800 group-hover:bg-green-500" />
