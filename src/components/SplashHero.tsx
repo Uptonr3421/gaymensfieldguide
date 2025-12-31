@@ -163,6 +163,7 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
                     fill
                     sizes="(max-width: 768px) 20vw, 100px"
                     className="object-cover"
+                    loading="lazy"
                   />
                 </button>
               ))}

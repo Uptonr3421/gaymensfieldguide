@@ -43,6 +43,12 @@ const nextConfig = {
         ],
       },
       {
+        source: '/:path*.webp',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
         source: '/:path*.svg',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
@@ -66,7 +72,14 @@ const nextConfig = {
 
   // Bundle Optimization
   experimental: {
-    optimizePackageImports: ['lucide-react', 'date-fns', 'framer-motion'],
+    optimizePackageImports: ['lucide-react', 'date-fns', 'framer-motion', '@react-three/fiber', '@react-three/drei'],
+  },
+  
+  // Optimize server-side bundle
+  modularizeImports: {
+    'lucide-react': {
+      transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
+    },
   },
 }
 

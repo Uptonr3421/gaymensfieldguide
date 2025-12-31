@@ -10,12 +10,12 @@ import './globals.css';
 
 import type { Metadata } from 'next';
 
-// Dynamically import client-only components
+// Dynamically import client-only components with loading state
 const ImpactMeter = dynamic(() => import('../components/Antigravity/ImpactMeter'), { 
-  ssr: false 
+  loading: () => null
 });
 const ReadingProgress = dynamic(() => import('../components/Antigravity/ReadingProgress').then(mod => ({ default: mod.ReadingProgress })), { 
-  ssr: false 
+  loading: () => null
 });
 
 const inter = Inter({ 
