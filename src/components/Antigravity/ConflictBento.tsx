@@ -37,7 +37,7 @@ export default function ConflictBento({
             </h4>
             
             {/* Value (Glowing) */}
-            <p className="font-mono text-xl md:text-2xl font-bold text-zinc-300 group-hover:text-glow-green group-hover:text-green-400 transition-all">
+            <p className="font-mono text-xl md:text-2xl font-bold text-zinc-300 group-hover:text-glow-green group-hover:text-green-400 transition-colors">
               {item.value}
             </p>
 

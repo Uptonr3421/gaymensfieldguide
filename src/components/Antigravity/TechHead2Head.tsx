@@ -56,7 +56,7 @@ export function TechHead2Head({ leftName, rightName, specs }: TechHead2HeadProps
             onMouseEnter={() => setHoveredRow(idx)}
             onMouseLeave={() => setHoveredRow(null)}
             className={cn(
-              "grid grid-cols-3 gap-2 p-3 text-xs md:text-sm font-mono border-win95-inset transition-all duration-200",
+              "grid grid-cols-3 gap-2 p-3 text-xs md:text-sm font-mono border-win95-inset transition-[background-color,border-color,opacity] duration-200",
               hoveredRow === idx ? "bg-zinc-900 border-zinc-700" : "bg-zinc-950/30 border-transparent"
             )}
           >

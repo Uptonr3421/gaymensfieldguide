@@ -65,13 +65,13 @@ export function TuringTest({ scenarios = [
                  <div className="grid grid-cols-2 gap-4">
                    <button 
                      onClick={() => handleGuess(false)}
-                     className="py-12 border border-zinc-600 hover:bg-zinc-800 hover:border-zinc-400 transition-all text-xl font-bold text-zinc-300"
+                     className="py-12 border border-zinc-600 hover:bg-zinc-800 hover:border-zinc-400 transition-colors text-xl font-bold text-zinc-300"
                    >
                      HUMAN
                    </button>
                    <button 
                      onClick={() => handleGuess(true)}
-                     className="py-12 border border-zinc-600 hover:bg-zinc-800 hover:border-zinc-400 transition-all text-xl font-bold text-zinc-300"
+                     className="py-12 border border-zinc-600 hover:bg-zinc-800 hover:border-zinc-400 transition-colors text-xl font-bold text-zinc-300"
                    >
                      AI
                    </button>

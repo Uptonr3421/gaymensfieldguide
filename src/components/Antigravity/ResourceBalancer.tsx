@@ -43,7 +43,7 @@ export function ResourceBalancer({ initialTech = 50, initialNature = 50 }: Resou
                     <span className="text-zinc-400">{tech}%</span>
                 </div>
                 <div className="w-full bg-zinc-800 h-4 rounded-full overflow-hidden">
-                    <div className="h-full bg-blue-500 transition-all" style={{ width: `${tech}%` }} />
+                    <div className="h-full bg-blue-500 transition-[width]" style={{ width: `${tech}%` }} />
                 </div>
                 <div className="flex gap-2 mt-2">
                     <button onClick={() => adjust('tech', 10)} className="flex-1 bg-zinc-800 hover:bg-zinc-700 text-xs py-2">+ AI_GRID</button>
@@ -57,7 +57,7 @@ export function ResourceBalancer({ initialTech = 50, initialNature = 50 }: Resou
                     <span className="text-zinc-400">{nature}%</span>
                 </div>
                 <div className="w-full bg-zinc-800 h-4 rounded-full overflow-hidden">
-                    <div className="h-full bg-green-500 transition-all" style={{ width: `${nature}%` }} />
+                    <div className="h-full bg-green-500 transition-[width]" style={{ width: `${nature}%` }} />
                 </div>
                 <div className="flex gap-2 mt-2">
                      <button onClick={() => adjust('nature', 10)} className="flex-1 bg-zinc-800 hover:bg-zinc-700 text-xs py-2">+ REWILDING</button>
