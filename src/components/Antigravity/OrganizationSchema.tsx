@@ -7,7 +7,7 @@ export default function OrganizationSchema() {
     "name": "Gay Mens Field Guide",
     "alternateName": "The Field Guide",
     "url": "https://bespoke-ethos.vercel.app",
-    "logo": "https://bespoke-ethos.vercel.app/images/blog/moe-timeline.png",
+    "logo": "https://bespoke-ethos.vercel.app/images/blog/moe-timeline.webp",
     "description": "The definitive editorial for the post-code era. We engineer vibe.",
     "sameAs": []
   };

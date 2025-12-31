@@ -1,8 +1,7 @@
 import { Inter, JetBrains_Mono } from 'next/font/google';
-import ImpactMeter from '../components/Antigravity/ImpactMeter';
+import dynamic from 'next/dynamic';
 import SkipLink from '../components/Antigravity/SkipLink';
 import OrganizationSchema from '../components/Antigravity/OrganizationSchema';
-import { ReadingProgress } from '../components/Antigravity/ReadingProgress';
 import SickNav from '../components/SickNav';
 import Footer from '../components/Footer';
 import { Analytics } from "@vercel/analytics/react";
@@ -10,6 +9,14 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 
 import type { Metadata } from 'next';
+
+// Dynamically import client-only components with loading state
+const ImpactMeter = dynamic(() => import('../components/Antigravity/ImpactMeter'), { 
+  loading: () => null
+});
+const ReadingProgress = dynamic(() => import('../components/Antigravity/ReadingProgress').then(mod => ({ default: mod.ReadingProgress })), { 
+  loading: () => null
+});
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -47,7 +54,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
     images: [{
-      url: '/images/blog/moe-timeline.png',
+      url: '/images/blog/moe-timeline.webp',
       width: 1200,
       height: 630,
       alt: 'GMFG - The Vibe Coding Editorial',
@@ -57,7 +64,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'GMFG // The Vibe Coding Editorial',
     description: 'The definitive editorial for the post-code era.',
-    images: ['/images/blog/moe-timeline.png'],
+    images: ['/images/blog/moe-timeline.webp'],
   },
   verification: {
     google: 'google1cd91746b71a2414',
@@ -88,6 +95,8 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <meta name="theme-color" content="#FACC15" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />

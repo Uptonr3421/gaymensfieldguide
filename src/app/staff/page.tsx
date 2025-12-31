@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'GMFG Intelligence Staff',
     description: 'A tripartite intelligence. Context-Injected. Sovereign.',
-    images: ['/images/blog/moe-timeline.png'],
+    images: ['/images/blog/moe-timeline.webp'],
     type: 'website',
   },
   twitter: {

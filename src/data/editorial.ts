@@ -29,7 +29,7 @@ export const EDITORIAL_FEED: Article[] = [
     gridArea: 'large',
     slug: 'openai-gpt-5-2-garlic',
     date: '2025-10-15',
-    image: '/images/blog/moe-timeline.png'
+    image: '/images/blog/moe-timeline.webp'
   },
   {
     id: '001',
@@ -42,7 +42,7 @@ export const EDITORIAL_FEED: Article[] = [
     gridArea: 'wide',
     slug: 'dead-internet-theory',
     date: '2025-10-12',
-    image: '/images/blog/dead-internet-server-farm.png'
+    image: '/images/blog/dead-internet-server-farm.webp'
   },
   {
     id: '002',
@@ -79,7 +79,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'voltage',
     slug: 'rabbit-r1-e-waste',
     date: '2025-10-05',
-    image: '/images/blog/rabbit-teardown-xray.png'
+    image: '/images/blog/rabbit-teardown-xray.webp'
   },
   {
     id: '005-POISON',
@@ -91,7 +91,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'holo',
     slug: 'nightshade-data-poisoning',
     date: '2025-10-01',
-    image: '/images/blog/glitched-art-dog-cat.png'
+    image: '/images/blog/glitched-art-dog-cat.webp'
   },
   {
     id: '006-FINGER',
@@ -151,7 +151,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'holo',
     slug: 'cursor-vs-windsurf',
     date: '2025-09-15',
-    image: '/images/blog/samurai-editor-war.png'
+    image: '/images/blog/samurai-editor-war.webp'
   },
   {
     id: '011-DARK',
