@@ -149,14 +149,13 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
               </Link>
             </div>
             
-            {/* Thumbnail Strip */}
-            <div className="flex gap-3" role="presentation">
+            {/* Thumbnail Strip - Visual Preview */}
+            <div className="flex gap-3" aria-hidden="true">
               {featuredArticles.map((article, idx) => (
                 <button
                   key={article.id}
                   onClick={() => { setIsAutoPlaying(false); setCurrentIndex(idx); }}
-                  aria-label={`View article: ${article.title}`}
-                  aria-pressed={idx === currentIndex}
+                  tabIndex={-1}
                   className={cn(
                     "relative flex-1 aspect-video bg-zinc-900 border-2 overflow-hidden transition-all",
                     idx === currentIndex 
