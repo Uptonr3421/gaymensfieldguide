@@ -73,9 +73,31 @@ const nextConfig = {
   // Bundle Optimization
   experimental: {
     optimizePackageImports: ['lucide-react', 'date-fns', 'framer-motion', '@react-three/fiber', '@react-three/drei'],
-    // Target modern browsers only to eliminate unnecessary polyfills
-    browsersListForSwc: true,
-    legacyBrowsers: false,
+    // Optimize CSS
+    optimizeCss: true,
+  },
+
+  // Webpack optimization for code splitting
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      // Split CSS into smaller chunks
+      config.optimization = {
+        ...config.optimization,
+        splitChunks: {
+          ...config.optimization.splitChunks,
+          cacheGroups: {
+            ...config.optimization.splitChunks?.cacheGroups,
+            styles: {
+              name: 'styles',
+              test: /\.(css|scss|sass)$/,
+              chunks: 'all',
+              enforce: true,
+            },
+          },
+        },
+      };
+    }
+    return config;
   },
 }
 
