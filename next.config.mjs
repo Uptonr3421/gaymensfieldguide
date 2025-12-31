@@ -74,13 +74,6 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react', 'date-fns', 'framer-motion', '@react-three/fiber', '@react-three/drei'],
   },
-  
-  // Optimize server-side bundle
-  modularizeImports: {
-    'lucide-react': {
-      transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
-    },
-  },
 }
 
 const withMDX = createMDX({
