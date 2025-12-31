@@ -65,7 +65,7 @@ export default function SickNav() {
                   className={cn(
                     "px-4 py-1.5 font-mono text-xs uppercase tracking-wide transition-all relative overflow-hidden",
                     isActive 
-                      ? "bg-orange-500/10 text-orange-500 font-bold border border-orange-500/30 shadow-[0_0_10px_rgba(249,115,22,0.1)]" 
+                      ? "bg-orange-500/10 text-orange-400 font-bold border border-orange-500/30 shadow-[0_0_10px_rgba(249,115,22,0.1)]" 
                       : "text-zinc-500 hover:text-zinc-300 hover:bg-zinc-800"
                   )}
                 >
