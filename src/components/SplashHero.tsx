@@ -150,7 +150,7 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
             </div>
             
             {/* Thumbnail Strip */}
-            <div className="flex gap-3">
+            <div className="flex gap-3" role="presentation">
               {featuredArticles.map((article, idx) => (
                 <button
                   key={article.id}
