@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Interspecies Etiquette // GMFG Manifesto',
     description: 'AI is not human. It is not a calculator. It is a Third Thing.',
-    images: ['/images/blog/moe-timeline.png'],
+    images: ['/images/blog/moe-timeline.webp'],
     type: 'article',
   },
   twitter: {

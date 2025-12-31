@@ -15,14 +15,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'THE GUIDE // Vibe Coder Editorial',
     description: 'We don\'t "prompt." We engineer vibe. The definitive editorial for the post-code era.',
-    images: ['/images/blog/moe-timeline.png'],
+    images: ['/images/blog/moe-timeline.webp'],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'THE GUIDE // GMFG',
     description: 'The definitive editorial for the post-code era. We engineer vibe.',
-    images: ['/images/blog/moe-timeline.png'],
+    images: ['/images/blog/moe-timeline.webp'],
   },
 };
 

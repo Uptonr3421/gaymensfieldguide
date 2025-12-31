@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'GMFG Blog // Transmissions',
     description: 'Field notes, technical deep dives, and philosophical musings from the post-code era.',
-    images: ['/images/blog/moe-timeline.png'],
+    images: ['/images/blog/moe-timeline.webp'],
     type: 'website',
   },
   twitter: {
