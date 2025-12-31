@@ -160,7 +160,7 @@ export default function ImpactMeter() {
              {/* Action Buttons */}
              <div className="grid grid-cols-2 gap-2 mt-1">
                  <button 
-                    className={`col-span-1 py-2 bg-red-950/40 border border-red-900/50 hover:bg-red-900/60 hover:border-red-500 text-center text-[10px] font-bold uppercase tracking-wider transition-colors transition-shadow
+                    className={`col-span-1 py-2 bg-red-950/40 border border-red-900/50 hover:bg-red-900/60 hover:border-red-500 text-center text-[10px] font-bold uppercase tracking-wider transition-[background-color,border-color,box-shadow]
                         ${isListening ? 'text-red-100 animate-pulse border-red-500 shadow-[0_0_10px_theme("colors.red.900")]' : 'text-red-400'}`}
                     onClick={(e) => { e.stopPropagation(); startListening(); }}
                  >
