@@ -101,13 +101,14 @@ export default function HeroCarousel({ featuredArticles }: HeroCarouselProps) {
               >
                 Read Transmission <Terminal className="w-4 h-4 ml-2" />
               </Link>
-              <div className="flex gap-2">
+              <div className="flex gap-2" role="tablist" aria-label="Article navigation">
                  {featuredArticles.map((article, idx) => (
                    <button 
                      key={idx}
                      onClick={() => { setIsAutoPlaying(false); setCurrentIndex(idx); }}
                      aria-label={`Article ${idx + 1}: ${article.title}`}
-                     aria-current={idx === currentIndex ? 'true' : 'false'}
+                     aria-selected={idx === currentIndex}
+                     role="tab"
                      className={cn(
                        "w-12 h-1 transition-all",
                        idx === currentIndex ? "bg-orange-500" : "bg-zinc-800 hover:bg-zinc-700"
