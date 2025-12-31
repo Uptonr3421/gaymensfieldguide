@@ -65,7 +65,7 @@ export default function HeroCarousel({ featuredArticles }: HeroCarouselProps) {
         {/* Background Grid/Noise for "Dark Square" vibe */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(24,24,27,0.8)_2px,transparent_2px),linear-gradient(90deg,rgba(24,24,27,0.8)_2px,transparent_2px)] bg-[size:40px_40px] opacity-20 pointer-events-none" />
         <div className="absolute top-0 right-0 p-4 opacity-50">
-           <div className="flex items-center gap-2 font-mono text-xs text-orange-500/50">
+           <div className="flex items-center gap-2 font-mono text-xs text-orange-400/70">
               <span className="w-2 h-2 bg-orange-500 animate-pulse" />
               <span>SYSTEM_GMFG // FEED_LIVE</span>
            </div>
@@ -76,7 +76,7 @@ export default function HeroCarousel({ featuredArticles }: HeroCarouselProps) {
           {/* Text Content (Left) */}
           <div className="lg:col-span-7 space-y-8">
             <div className="flex items-center gap-3">
-               <span className="px-2 py-1 bg-orange-500/10 border border-orange-500/20 text-orange-500 text-[10px] font-mono font-bold uppercase tracking-widest">
+               <span className="px-2 py-1 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-[10px] font-mono font-bold uppercase tracking-widest">
                   {currentArticle.tag}
                </span>
                <span className="text-zinc-500 text-xs font-mono border-l border-zinc-800 pl-3">
@@ -101,11 +101,14 @@ export default function HeroCarousel({ featuredArticles }: HeroCarouselProps) {
               >
                 Read Transmission <Terminal className="w-4 h-4 ml-2" />
               </Link>
-              <div className="flex gap-2">
-                 {featuredArticles.map((_, idx) => (
+              <div className="flex gap-2" role="tablist" aria-label="Article navigation">
+                 {featuredArticles.map((article, idx) => (
                    <button 
                      key={idx}
                      onClick={() => { setIsAutoPlaying(false); setCurrentIndex(idx); }}
+                     aria-label={`Article ${idx + 1}: ${article.title}`}
+                     aria-selected={idx === currentIndex}
+                     role="tab"
                      className={cn(
                        "w-12 h-1 transition-all",
                        idx === currentIndex ? "bg-orange-500" : "bg-zinc-800 hover:bg-zinc-700"

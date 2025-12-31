@@ -60,7 +60,7 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
                 </span>
               </h1>
               <p className="mt-6 text-lg text-zinc-400 max-w-md leading-relaxed">
-                The definitive editorial for the <span className="text-orange-500 font-semibold">post-code era</span>. 
+                The definitive editorial for the <span className="text-orange-400 font-semibold">post-code era</span>. 
                 We don't prompt. We engineer vibe.
               </p>
               
@@ -90,7 +90,7 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
             
             {/* Section Label */}
             <div className="flex items-center justify-between mb-6">
-              <span className="font-mono text-xs text-orange-500 uppercase tracking-widest">
+              <span className="font-mono text-xs text-orange-400 uppercase tracking-widest">
                 FEATURED_TRANSMISSIONS
               </span>
               <div className="flex gap-2">
@@ -174,8 +174,8 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
                 <button
                   key={idx}
                   onClick={() => { setIsAutoPlaying(false); setCurrentIndex(idx); }}
-                  aria-label={`Go to slide ${idx + 1}: ${article.title}`}
-                  aria-controls={`slide-${idx}`}
+                  aria-label={`Article ${idx + 1} of ${featuredArticles.length}: ${article.title}`}
+                  aria-selected={idx === currentIndex}
                   role="tab"
                   className={cn(
                     "h-1 transition-all",
