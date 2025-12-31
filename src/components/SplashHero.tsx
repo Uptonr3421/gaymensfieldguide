@@ -175,7 +175,6 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
                   key={idx}
                   onClick={() => { setIsAutoPlaying(false); setCurrentIndex(idx); }}
                   aria-label={`Article ${idx + 1} of ${featuredArticles.length}: ${article.title}`}
-                  aria-controls={`slide-${idx}`}
                   aria-selected={idx === currentIndex}
                   role="tab"
                   className={cn(
