@@ -45,7 +45,7 @@ export function InteractiveContainer({
       <div className={cn(
         "flex items-center justify-between px-3 py-1 bg-zinc-800 border-b-2 border-zinc-950",
       )}>
-        <span className="font-mono text-xs uppercase tracking-widest text-zinc-400 group-hover:text-glow-green group-hover:text-green-400 transition-all duration-300">
+        <span className="font-mono text-xs uppercase tracking-widest text-zinc-400 group-hover:text-glow-green group-hover:text-green-400 transition-colors duration-300">
           [{type.toUpperCase()}] :: {title}
         </span>
         <div className="flex gap-1">

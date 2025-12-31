@@ -104,7 +104,7 @@ export default function ImpactMeter() {
 
   return (
     <div 
-      className={`fixed bottom-4 left-4 z-50 transition-all duration-300 ${isCompact ? 'w-auto' : 'w-72'} 
+      className={`fixed bottom-4 left-4 z-50 transition-[width] duration-300 ${isCompact ? 'w-auto' : 'w-72'} 
         bg-zinc-950 border-win95-inset shadow-[0_0_15px_rgba(0,0,0,0.8)] 
         font-mono text-xs text-zinc-300 overflow-hidden select-none`}
       onMouseEnter={() => setIsCompact(false)}
@@ -160,7 +160,7 @@ export default function ImpactMeter() {
              {/* Action Buttons */}
              <div className="grid grid-cols-2 gap-2 mt-1">
                  <button 
-                    className={`col-span-1 py-2 bg-red-950/40 border border-red-900/50 hover:bg-red-900/60 hover:border-red-500 text-center text-[10px] font-bold uppercase tracking-wider transition-all
+                    className={`col-span-1 py-2 bg-red-950/40 border border-red-900/50 hover:bg-red-900/60 hover:border-red-500 text-center text-[10px] font-bold uppercase tracking-wider transition-colors transition-shadow
                         ${isListening ? 'text-red-100 animate-pulse border-red-500 shadow-[0_0_10px_theme("colors.red.900")]' : 'text-red-400'}`}
                     onClick={(e) => { e.stopPropagation(); startListening(); }}
                  >
@@ -168,7 +168,7 @@ export default function ImpactMeter() {
                  </button>
                  
                  <button 
-                    className="col-span-1 py-2 bg-zinc-900 border border-zinc-700 hover:border-banana-500 hover:text-banana-400 text-center text-[10px] uppercase tracking-wider text-zinc-400 transition-all"
+                    className="col-span-1 py-2 bg-zinc-900 border border-zinc-700 hover:border-banana-500 hover:text-banana-400 text-center text-[10px] uppercase tracking-wider text-zinc-400 transition-colors"
                     onClick={async (e) => {
                         e.stopPropagation();
                         setIsLoading(true);

@@ -7,7 +7,7 @@ interface CinematicContainerProps {
 }
 
 export default function CinematicContainer({ children, variant = 'holo', className = '' }: CinematicContainerProps) {
-  const baseStyles = "relative overflow-hidden transition-all duration-700 group isolate";
+  const baseStyles = "relative overflow-hidden transition-opacity transition-shadow duration-700 group isolate";
   
   const variants = {
     holo: "bg-industrial-900/60 backdrop-blur-xl border border-white/10 shadow-2xl hover:shadow-[0_0_50px_rgba(255,255,255,0.05)]",

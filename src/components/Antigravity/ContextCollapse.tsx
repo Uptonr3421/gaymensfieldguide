@@ -106,7 +106,7 @@ export function ContextCollapse({ topic = "CONTEXT_COLLAPSE" }: ContextCollapseP
                 {/* Timer Bar */}
                 <div className="w-full h-2 bg-zinc-800 rounded-full mb-6 overflow-hidden">
                     <div 
-                        className={`h-full transition-all duration-100 ${timer < 30 ? 'bg-red-600' : 'bg-neon-green'}`}
+                        className={`h-full transition-[width] duration-100 ${timer < 30 ? 'bg-red-600' : 'bg-neon-green'}`}
                         style={{ width: `${timer}%` }} 
                     />
                 </div>
@@ -133,7 +133,7 @@ export function ContextCollapse({ topic = "CONTEXT_COLLAPSE" }: ContextCollapseP
                                 <button
                                     key={card.id}
                                     onClick={() => handleCardClick(card.id)}
-                                    className={`aspect-square flex items-center justify-center border transition-all duration-300 transform ${isFlipped ? 'rotate-y-180 bg-zinc-800 border-zinc-600' : 'bg-zinc-950 border-zinc-800 hover:border-zinc-600'}`}
+                                    className={`aspect-square flex items-center justify-center border transition-transform transition-colors duration-300 transform ${isFlipped ? 'rotate-y-180 bg-zinc-800 border-zinc-600' : 'bg-zinc-950 border-zinc-800 hover:border-zinc-600'}`}
                                 >
                                     {isFlipped ? (
                                         <Icon className={isSolved ? 'text-neon-green' : 'text-white'} size={24} />

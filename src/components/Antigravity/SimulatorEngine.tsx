@@ -63,7 +63,7 @@ export function SimulatorEngine({ type, title, autoStart = false }: SimulatorPro
                 </button>
                 <div className="mt-4 h-2 w-full bg-zinc-800 rounded-full overflow-hidden">
                     <div 
-                        className={`h-full bg-neon-red transition-all duration-200 w-[${progress}%]`}
+                        className={`h-full bg-neon-red transition-[width] duration-200 w-[${progress}%]`}
                         style={{ width: `${progress}%` }}
                     />
                 </div>
@@ -115,7 +115,7 @@ export function SimulatorEngine({ type, title, autoStart = false }: SimulatorPro
                     {Array.from({ length: 20 }).map((_, i) => (
                         <div 
                             key={i} 
-                            className={`w-full bg-neon-orange transition-all duration-75`}
+                            className={`w-full bg-neon-orange transition-[height,opacity] duration-75`}
                             style={{ 
                                 height: running ? `${Math.random() * 100}%` : '5%',
                                 opacity: running ? 1 : 0.3
@@ -167,7 +167,7 @@ export function SimulatorEngine({ type, title, autoStart = false }: SimulatorPro
                     </div>
                     <div className="w-full bg-zinc-800 h-2 overflow-hidden">
                         <div 
-                            className="h-full bg-zinc-500 transition-all duration-200"
+                            className="h-full bg-zinc-500 transition-[width] duration-200"
                             style={{ width: running ? `${Math.min(progress * 0.2, 100)}%` : '0%' }}
                         />
                     </div>
@@ -180,7 +180,7 @@ export function SimulatorEngine({ type, title, autoStart = false }: SimulatorPro
                     </div>
                     <div className="w-full bg-zinc-800 h-2 overflow-hidden">
                         <div 
-                            className="h-full bg-neon-green transition-all duration-200"
+                            className="h-full bg-neon-green transition-[width] duration-200"
                             style={{ width: running ? `${Math.min(progress * 1.5, 100)}%` : '0%' }}
                         />
                     </div>

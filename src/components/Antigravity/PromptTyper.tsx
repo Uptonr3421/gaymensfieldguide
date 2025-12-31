@@ -100,7 +100,7 @@ export function PromptTyper({ customPrompt, topic = "HUMAN_VS_MODEL" }: PromptTy
                     </div>
                     <div className="h-2 bg-zinc-800 rounded-full overflow-hidden">
                         <div 
-                            className="h-full bg-red-600 transition-all duration-100 ease-linear"
+                            className="h-full bg-red-600 transition-[width] duration-100 ease-linear"
                             style={{ width: `${aiProgress}%` }}
                         />
                     </div>
@@ -114,7 +114,7 @@ export function PromptTyper({ customPrompt, topic = "HUMAN_VS_MODEL" }: PromptTy
                     </div>
                     <div className="h-2 bg-zinc-800 rounded-full overflow-hidden">
                         <div 
-                            className="h-full bg-neon-green transition-all duration-75"
+                            className="h-full bg-neon-green transition-[width] duration-75"
                             style={{ width: `${humanProgress}%` }}
                         />
                     </div>

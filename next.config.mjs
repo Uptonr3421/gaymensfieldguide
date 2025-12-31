@@ -73,6 +73,9 @@ const nextConfig = {
   // Bundle Optimization
   experimental: {
     optimizePackageImports: ['lucide-react', 'date-fns', 'framer-motion', '@react-three/fiber', '@react-three/drei'],
+    // Target modern browsers only to eliminate unnecessary polyfills
+    browsersListForSwc: true,
+    legacyBrowsers: false,
   },
 }
 

@@ -27,7 +27,7 @@ export function VibeBento({ children, className }: VibeBentoProps) {
 export function BentoItem({ children, className, span = 1, title }: BentoItemProps) {
   return (
     <div className={cn(
-      "relative group overflow-hidden bg-zinc-900 border-win95 ml-1 mt-1 hover:border-black transition-all duration-300",
+      "relative group overflow-hidden bg-zinc-900 border-win95 ml-1 mt-1 hover:border-black transition-colors duration-300",
       span === 2 && "md:col-span-2",
       span === 3 && "md:col-span-3",
       className
