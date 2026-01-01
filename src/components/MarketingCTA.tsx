@@ -45,7 +45,7 @@ export default function MarketingCTA() {
           </Link>
         </div>
 
-        <div className="mt-12 flex justify-center gap-8 text-zinc-600 font-mono text-xs uppercase">
+        <div className="mt-12 flex justify-center gap-8 text-zinc-300 font-mono text-xs uppercase">
           <div className="flex items-center gap-2">
              <span className="w-2 h-2 bg-green-500 rounded-full" />
              <span>350k Monthly Vibes</span>

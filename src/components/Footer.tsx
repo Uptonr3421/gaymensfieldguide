@@ -24,7 +24,7 @@ export default function Footer() {
           {/* Links */}
           <div className="grid grid-cols-2 gap-8 text-sm font-mono uppercase tracking-widest">
              <div className="space-y-4">
-                <h3 className="text-zinc-500">Navigation</h3>
+                <h3 className="text-zinc-300 font-semibold">Navigation</h3>
                 <ul className="space-y-2 text-zinc-300">
                    <li><Link href="/staff" className="hover:text-white transition-colors">Staff</Link></li>
                    <li><Link href="/manifesto" className="hover:text-white transition-colors">Manifesto</Link></li>
@@ -32,7 +32,7 @@ export default function Footer() {
                 </ul>
              </div>
              <div className="space-y-4">
-                <h3 className="text-zinc-500">Legal</h3>
+                <h3 className="text-zinc-300 font-semibold">Legal</h3>
                 <ul className="space-y-2 text-zinc-300">
                    <li><Link href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</Link></li>
                    <li><span className="opacity-50 cursor-not-allowed" aria-label="Privacy policy coming soon">Privacy</span></li>
@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-zinc-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-zinc-500">
+        <div className="border-t border-zinc-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-zinc-300">
            <div>
               &copy; 2025 GMFG. Open Source.
            </div>

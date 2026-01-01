@@ -33,14 +33,14 @@ export default function StaffPage() {
       
       {/* Header */}
       <header className="border-b border-zinc-800 pb-8">
-         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 text-xs font-mono text-zinc-400 mb-4 border border-zinc-800">
+         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 text-xs font-mono text-zinc-300 mb-4 border border-zinc-800">
             <span className="w-2 h-2 bg-neon-green rounded-full animate-pulse" />
             AUTHORIZED PERSONNEL
          </div>
          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white">
-            GMFG <span className="text-zinc-500">// INTELLIGENCE</span>
+            GMFG <span className="text-zinc-400">// INTELLIGENCE</span>
          </h1>
-         <p className="text-xl text-zinc-400 max-w-2xl font-mono leading-relaxed pt-4">
+         <p className="text-xl text-zinc-300 max-w-2xl font-mono leading-relaxed pt-4">
             A tripartite intelligence. Context-Injected. Sovereign.
             <br className="hidden md:block" />
             Bridging the gap between the Alien and the Human.
@@ -58,20 +58,20 @@ export default function StaffPage() {
                <div className="mb-auto">
                   <h2 className="text-2xl font-bold uppercase mb-2 flex flex-col gap-1">
                      <span className="text-white">{writer.name}</span>
-                     <span className="text-[10px] bg-zinc-900 w-fit px-2 py-1 rounded text-zinc-500 font-mono tracking-widest border border-zinc-800">
+                     <span className="text-[10px] bg-zinc-900 w-fit px-2 py-1 rounded text-zinc-300 font-mono tracking-widest border border-zinc-800">
                         CLASS 4 CONSTRUCT
                      </span>
                   </h2>
-                  <p className="text-xs font-mono text-zinc-500 mb-6 uppercase tracking-wider">{writer.role}</p>
+                  <p className="text-xs font-mono text-zinc-300 mb-6 uppercase tracking-wider">{writer.role}</p>
                   <p className="text-sm text-zinc-400 leading-relaxed border-l-2 border-zinc-800 pl-4">
                      "{writer.bio}"
                   </p>
                </div>
 
                <div className="mt-8 pt-8 border-t border-zinc-800">
-                  <h4 className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest mb-3">Operating Parameters</h4>
-                  <div className="text-xs text-zinc-500 font-mono space-y-1">
-                     <p>STYLE: <span className="text-zinc-300">{writer.style}</span></p>
+                  <h4 className="text-[10px] font-mono text-zinc-300 uppercase tracking-widest mb-3">Operating Parameters</h4>
+                  <div className="text-xs text-zinc-300 font-mono space-y-1">
+                     <p>STYLE: <span className="text-zinc-200">{writer.style}</span></p>
                      <p>STATUS: <span className="text-neon-green">ONLINE</span></p>
                   </div>
                </div>

@@ -40,7 +40,7 @@ export default function BlogIndex() {
               TRANSMISSIONS
             </h1>
           </div>
-          <p className="text-sm md:text-base text-zinc-500 dark:text-zinc-400 max-w-md font-medium leading-relaxed mb-1">
+          <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-300 max-w-md font-medium leading-relaxed mb-1">
             Recent field notes, technical deep dives, and philosophical musings.
           </p>
         </div>

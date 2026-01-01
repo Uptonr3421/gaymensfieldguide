@@ -45,7 +45,7 @@ export default function SickNav() {
              </div>
              <div className="flex flex-col">
                 <span className="font-bold text-sm tracking-tighter text-zinc-200 group-hover/logo:text-white transition-all">
-                  GMFG<span className="text-zinc-600">_OS</span>
+                  GMFG<span className="text-zinc-400">_OS</span>
                 </span>
                 {/* <span className="font-mono text-[9px] text-zinc-500 uppercase tracking-widest hidden md:block">
                   v2.0.4 [STABLE]
@@ -65,8 +65,8 @@ export default function SickNav() {
                   className={cn(
                     "px-4 py-1.5 font-mono text-xs uppercase tracking-wide transition-all relative overflow-hidden",
                     isActive 
-                      ? "bg-orange-500/10 text-orange-400 font-bold border border-orange-500/30 shadow-[0_0_10px_rgba(249,115,22,0.1)]" 
-                      : "text-zinc-500 hover:text-zinc-300 hover:bg-zinc-800"
+                      ? "bg-orange-500/10 text-orange-300 font-bold border border-orange-500/30 shadow-[0_0_10px_rgba(249,115,22,0.1)]" 
+                      : "text-zinc-300 hover:text-zinc-100 hover:bg-zinc-800"
                   )}
                 >
                   {isActive && <span className="absolute left-1 top-1/2 -translate-y-1/2 w-1 h-1 bg-orange-500 animate-pulse rounded-full" />}
@@ -77,7 +77,7 @@ export default function SickNav() {
           </div>
 
           {/* System Status Ticker */}
-          <div className="hidden lg:flex items-center gap-3 pl-4 border-l border-zinc-800 text-[10px] font-mono text-zinc-600" aria-hidden="true">
+          <div className="hidden lg:flex items-center gap-3 pl-4 border-l border-zinc-800 text-[10px] font-mono text-zinc-300" aria-hidden="true">
              <div className="flex items-center gap-1">
                 <span className="w-1.5 h-1.5 bg-orange-500" />
                 <span>ONLINE</span>
