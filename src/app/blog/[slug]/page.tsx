@@ -12,6 +12,8 @@ import ConflictBento from '@/components/Antigravity/ConflictBento';
 import { VibeBento, BentoItem } from '@/components/Antigravity/VibeBento';
 import Breadcrumbs from '@/components/Antigravity/Breadcrumbs';
 import FAQSchema from '@/components/Antigravity/FAQSchema';
+import ArticleSchema from '@/components/Antigravity/ArticleSchema';
+import BreadcrumbSchema from '@/components/Antigravity/BreadcrumbSchema';
 import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import { SimulatorEngine } from '@/components/Antigravity/SimulatorEngine';
@@ -72,13 +74,45 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps) {
     const { slug } = await params;
+    const filePath = path.join(process.cwd(), 'src/app/blog/(content)', `${slug}.mdx`);
     
-    // Quick title generation
-    const title = slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) + " | GMFG";
+    // Try to read frontmatter for better metadata
+    let title = slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    let description = `Deep dive into ${slug}. Vibe coding analysis.`;
+    
+    if (fs.existsSync(filePath)) {
+      try {
+        const source = fs.readFileSync(filePath, 'utf8');
+        const frontmatterMatch = source.match(/^---\n([\s\S]*?)\n---/);
+        if (frontmatterMatch) {
+          const frontmatterText = frontmatterMatch[1];
+          const titleMatch = frontmatterText.match(/title:\s*(.+)/);
+          const descMatch = frontmatterText.match(/description:\s*(.+)/);
+          if (titleMatch) title = titleMatch[1].trim().replace(/['"]/g, '');
+          if (descMatch) description = descMatch[1].trim().replace(/['"]/g, '');
+        }
+      } catch (e) {
+        // Use defaults if parsing fails
+      }
+    }
     
     return { 
-        title,
-        description: `Deep dive into ${slug}. Vibe coding analysis.`
+        title: `${title} | GMFG`,
+        description,
+        alternates: {
+          canonical: `https://gaymensfieldguide.com/blog/${slug}`
+        },
+        openGraph: {
+          title: `${title} | GMFG`,
+          description,
+          url: `https://gaymensfieldguide.com/blog/${slug}`,
+          type: 'article',
+        },
+        twitter: {
+          card: 'summary_large_image',
+          title: `${title} | GMFG`,
+          description,
+        }
     };
 }
 
@@ -94,38 +128,64 @@ export default async function BlogPost({ params }: PageProps) {
   const source = fs.readFileSync(filePath, 'utf8');
 
   // Compile MDX
-  const { content, frontmatter } = await compileMDX<{ title: string }>({
+  const { content, frontmatter } = await compileMDX<{ 
+    title: string;
+    description?: string;
+    date?: string;
+    author?: string;
+  }>({
     source,
     components: COMPONENTS,
     options: { parseFrontmatter: true }
   });
 
+  const title = frontmatter.title || slug.replace(/-/g, ' ').toUpperCase();
+  const description = frontmatter.description || `Deep dive into ${slug}`;
+  const publishDate = frontmatter.date || new Date().toISOString();
+  const author = frontmatter.author || 'GMFG Editorial';
+
   return (
-    <article className="min-h-screen bg-zinc-950 text-zinc-100 selection:bg-neon-yellow selection:text-black">
+    <>
+      <ArticleSchema
+        title={title}
+        description={description}
+        publishDate={publishDate}
+        author={author}
+        url={`https://gaymensfieldguide.com/blog/${slug}`}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://gaymensfieldguide.com' },
+          { name: 'Blog', url: 'https://gaymensfieldguide.com/blog' },
+          { name: title, url: `https://gaymensfieldguide.com/blog/${slug}` }
+        ]}
+      />
+      <article className="min-h-screen bg-zinc-950 text-zinc-100 selection:bg-neon-yellow selection:text-black">
         {/* Progress Bar or Nav could go here */}
         
         <div className="prose prose-invert prose-zinc max-w-3xl mx-auto py-24 px-6 md:px-0">
             <header className="mb-12 border-b border-zinc-800 pb-8">
-                <span className="text-neon-yellow font-mono text-xs tracking-widest uppercase mb-4 block">
+                <span className="text-neon-yellow font-mono text-xs tracking-widest uppercase mb-4 block" role="doc-subtitle">
                     TRANSMISSION_ID: {slug.toUpperCase()}
                 </span>
                 <h1 className="text-4xl md:text-6xl font-black tracking-tighter text-white mb-6 leading-none">
-                    {frontmatter.title || slug.replace(/-/g, ' ').toUpperCase()}
+                    {title}
                 </h1>
-                <div className="flex items-center gap-4 text-zinc-500 font-mono text-xs">
-                    <span>DATE: 2025-10-XX</span>
-                    <span>//</span>
-                    <span>AUTHOR: ARCHITECT</span>
+                <div className="flex items-center gap-4 text-zinc-300 font-mono text-xs">
+                    <time dateTime={publishDate}>DATE: {new Date(publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+                    <span aria-hidden="true">//</span>
+                    <span>AUTHOR: {author.toUpperCase()}</span>
                 </div>
             </header>
             
             {/* Main Content */}
-            <div className="data-article-content">
+            <div className="data-article-content" role="main">
                 {content}
             </div>
 
             {/* Footer / Read Next could go here */}
         </div>
     </article>
+    </>
   );
 }

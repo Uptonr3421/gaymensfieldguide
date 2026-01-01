@@ -1,17 +1,20 @@
 import { Metadata } from 'next';
 import { EDITORIAL_FEED } from '@/data/editorial';
 import BentoFeed from '@/components/Experimental/BentoFeed';
-import HeroAnimation from '@/components/HeroAnimation';
 
 export const metadata: Metadata = {
   title: 'Blog // The Field Guide',
   description: 'Notes from the field. Engineering vibe in the post-code era. Technical deep dives, philosophical musings, and hardware reviews.',
   keywords: ['Tech Blog', 'AI', 'Vibe Coding', 'Local LLM', 'Privacy', 'Hardware', 'Software'],
+  alternates: {
+    canonical: 'https://gaymensfieldguide.com/blog'
+  },
   openGraph: {
     title: 'GMFG Blog // Transmissions',
     description: 'Field notes, technical deep dives, and philosophical musings from the post-code era.',
     images: ['/images/blog/moe-timeline.webp'],
     type: 'website',
+    url: 'https://gaymensfieldguide.com/blog',
   },
   twitter: {
     card: 'summary_large_image',
@@ -40,7 +43,7 @@ export default function BlogIndex() {
               TRANSMISSIONS
             </h1>
           </div>
-          <p className="text-sm md:text-base text-zinc-500 dark:text-zinc-400 max-w-md font-medium leading-relaxed mb-1">
+          <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-300 max-w-md font-medium leading-relaxed mb-1">
             Recent field notes, technical deep dives, and philosophical musings.
           </p>
         </div>

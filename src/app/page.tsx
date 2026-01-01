@@ -57,13 +57,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="flex justify-between items-end mb-16">
             <h2 className="text-3xl font-black uppercase tracking-tight text-white">The Staff</h2>
-            <span className="font-mono text-xs text-zinc-400">AUTHORIZED_PERSONNEL</span>
+            <span className="font-mono text-xs text-zinc-300" aria-label="Authorized personnel section">AUTHORIZED_PERSONNEL</span>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {STAFF.map(writer => (
               <div key={writer.id} className="group relative bg-black border border-zinc-800 p-8 hover:border-orange-500 transition-colors">
-                <div className="absolute top-4 right-4 font-mono text-[10px] text-zinc-400">
+                <div className="absolute top-4 right-4 font-mono text-[10px] text-zinc-300" aria-label={`Staff ID: ${writer.id}`}>
                   ID: {writer.id}
                 </div>
                 
@@ -73,7 +73,7 @@ export default function Home() {
                 <p className="font-mono text-xs uppercase tracking-widest text-orange-400 mb-4">
                   {writer.role}
                 </p>
-                <p className="text-sm text-zinc-400 leading-relaxed border-t border-zinc-800 pt-4">
+                <p className="text-sm text-zinc-300 leading-relaxed border-t border-zinc-800 pt-4">
                   {writer.bio}
                 </p>
               </div>

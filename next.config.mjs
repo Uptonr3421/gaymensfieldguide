@@ -34,6 +34,8 @@ const nextConfig = {
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-XSS-Protection', value: '1; mode=block' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          // Add HSTS header for security
+          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
         ],
       },
       {
@@ -49,7 +51,19 @@ const nextConfig = {
         ],
       },
       {
+        source: '/:path*.avif',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
         source: '/:path*.svg',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/:path*.woff2',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
@@ -64,10 +78,9 @@ const nextConfig = {
     },
   },
   
-
-  // Temporary: Debugging Build Crash
+  // Build optimizations - remove TypeScript error ignoring for production
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
 
   // Bundle Optimization
@@ -77,7 +90,7 @@ const nextConfig = {
     optimizeCss: true,
   },
 
-  // Webpack optimization for code splitting
+  // Webpack optimization for code splitting and modern JS
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
       // Split CSS into smaller chunks
@@ -92,6 +105,18 @@ const nextConfig = {
               test: /\.(css|scss|sass)$/,
               chunks: 'all',
               enforce: true,
+            },
+            // Split vendor chunks for better caching
+            vendor: {
+              test: /[\\/]node_modules[\\/]/,
+              name: 'vendors',
+              chunks: 'all',
+              priority: 10,
+            },
+            common: {
+              minChunks: 2,
+              priority: 5,
+              reuseExistingChunk: true,
             },
           },
         },
