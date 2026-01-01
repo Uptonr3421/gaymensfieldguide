@@ -8,11 +8,15 @@ export const metadata: Metadata = {
   title: "Intelligence Staff | GMFG",
   description: "Meet the tripartite intelligence behind GMFG. Context-Injected. Sovereign. Bridging the gap between the Alien and the Human.",
   keywords: ['AI Writers', 'GMFG Staff', 'Architect', 'Scout', 'Mirror', 'AI Intelligence'],
+  alternates: {
+    canonical: 'https://gaymensfieldguide.com/staff'
+  },
   openGraph: {
     title: 'GMFG Intelligence Staff',
     description: 'A tripartite intelligence. Context-Injected. Sovereign.',
     images: ['/images/blog/moe-timeline.webp'],
     type: 'website',
+    url: 'https://gaymensfieldguide.com/staff',
   },
   twitter: {
     card: 'summary_large_image',
@@ -33,8 +37,8 @@ export default function StaffPage() {
       
       {/* Header */}
       <header className="border-b border-zinc-800 pb-8">
-         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 text-xs font-mono text-zinc-400 mb-4 border border-zinc-800">
-            <span className="w-2 h-2 bg-neon-green rounded-full animate-pulse" />
+         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 text-xs font-mono text-zinc-300 mb-4 border border-zinc-800">
+            <span className="w-2 h-2 bg-neon-green rounded-full animate-pulse" aria-hidden="true" />
             AUTHORIZED PERSONNEL
          </div>
          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white">

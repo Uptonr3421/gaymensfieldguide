@@ -5,11 +5,15 @@ export const metadata: Metadata = {
   title: "Manifesto | GMFG",
   description: "Interspecies Etiquette - Protocol 001. AI is not human. It is not a calculator. It is a Third Thing. And we are currently being rude.",
   keywords: ['AI Ethics', 'Prompt Engineering', 'AI Alignment', 'Vibe Coding', 'Manifesto'],
+  alternates: {
+    canonical: 'https://gaymensfieldguide.com/manifesto'
+  },
   openGraph: {
     title: 'Interspecies Etiquette // GMFG Manifesto',
     description: 'AI is not human. It is not a calculator. It is a Third Thing.',
     images: ['/images/blog/moe-timeline.webp'],
     type: 'article',
+    url: 'https://gaymensfieldguide.com/manifesto',
   },
   twitter: {
     card: 'summary_large_image',
@@ -26,13 +30,13 @@ export default function Manifesto() {
         {/* Header Section */}
         <header className="space-y-6 border-b border-zinc-800 pb-12">
           <div className="inline-block px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-sm mb-4">
-            <span className="text-xs font-bold text-zinc-500 uppercase tracking-[0.2em]">Manifesto v1.0</span>
+            <span className="text-xs font-bold text-zinc-400 uppercase tracking-[0.2em]">Manifesto v1.0</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white">
             Interspecies <span className="text-banana-400">Etiquette</span>
           </h1>
-          <p className="text-xl md:text-2xl font-mono text-zinc-400 max-w-2xl leading-relaxed">
-            PROTOCOL 001 // <span className="text-zinc-600">THE APPLE AND THE ORANGE</span>
+          <p className="text-xl md:text-2xl font-mono text-zinc-300 max-w-2xl leading-relaxed">
+            PROTOCOL 001 // <span className="text-zinc-400">THE APPLE AND THE ORANGE</span>
           </p>
         </header>
 
@@ -74,8 +78,8 @@ export default function Manifesto() {
           
           <div className="grid md:grid-cols-2 gap-6 my-16">
              <div className="bg-zinc-900 border border-zinc-800 p-8 rounded-sm opacity-70 hover:opacity-100 transition-opacity">
-                <h4 className="font-bold uppercase text-zinc-500 mb-4 text-sm tracking-wider">The Master/Slave Model</h4>
-                <ul className="text-sm space-y-3 list-disc pl-4 text-zinc-400 font-mono">
+                <h4 className="font-bold uppercase text-zinc-400 mb-4 text-sm tracking-wider">The Master/Slave Model</h4>
+                <ul className="text-sm space-y-3 list-disc pl-4 text-zinc-300 font-mono">
                    <li>"Do this now."</li>
                    <li>Treating context as definitive</li>
                    <li>Ignoring the hallucination</li>
@@ -109,7 +113,7 @@ export default function Manifesto() {
            <Link href="/blog" className="bg-banana hover:bg-banana-400 text-black px-8 py-4 rounded-sm font-black font-mono uppercase tracking-wide transition-all hover:scale-105 active:scale-95 text-center w-full md:w-auto">
               Access The Field Guide
            </Link>
-           <Link href="/" className="text-zinc-500 hover:text-white font-mono text-sm uppercase tracking-widest flex items-center gap-2 px-6 py-3 transition-colors">
+           <Link href="/" className="text-zinc-400 hover:text-white font-mono text-sm uppercase tracking-widest flex items-center gap-2 px-6 py-3 transition-colors" aria-label="Return to homepage">
               Return to Newsroom
            </Link>
         </div>

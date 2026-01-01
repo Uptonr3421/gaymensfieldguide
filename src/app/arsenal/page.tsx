@@ -9,11 +9,15 @@ export const metadata: Metadata = {
   title: "Hardware Arsenal | GMFG",
   description: "Tactical hardware for the modern Vibe Coder. Curated tools for privacy, security, and local AI development.",
   keywords: ['Flipper Zero', 'Raspberry Pi', 'Hardware Wallet', 'Privacy Tools', 'Local LLM', 'Vibe Coder'],
+  alternates: {
+    canonical: 'https://gaymensfieldguide.com/arsenal'
+  },
   openGraph: {
     title: 'Hardware Arsenal // GMFG',
     description: 'Tactical hardware for the modern Vibe Coder. Tools, not toys.',
     images: ['/images/blog/gpu-rig-thumb.png'],
     type: 'website',
+    url: 'https://gaymensfieldguide.com/arsenal',
   },
   twitter: {
     card: 'summary_large_image',
@@ -30,7 +34,7 @@ export default function ArsenalPage() {
         <h1 className="text-4xl md:text-6xl font-black tracking-tighter text-white mb-4 uppercase">
           Hardware
         </h1>
-        <div className="flex items-center gap-4 font-mono text-xs text-zinc-500">
+        <div className="flex items-center gap-4 font-mono text-xs text-zinc-400">
           <span>CURATED TOOLS FOR THE MODERN VIBE CODER</span>
         </div>
       </div>
@@ -41,9 +45,9 @@ export default function ArsenalPage() {
             <div>
                 <div className="flex justify-between items-start mb-2">
                     <h3 className="font-bold text-white text-lg">Flipper Zero (Black Edition)</h3>
-                    <span className="font-mono text-zinc-600 line-through">$169</span>
+                    <span className="font-mono text-zinc-500 line-through">$169</span>
                 </div>
-                <p className="text-zinc-400 text-sm leading-relaxed mb-4">Multi-tool device for geeks. RFID, NFC, Sub-GHz. The ultimate pen-testing toy.</p>
+                <p className="text-zinc-300 text-sm leading-relaxed mb-4">Multi-tool device for geeks. RFID, NFC, Sub-GHz. The ultimate pen-testing toy.</p>
                 
                 <div className="w-full h-32 bg-zinc-900 border border-zinc-800 relative overflow-hidden group">
                      <div className="absolute inset-0 bg-scanlines opacity-20 pointer-events-none" />

@@ -24,7 +24,7 @@ export default function MarketingCTA() {
           Reach the <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-yellow to-yellow-500">Post-Code</span> Generation.
         </h2>
         
-        <p className="text-lg text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg text-zinc-300 mb-10 max-w-2xl mx-auto leading-relaxed">
           We don't serve ads. We serve **Vibe**. Partner with GMFG to embed your brand into the cultural operating system of the future. 
           High-engagement artifacts. Deep-tech context. Zero fluff.
         </p>
@@ -45,13 +45,13 @@ export default function MarketingCTA() {
           </Link>
         </div>
 
-        <div className="mt-12 flex justify-center gap-8 text-zinc-600 font-mono text-xs uppercase">
+        <div className="mt-12 flex justify-center gap-8 text-zinc-400 font-mono text-xs uppercase">
           <div className="flex items-center gap-2">
-             <span className="w-2 h-2 bg-green-500 rounded-full" />
+             <span className="w-2 h-2 bg-green-500 rounded-full" aria-hidden="true" />
              <span>350k Monthly Vibes</span>
           </div>
           <div className="flex items-center gap-2">
-             <span className="w-2 h-2 bg-green-500 rounded-full" />
+             <span className="w-2 h-2 bg-green-500 rounded-full" aria-hidden="true" />
              <span>89% Dev Audience</span>
           </div>
         </div>
