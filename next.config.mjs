@@ -78,7 +78,8 @@ const nextConfig = {
     },
   },
   
-  // Build optimizations - remove TypeScript error ignoring for production
+  // TypeScript - Enable build-time type checking
+  // Set to true temporarily if needed to debug build issues
   typescript: {
     ignoreBuildErrors: false,
   },
