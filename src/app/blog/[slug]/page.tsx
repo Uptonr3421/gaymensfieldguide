@@ -12,6 +12,7 @@ import ConflictBento from '@/components/Antigravity/ConflictBento';
 import { VibeBento, BentoItem } from '@/components/Antigravity/VibeBento';
 import Breadcrumbs from '@/components/Antigravity/Breadcrumbs';
 import FAQSchema from '@/components/Antigravity/FAQSchema';
+import ArticleSchema from '@/components/Antigravity/ArticleSchema';
 import { SchemaBuilder } from '@/components/Antigravity/SchemaBuilder';
 import { QuizEngine } from '@/components/Antigravity/QuizEngine';
 import { SimulatorEngine } from '@/components/Antigravity/SimulatorEngine';
@@ -37,6 +38,7 @@ const COMPONENTS = {
   BentoItem,
   Breadcrumbs,
   FAQSchema,
+  ArticleSchema,
   SchemaBuilder,
   QuizEngine,
   SimulatorEngine,
@@ -78,7 +80,10 @@ export async function generateMetadata({ params }: PageProps) {
     
     return { 
         title,
-        description: `Deep dive into ${slug}. Vibe coding analysis.`
+        description: `Deep dive into ${slug}. Vibe coding analysis.`,
+        alternates: {
+            canonical: `/blog/${slug}`,
+        },
     };
 }
 
@@ -102,6 +107,13 @@ export default async function BlogPost({ params }: PageProps) {
 
   return (
     <article className="min-h-screen bg-zinc-950 text-zinc-100 selection:bg-neon-yellow selection:text-black">
+        {/* Article Schema */}
+        <ArticleSchema 
+          title={frontmatter.title || slug.replace(/-/g, ' ')}
+          description={`Deep dive into ${slug}. Vibe coding analysis.`}
+          slug={slug}
+        />
+        
         {/* Progress Bar or Nav could go here */}
         
         <div className="prose prose-invert prose-zinc max-w-3xl mx-auto py-24 px-6 md:px-0">

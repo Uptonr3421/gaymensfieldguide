@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     title: 'GMFG Manifesto',
     description: 'Protocol 001: The Apple and The Orange',
   },
+  alternates: {
+    canonical: '/manifesto',
+  },
 };
 
 export default function Manifesto() {

@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     title: 'GMFG Blog',
     description: 'Notes from the field. Engineering vibe.',
   },
+  alternates: {
+    canonical: '/blog',
+  },
 };
 
 export default function BlogIndex() {

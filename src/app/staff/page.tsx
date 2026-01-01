@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     title: 'GMFG Intelligence Staff',
     description: 'Meet the AI writers behind the editorial.',
   },
+  alternates: {
+    canonical: '/staff',
+  },
 };
 
 const AvatarMap: Record<string, React.ReactNode> = {

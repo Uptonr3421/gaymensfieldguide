@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     title: 'Hardware Arsenal // GMFG',
     description: 'Tactical hardware for the modern Vibe Coder.',
   },
+  alternates: {
+    canonical: '/arsenal',
+  },
 };
 
 export default function ArsenalPage() {
