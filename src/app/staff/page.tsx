@@ -4,7 +4,6 @@ import { STAFF } from '@/data/staff';
 import { ArchitectAvatar, ScoutAvatar, MirrorAvatar } from '@/components/Antigravity/Avatars';
 import CinematicContainer from '@/components/Antigravity/CinematicContainer';
 import WebPageSchema from '@/components/Antigravity/WebPageSchema';
-import BreadcrumbListSchema from '@/components/Antigravity/BreadcrumbListSchema';
 
 export const metadata: Metadata = {
   title: "Intelligence Staff | GMFG",
@@ -34,12 +33,10 @@ export default function StaffPage() {
     <div className="max-w-6xl mx-auto py-12 space-y-16">
       {/* Structured Data Schemas */}
       <WebPageSchema
-        name="Intelligence Staff | GMFG"
+        title="Intelligence Staff | GMFG"
         description="Meet the tripartite intelligence behind GMFG. Context-Injected. Sovereign. Bridging the gap between the Alien and the Human."
         url="https://gaymensfieldguide.com/staff"
-      />
-      <BreadcrumbListSchema
-        items={[
+        breadcrumbs={[
           { name: "Home", item: "/" },
           { name: "Staff", item: "/staff" }
         ]}

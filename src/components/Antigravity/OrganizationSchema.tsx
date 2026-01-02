@@ -5,7 +5,7 @@ export default function OrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Gay Mens Field Guide",
-    "alternateName": ["GMFG", "The Field Guide", "The Guide"],
+    "alternateName": ["The Field Guide", "GMFG"],
     "url": "https://gaymensfieldguide.com",
     "logo": {
       "@type": "ImageObject",

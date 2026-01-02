@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 import WebPageSchema from '@/components/Antigravity/WebPageSchema';
-import BreadcrumbListSchema from '@/components/Antigravity/BreadcrumbListSchema';
 
 export const metadata: Metadata = {
   title: "Manifesto | GMFG",
@@ -25,12 +24,10 @@ export default function Manifesto() {
     <div className="min-h-screen bg-zinc-950 text-zinc-100 font-mono selection:bg-banana selection:text-black">
       {/* Structured Data Schemas */}
       <WebPageSchema
-        name="Manifesto - Interspecies Etiquette | GMFG"
+        title="Manifesto - Interspecies Etiquette | GMFG"
         description="Interspecies Etiquette - Protocol 001. AI is not human. It is not a calculator. It is a Third Thing. And we are currently being rude."
         url="https://gaymensfieldguide.com/manifesto"
-      />
-      <BreadcrumbListSchema
-        items={[
+        breadcrumbs={[
           { name: "Home", item: "/" },
           { name: "Manifesto", item: "/manifesto" }
         ]}

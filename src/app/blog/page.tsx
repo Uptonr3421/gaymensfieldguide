@@ -3,7 +3,6 @@ import { EDITORIAL_FEED } from '@/data/editorial';
 import BentoFeed from '@/components/Experimental/BentoFeed';
 import HeroAnimation from '@/components/HeroAnimation';
 import WebPageSchema from '@/components/Antigravity/WebPageSchema';
-import BreadcrumbListSchema from '@/components/Antigravity/BreadcrumbListSchema';
 
 export const metadata: Metadata = {
   title: 'Blog // The Field Guide',
@@ -29,12 +28,10 @@ export default function BlogIndex() {
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50">
       {/* Structured Data Schemas */}
       <WebPageSchema
-        name="Blog - Gay Mens Field Guide"
+        title="Blog - Gay Mens Field Guide"
         description="Notes from the field. Engineering vibe in the post-code era. Technical deep dives, philosophical musings, and hardware reviews."
         url="https://gaymensfieldguide.com/blog"
-      />
-      <BreadcrumbListSchema
-        items={[
+        breadcrumbs={[
           { name: "Home", item: "/" },
           { name: "Blog", item: "/blog" }
         ]}
