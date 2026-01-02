@@ -4,7 +4,7 @@ export default function OrganizationSchema() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Gay Mens Field Guide",
+    "name": "Gay Men's Field Guide",
     "alternateName": "GMFG",
     "url": "https://gaymensfieldguide.com",
     "logo": {
@@ -21,13 +21,13 @@ export default function OrganizationSchema() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Gay Mens Field Guide",
+    "name": "Gay Men's Field Guide",
     "alternateName": "GMFG",
     "url": "https://gaymensfieldguide.com",
     "description": "The definitive editorial for the post-code era featuring AI, technology, and vibe coding insights.",
     "publisher": {
       "@type": "Organization",
-      "name": "Gay Mens Field Guide",
+      "name": "Gay Men's Field Guide",
       "logo": {
         "@type": "ImageObject",
         "url": "https://gaymensfieldguide.com/images/blog/moe-timeline.webp"

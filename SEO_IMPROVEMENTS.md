@@ -12,7 +12,7 @@ Location: `src/components/Antigravity/OrganizationSchema.tsx`
 ```json
 {
   "@type": "Organization",
-  "name": "Gay Mens Field Guide",
+  "name": "Gay Men's Field Guide",
   "url": "https://gaymensfieldguide.com",
   "logo": {...},
   "description": "..."

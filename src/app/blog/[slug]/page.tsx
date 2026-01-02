@@ -93,6 +93,10 @@ export async function generateMetadata({ params }: PageProps) {
         }
       } catch (e) {
         // Use defaults if parsing fails
+        console.warn(
+          `Failed to parse frontmatter for blog post at "${filePath}". Using default metadata instead.`,
+          e
+        );
       }
     }
     
@@ -141,7 +145,18 @@ export default async function BlogPost({ params }: PageProps) {
 
   const title = frontmatter.title || slug.replace(/-/g, ' ').toUpperCase();
   const description = frontmatter.description || `Deep dive into ${slug}`;
-  const publishDate = frontmatter.date || new Date().toISOString();
+  
+  // Use file creation date as fallback instead of current date to avoid changing dates on every build
+  let publishDate = frontmatter.date;
+  if (!publishDate) {
+    try {
+      const fileStats = fs.statSync(filePath);
+      publishDate = fileStats.birthtime ? fileStats.birthtime.toISOString() : '2024-01-01T00:00:00.000Z';
+    } catch {
+      publishDate = '2024-01-01T00:00:00.000Z';
+    }
+  }
+  
   const author = frontmatter.author || 'GMFG Editorial';
 
   return (

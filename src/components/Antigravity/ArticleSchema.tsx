@@ -35,7 +35,7 @@ export default function ArticleSchema({
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Gay Mens Field Guide",
+      "name": "Gay Men's Field Guide",
       "logo": {
         "@type": "ImageObject",
         "url": "https://gaymensfieldguide.com/images/blog/moe-timeline.webp"
