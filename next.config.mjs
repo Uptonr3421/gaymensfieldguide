@@ -4,12 +4,12 @@ import createMDX from '@next/mdx'
 const nextConfig = {
   // Configure pageExtensions to include md and mdx
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-  
+
   // Performance & Security
   poweredByHeader: false,
   compress: true,
   reactStrictMode: true,
-  
+
   // Image Optimization
   images: {
     formats: ['image/avif', 'image/webp'],
@@ -24,7 +24,6 @@ const nextConfig = {
     ],
   },
 
-  // Headers for caching and security
   async headers() {
     return [
       {
@@ -34,67 +33,54 @@ const nextConfig = {
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-XSS-Protection', value: '1; mode=block' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-          // Add HSTS header for security
-          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
+          // HSTS (applies to this host; avoids forcing all subdomains)
+          { key: 'Strict-Transport-Security', value: 'max-age=31536000' },
         ],
       },
       {
         source: '/images/:path*',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
       {
         source: '/:path*.webp',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
       {
         source: '/:path*.avif',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
       {
         source: '/:path*.svg',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
       {
         source: '/:path*.woff2',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
-    ];
+    ]
   },
 
-  // Logging
   logging: {
-    fetches: {
-      fullUrl: true,
-    },
+    fetches: { fullUrl: true },
   },
-  
-  // TypeScript - Enable build-time type checking
-  // Set to true temporarily if needed to debug build issues
+
   typescript: {
     ignoreBuildErrors: false,
   },
 
-  // Bundle Optimization
   experimental: {
-    optimizePackageImports: ['lucide-react', 'date-fns', 'framer-motion', '@react-three/fiber', '@react-three/drei'],
-    // Optimize CSS
+    optimizePackageImports: [
+      'lucide-react',
+      'date-fns',
+      'framer-motion',
+      '@react-three/fiber',
+      '@react-three/drei',
+    ],
     optimizeCss: true,
   },
 
-  // Webpack optimization for code splitting and modern JS
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
-      // Split CSS into smaller chunks
       config.optimization = {
         ...config.optimization,
         splitChunks: {
@@ -107,7 +93,6 @@ const nextConfig = {
               chunks: 'all',
               enforce: true,
             },
-            // Split vendor chunks for better caching
             vendor: {
               test: /[\\/]node_modules[\\/]/,
               name: 'vendors',
@@ -121,14 +106,18 @@ const nextConfig = {
             },
           },
         },
-      };
+      }
     }
-    return config;
+    return config
   },
 }
 
 const withMDX = createMDX({
-  // Add markdown plugins here, as needed
+  // extension: /\.(md|mdx)$/, // optional; pageExtensions already covers it
+  options: {
+    // remarkPlugins: [],
+    // rehypePlugins: [],
+  },
 })
 
 export default withMDX(nextConfig)
