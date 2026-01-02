@@ -8,6 +8,7 @@ type SchemaProps = {
     datePublished: string;
     dateModified?: string;
     author: string;
+    url?: string; // Optional canonical URL of the article
   };
   breadcrumbs?: {
     name: string;
@@ -24,6 +25,12 @@ export function SchemaBuilder({ article, breadcrumbs, questions }: SchemaProps) 
 
   // 1. BlogPosting Schema (more specific than TechArticle for blog posts)
   if (article) {
+    // Derive the article URL from breadcrumbs if not explicitly provided
+    const articleUrl = article.url || 
+      (breadcrumbs && breadcrumbs.length > 0 
+        ? `https://gaymensfieldguide.com${breadcrumbs[breadcrumbs.length - 1].item}`
+        : 'https://gaymensfieldguide.com');
+
     schemas.push({
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
@@ -49,9 +56,7 @@ export function SchemaBuilder({ article, breadcrumbs, questions }: SchemaProps) 
       },
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': article.image.includes('http') 
-          ? article.image.replace(/\/images\/.*$/, '')
-          : 'https://gaymensfieldguide.com'
+        '@id': articleUrl
       },
     });
   }
