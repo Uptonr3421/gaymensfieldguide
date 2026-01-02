@@ -37,10 +37,10 @@ export const metadata: Metadata = {
     default: 'GMFG: The Vibe Coding Editorial',
   },
   description: 'The definitive editorial for the post-code era. We engineer vibe. Featuring the latest on GPT-5.2 "Garlic" and the Mixture of Experts.',
-  keywords: ['Vibe Coding', 'AI', 'GPT-5.2', 'Garlic', 'Mixture of Experts', 'Nano Banana', 'Gay Mens Field Guide', 'Local LLM', 'Privacy', 'Tech Editorial'],
+  keywords: ['Vibe Coding', 'AI', 'GPT-5.2', 'Garlic', 'Mixture of Experts', 'Nano Banana', 'Gay Men\'s Field Guide', 'Local LLM', 'Privacy', 'Tech Editorial'],
   authors: [{ name: 'GMFG Editorial', url: 'https://gaymensfieldguide.com' }],
   creator: 'GMFG',
-  publisher: 'Gay Mens Field Guide',
+  publisher: 'Gay Men\'s Field Guide',
   manifest: '/manifest.json',
   icons: {
     icon: '/icon.svg',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: 'GMFG // Antigravity',
     description: 'We don\'t "prompt." We engineer vibe. The definitive editorial for the post-code era.',
     url: 'https://gaymensfieldguide.com',
-    siteName: 'Gay Mens Field Guide',
+    siteName: 'Gay Men\'s Field Guide',
     locale: 'en_US',
     type: 'website',
     images: [{

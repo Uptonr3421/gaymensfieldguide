@@ -36,7 +36,7 @@ export function SchemaBuilder({ article, breadcrumbs, questions }: SchemaProps) 
       },
       publisher: {
         '@type': 'Organization',
-        name: 'Gay Mens Field Guide',
+        name: 'Gay Men\'s Field Guide',
         logo: {
           '@type': 'ImageObject',
           url: 'https://gaymensfieldguide.com/logo.png', // Update with real logo

@@ -64,7 +64,10 @@ export default function ArsenalPage() {
             </div>
             
             
-            <button className="w-full mt-4 bg-zinc-800 text-white py-2 hover:bg-neon-yellow hover:text-black transition-colors font-mono text-xs uppercase tracking-widest border border-zinc-700">
+            <button 
+                className="w-full mt-4 bg-zinc-800 text-white py-2 hover:bg-neon-yellow hover:text-black transition-colors font-mono text-xs uppercase tracking-widest border border-zinc-700"
+                aria-label="Add Flipper Zero to cart"
+            >
                 ADD_TO_CART
             </button>
         </BentoItem>
@@ -87,7 +90,10 @@ export default function ArsenalPage() {
             
             
             
-            <button className="w-full mt-4 bg-zinc-800 text-white py-2 hover:bg-neon-yellow hover:text-black transition-colors font-mono text-xs uppercase tracking-widest border border-zinc-700">
+            <button 
+                className="w-full mt-4 bg-zinc-800 text-white py-2 hover:bg-neon-yellow hover:text-black transition-colors font-mono text-xs uppercase tracking-widest border border-zinc-700"
+                aria-label="Add Raspberry Pi 5 to cart"
+            >
                 ADD_TO_CART
             </button>
         </BentoItem>
@@ -115,7 +121,10 @@ export default function ArsenalPage() {
             </div>
             
             
-            <button className="w-full mt-4 bg-zinc-800 text-white py-2 hover:bg-neon-yellow hover:text-black transition-colors font-mono text-xs uppercase tracking-widest border border-zinc-700">
+            <button 
+                className="w-full mt-4 bg-zinc-800 text-white py-2 hover:bg-neon-yellow hover:text-black transition-colors font-mono text-xs uppercase tracking-widest border border-zinc-700"
+                aria-label="Add USB Rubber Ducky to cart"
+            >
                 ADD_TO_CART
             </button>
         </BentoItem>
@@ -143,7 +152,10 @@ export default function ArsenalPage() {
             </div>
             
             
-            <button className="w-full mt-4 bg-zinc-800 text-white py-2 hover:bg-neon-yellow hover:text-black transition-colors font-mono text-xs uppercase tracking-widest border border-zinc-700">
+            <button 
+                className="w-full mt-4 bg-zinc-800 text-white py-2 hover:bg-neon-yellow hover:text-black transition-colors font-mono text-xs uppercase tracking-widest border border-zinc-700"
+                aria-label="Add Proxmark 3 Easy to cart"
+            >
                 ADD_TO_CART
             </button>
         </BentoItem>
@@ -171,7 +183,10 @@ export default function ArsenalPage() {
             </div>
             
             
-            <button className="w-full mt-4 bg-zinc-800 text-white py-2 hover:bg-neon-yellow hover:text-black transition-colors font-mono text-xs uppercase tracking-widest border border-zinc-700">
+            <button 
+                className="w-full mt-4 bg-zinc-800 text-white py-2 hover:bg-neon-yellow hover:text-black transition-colors font-mono text-xs uppercase tracking-widest border border-zinc-700"
+                aria-label="Add Heltec V3 Meshtastic Kit to cart"
+            >
                 ADD_TO_CART
             </button>
         </BentoItem>

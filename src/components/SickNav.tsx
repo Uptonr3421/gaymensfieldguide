@@ -37,7 +37,7 @@ export default function SickNav() {
           <div className="absolute inset-0 pointer-events-none bg-scanlines opacity-10 mix-blend-overlay" />
 
           {/* Logo Section */}
-          <Link href="/" aria-label="Gay Mens Field Guide Home" className="relative flex items-center gap-3 px-2 py-1 hover:bg-zinc-900 transition-colors rounded-sm group/logo">
+          <Link href="/" aria-label="Gay Men's Field Guide Home" className="relative flex items-center gap-3 px-2 py-1 hover:bg-zinc-900 transition-colors rounded-sm group/logo">
              <div className="w-8 h-8 bg-zinc-900 border border-zinc-700 flex items-center justify-center relative overflow-hidden">
                 <span className="font-black text-xs text-white">G</span>
                 <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-zinc-600" />
