@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { EDITORIAL_FEED } from '@/data/editorial';
 import BentoFeed from '@/components/Experimental/BentoFeed';
 import HeroAnimation from '@/components/HeroAnimation';
+import WebPageSchema from '@/components/Antigravity/WebPageSchema';
+import BreadcrumbListSchema from '@/components/Antigravity/BreadcrumbListSchema';
 
 export const metadata: Metadata = {
   title: 'Blog // The Field Guide',
@@ -25,6 +27,18 @@ export default function BlogIndex() {
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50">
+      {/* Structured Data Schemas */}
+      <WebPageSchema
+        name="Blog - Gay Mens Field Guide"
+        description="Notes from the field. Engineering vibe in the post-code era. Technical deep dives, philosophical musings, and hardware reviews."
+        url="https://gaymensfieldguide.com/blog"
+      />
+      <BreadcrumbListSchema
+        items={[
+          { name: "Home", item: "/" },
+          { name: "Blog", item: "/blog" }
+        ]}
+      />
       
       {/* Background Texture */}
       <div className="fixed inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none z-0" />

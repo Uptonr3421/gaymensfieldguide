@@ -4,6 +4,8 @@ import React from 'react';
 import { VibeBento, BentoItem } from '@/components/Antigravity/VibeBento';
 import { SimulatorEngine } from '@/components/Antigravity/SimulatorEngine';
 import Image from 'next/image';
+import WebPageSchema from '@/components/Antigravity/WebPageSchema';
+import BreadcrumbListSchema from '@/components/Antigravity/BreadcrumbListSchema';
 
 export const metadata: Metadata = {
   title: "Hardware Arsenal | GMFG",
@@ -25,6 +27,19 @@ export const metadata: Metadata = {
 export default function ArsenalPage() {
   return (
     <div className="min-h-screen p-4 md:p-8 space-y-8">
+      {/* Structured Data Schemas */}
+      <WebPageSchema
+        name="Hardware Arsenal | GMFG"
+        description="Tactical hardware for the modern Vibe Coder. Curated tools for privacy, security, and local AI development."
+        url="https://gaymensfieldguide.com/arsenal"
+      />
+      <BreadcrumbListSchema
+        items={[
+          { name: "Home", item: "/" },
+          { name: "Arsenal", item: "/arsenal" }
+        ]}
+      />
+      
       {/* Header */}
       <div className="border-b border-zinc-800 pb-8">
         <h1 className="text-4xl md:text-6xl font-black tracking-tighter text-white mb-4 uppercase">

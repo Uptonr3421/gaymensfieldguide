@@ -7,6 +7,7 @@ import { STAFF } from '@/data/staff';
 import StaffAvatar from '@/components/Antigravity/StaffAvatar';
 import MarketingCTA from '@/components/MarketingCTA';
 import SplashHero from '@/components/SplashHero';
+import WebPageSchema from '@/components/Antigravity/WebPageSchema';
 
 export const metadata: Metadata = {
   title: 'THE GUIDE // Vibe Coder Editorial',
@@ -32,6 +33,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-50 font-sans selection:bg-orange-500 selection:text-white">
+      {/* Structured Data Schema */}
+      <WebPageSchema
+        name="GMFG: The Vibe Coding Editorial"
+        description="The definitive editorial for the post-code era. We engineer vibe. Featuring the latest on GPT-5.2 'Garlic' and the Mixture of Experts."
+        url="https://gaymensfieldguide.com"
+      />
       
       {/* SPLIT HERO - Logo + Carousel */}
       <SplashHero featuredArticles={featuredArticles} />

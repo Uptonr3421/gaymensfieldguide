@@ -18,3 +18,7 @@ export { default as Callout } from './Callout';
 export { VibeSnake } from './VibeSnake';
 export { PromptTyper } from './PromptTyper';
 export { ContextCollapse } from './ContextCollapse';
+export { default as OrganizationSchema } from './OrganizationSchema';
+export { default as WebPageSchema } from './WebPageSchema';
+export { default as BlogPostingSchema } from './BlogPostingSchema';
+export { default as BreadcrumbListSchema } from './BreadcrumbListSchema';

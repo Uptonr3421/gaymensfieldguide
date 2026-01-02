@@ -27,6 +27,10 @@ import { VibeSnake } from '@/components/Antigravity/VibeSnake';
 import { PromptTyper } from '@/components/Antigravity/PromptTyper';
 import { ContextCollapse } from '@/components/Antigravity/ContextCollapse';
 import { TableOfContents } from '@/components/Antigravity/TableOfContents';
+import BlogPostingSchema from '@/components/Antigravity/BlogPostingSchema';
+import BreadcrumbListSchema from '@/components/Antigravity/BreadcrumbListSchema';
+import { EDITORIAL_FEED } from '@/data/editorial';
+import { STAFF } from '@/data/staff';
 
 const COMPONENTS = {
   Image,
@@ -100,8 +104,38 @@ export default async function BlogPost({ params }: PageProps) {
     options: { parseFrontmatter: true }
   });
 
+  // Find article metadata from editorial feed
+  const article = EDITORIAL_FEED.find(a => a.slug === slug);
+  const author = article ? STAFF.find(s => s.id === article.authorId) : null;
+  
+  // Generate article metadata
+  const articleTitle = frontmatter.title || article?.title || slug.replace(/-/g, ' ').toUpperCase();
+  const articleDescription = article?.subtitle || `Deep dive into ${slug}`;
+  const articleImage = article?.image || '/images/blog/default-thumb.png';
+  const articleDate = article?.date || '2025-10-15';
+  const authorName = author?.name || 'The Architect';
+  const articleUrl = `https://gaymensfieldguide.com/blog/${slug}`;
+
   return (
     <article className="min-h-screen bg-zinc-950 text-zinc-100 selection:bg-neon-yellow selection:text-black">
+        {/* Structured Data Schemas */}
+        <BlogPostingSchema
+          headline={articleTitle}
+          description={articleDescription}
+          image={articleImage}
+          datePublished={articleDate}
+          author={authorName}
+          url={articleUrl}
+          keywords={article?.tag ? [article.tag] : []}
+        />
+        <BreadcrumbListSchema
+          items={[
+            { name: "Home", item: "/" },
+            { name: "Blog", item: "/blog" },
+            { name: articleTitle, item: `/blog/${slug}` }
+          ]}
+        />
+        
         {/* Progress Bar or Nav could go here */}
         
         <div className="prose prose-invert prose-zinc max-w-3xl mx-auto py-24 px-6 md:px-0">
@@ -110,12 +144,12 @@ export default async function BlogPost({ params }: PageProps) {
                     TRANSMISSION_ID: {slug.toUpperCase()}
                 </span>
                 <h1 className="text-4xl md:text-6xl font-black tracking-tighter text-white mb-6 leading-none">
-                    {frontmatter.title || slug.replace(/-/g, ' ').toUpperCase()}
+                    {articleTitle}
                 </h1>
                 <div className="flex items-center gap-4 text-zinc-500 font-mono text-xs">
-                    <span>DATE: 2025-10-XX</span>
+                    <span>DATE: {articleDate}</span>
                     <span>//</span>
-                    <span>AUTHOR: ARCHITECT</span>
+                    <span>AUTHOR: {authorName.toUpperCase()}</span>
                 </div>
             </header>
             

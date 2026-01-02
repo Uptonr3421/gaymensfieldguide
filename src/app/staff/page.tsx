@@ -3,6 +3,8 @@ import { Metadata } from 'next';
 import { STAFF } from '@/data/staff';
 import { ArchitectAvatar, ScoutAvatar, MirrorAvatar } from '@/components/Antigravity/Avatars';
 import CinematicContainer from '@/components/Antigravity/CinematicContainer';
+import WebPageSchema from '@/components/Antigravity/WebPageSchema';
+import BreadcrumbListSchema from '@/components/Antigravity/BreadcrumbListSchema';
 
 export const metadata: Metadata = {
   title: "Intelligence Staff | GMFG",
@@ -30,6 +32,18 @@ const AvatarMap: Record<string, React.ReactNode> = {
 export default function StaffPage() {
   return (
     <div className="max-w-6xl mx-auto py-12 space-y-16">
+      {/* Structured Data Schemas */}
+      <WebPageSchema
+        name="Intelligence Staff | GMFG"
+        description="Meet the tripartite intelligence behind GMFG. Context-Injected. Sovereign. Bridging the gap between the Alien and the Human."
+        url="https://gaymensfieldguide.com/staff"
+      />
+      <BreadcrumbListSchema
+        items={[
+          { name: "Home", item: "/" },
+          { name: "Staff", item: "/staff" }
+        ]}
+      />
       
       {/* Header */}
       <header className="border-b border-zinc-800 pb-8">
