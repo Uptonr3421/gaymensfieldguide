@@ -211,7 +211,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'holo',
     slug: 'hivemapper-depin-casino',
     date: '2025-09-08',
-    image: '/images/blog/hivemapper-thumb.png'
+    image: '/images/blog/fiber-optic-garlic.png'
   },
   {
     id: '014-MAC',
@@ -223,7 +223,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'obsidian',
     slug: 'mac-studio-paperweight',
     date: '2025-09-05',
-    image: '/images/blog/mac-studio-thumb.png'
+    image: '/images/blog/vibe-coder-rise-hero.png'
   },
   {
     id: '015-SAAS',
@@ -247,7 +247,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'holo',
     slug: 'prompt-injection-101',
     date: '2025-08-30',
-    image: '/images/blog/prompt-injection-thumb.png'
+    image: '/images/blog/smiling-waveform.png'
   },
   {
     id: '017-PI',
@@ -283,7 +283,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'holo',
     slug: 'solarpunk-2025',
     date: '2025-08-22',
-    image: '/images/blog/solarpunk-thumb.png'
+    image: '/images/blog/glitched-art-dog-cat.png'
   },
   {
     id: '020-VIBE',
@@ -391,7 +391,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'obsidian',
     slug: 'helium-mobile-free-5g',
     date: '2025-08-15',
-    image: '/images/blog/meshtastic-thumb.png'
+    image: '/images/blog/fiber-optic-garlic.png'
   },
   {
     id: 'GEN-117',
