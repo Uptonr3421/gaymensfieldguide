@@ -60,7 +60,7 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
                 </span>
               </h1>
               <p className="mt-6 text-lg text-zinc-400 max-w-md leading-relaxed">
-                The definitive editorial for the <span className="text-orange-400 font-semibold">post-code era</span>. 
+                The definitive editorial for the <span className="text-orange-500 font-semibold">post-code era</span>. 
                 We don't prompt. We engineer vibe.
               </p>
               
@@ -90,7 +90,7 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
             
             {/* Section Label */}
             <div className="flex items-center justify-between mb-6">
-              <span className="font-mono text-xs text-orange-400 uppercase tracking-widest">
+              <span className="font-mono text-xs text-orange-500 uppercase tracking-widest">
                 FEATURED_TRANSMISSIONS
               </span>
               <div className="flex gap-2">
@@ -126,6 +126,7 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   priority
+                  quality={70}
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
@@ -139,9 +140,9 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
                 
                 {/* Title Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tight leading-tight group-hover:text-orange-500 transition-colors">
+                  <h2 className="text-xl md:text-2xl font-black text-white uppercase tracking-tight leading-tight group-hover:text-orange-500 transition-colors">
                     {currentArticle.title}
-                  </h3>
+                  </h2>
                   <p className="text-sm text-zinc-400 mt-2 line-clamp-2">
                     {currentArticle.subtitle}
                   </p>
