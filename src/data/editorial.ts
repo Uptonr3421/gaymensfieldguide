@@ -38,43 +38,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "voltage",
     "slug": "antigravity-quickstat",
     "date": "2026-01-03",
-    "image": "/images/blog/antigravity_flow_hero.png"
-  },
-  {
-    "id": "GEN-100",
-    "title": "Ai Is Augmenting Memory",
-    "subtitle": "Deep dive into Ai Is Augmenting Memory. Optimized for the Nano Banana aesthetics.,",
-    "authorId": "architect",
-    "tag": "VIBE",
-    "readTime": "6 MIN",
-    "variant": "voltage",
-    "slug": "ai-is-augmenting-memory",
-    "date": "2025-08-15",
-    "image": "/images/ai-memory/hero_image.png"
-  },
-  {
-    "id": "GEN-101",
-    "title": "Ambient Computing Interaction Without Screens",
-    "subtitle": "An deep dive into Ambient Computing Interaction Without Screens. Vibe coded for your pleasure.,",
-    "authorId": "architect",
-    "tag": "DYSTOPIA",
-    "readTime": "5 MIN",
-    "variant": "holo",
-    "slug": "ambient-computing-interaction-without-screens",
-    "date": "2025-08-15",
-    "image": "/images/blog/smiling-waveform.png"
-  },
-  {
-    "id": "GEN-103",
-    "title": "Blockchain Gaming A Ponzi Scheme",
-    "subtitle": "An deep dive into Blockchain Gaming A Ponzi Scheme. Vibe coded for your pleasure.,",
-    "authorId": "mirror",
-    "tag": "HARDWARE",
-    "readTime": "9 MIN",
-    "variant": "holo",
-    "slug": "blockchain-gaming-a-ponzi-scheme",
-    "date": "2025-08-15",
-    "image": "/images/blog/moe-dragon-rpg.png"
+    "image": "/images/blog/antigravity_agent_comparison.png"
   },
   {
     "id": "000-GARLIC",
@@ -86,96 +50,134 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "voltage",
     "slug": "openai-gpt-5-2-garlic",
     "date": "2025-10-15",
-    "image": "/images/blog/openai-gpt-garlic-hero.png"
+    "image": "/images/blog/openai-gpt-garlic-hero.png",
+    "featured": true,
+    "gridArea": "large"
+  },
+  {
+    "id": "GEN-100",
+    "title": "Ai Is Augmenting Memory",
+    "subtitle": "Deep dive into Ai Is Augmenting Memory. Optimized for the Nano Banana aesthetics.",
+    "authorId": "architect",
+    "tag": "VIBE",
+    "readTime": "6 MIN",
+    "variant": "voltage",
+    "slug": "ai-is-augmenting-memory",
+    "date": "2025-08-15",
+    "image": "/images/blog/default-thumb.png"
+  },
+  {
+    "id": "GEN-101",
+    "title": "Ambient Computing Interaction Without Screens",
+    "subtitle": "An deep dive into Ambient Computing Interaction Without Screens. Vibe coded for your pleasure.",
+    "authorId": "architect",
+    "tag": "DYSTOPIA",
+    "readTime": "5 MIN",
+    "variant": "holo",
+    "slug": "ambient-computing-interaction-without-screens",
+    "date": "2025-08-15",
+    "image": "/images/blog/default-thumb.png"
+  },
+  {
+    "id": "GEN-103",
+    "title": "Blockchain Gaming A Ponzi Scheme",
+    "subtitle": "An deep dive into Blockchain Gaming A Ponzi Scheme. Vibe coded for your pleasure.",
+    "authorId": "mirror",
+    "tag": "HARDWARE",
+    "readTime": "9 MIN",
+    "variant": "holo",
+    "slug": "blockchain-gaming-a-ponzi-scheme",
+    "date": "2025-08-15",
+    "image": "/images/blog/default-thumb.png"
   },
   {
     "id": "GEN-106",
     "title": "Cursor Vs Windsurf The Ai Editor Wars",
-    "subtitle": "A deep dive into Cursor Vs Windsurf The AI Editor Wars. Vibe coded for your pleasure.,",
+    "subtitle": "A deep dive into Cursor Vs Windsurf The AI Editor Wars. Vibe coded for your pleasure.",
     "authorId": "architect",
     "tag": "VIBE",
     "readTime": "7 MIN",
     "variant": "obsidian",
     "slug": "cursor-vs-windsurf-the-ai-editor-wars",
     "date": "2025-08-15",
-    "image": "/images/blog/samurai-editor-war.png"
+    "image": "/images/blog/cursor-vs-windsurf-thumb.png"
   },
   {
     "id": "GEN-110",
     "title": "Depin Distributed Physical Infrastructure",
-    "subtitle": "A deep dive into Depin Distributed Physical Infrastructure. Vibe coded for your pleasure.,",
+    "subtitle": "A deep dive into Depin Distributed Physical Infrastructure. Vibe coded for your pleasure.",
     "authorId": "mirror",
     "tag": "SOFTWARE",
     "readTime": "8 MIN",
     "variant": "holo",
     "slug": "depin-distributed-physical-infrastructure",
     "date": "2025-08-15",
-    "image": "/images/blog/rpi-cluster-mess.png"
+    "image": "/images/blog/default-thumb.png"
   },
   {
     "id": "GEN-112",
     "title": "Docker It Works On My Machine",
-    "subtitle": "A deep dive into Docker It Works On My Machine. Vibe coded for your pleasure.,",
+    "subtitle": "A deep dive into Docker It Works On My Machine. Vibe coded for your pleasure.",
     "authorId": "architect",
     "tag": "HARDWARE",
     "readTime": "6 MIN",
     "variant": "holo",
     "slug": "docker-it-works-on-my-machine",
     "date": "2025-08-15",
-    "image": "/images/blog/cloud-collapse-render.png"
+    "image": "/images/blog/default-thumb.png"
   },
   {
     "id": "GEN-115",
     "title": "Helium Mobile Free 5G",
-    "subtitle": "A deep dive into Helium Mobile Free 5G. Vibe coded for your pleasure.,",
+    "subtitle": "A deep dive into Helium Mobile Free 5G. Vibe coded for your pleasure.",
     "authorId": "mirror",
     "tag": "HARDWARE",
     "readTime": "9 MIN",
     "variant": "holo",
     "slug": "helium-mobile-free-5g",
     "date": "2025-08-15",
-    "image": "/images/blog/fiber-optic-garlic.png"
+    "image": "/images/blog/default-thumb.png"
   },
   {
     "id": "GEN-117",
     "title": "Home Assistant The Rabbit Hole",
-    "subtitle": "A deep dive into Home Assistant The Rabbit Hole. Vibe coded for your pleasure.,",
+    "subtitle": "A deep dive into Home Assistant The Rabbit Hole. Vibe coded for your pleasure.",
     "authorId": "mirror",
     "tag": "TECH",
     "readTime": "7 MIN",
     "variant": "voltage",
     "slug": "home-assistant-the-rabbit-hole",
     "date": "2025-08-15",
-    "image": "/images/blog/zigbee-matter-hero.png"
+    "image": "/images/blog/rabbit-r1-thumb.png"
   },
   {
     "id": "GEN-118",
     "title": "Kubernetes Overkill For Your Blog",
-    "subtitle": "A deep dive into Kubernetes Overkill For Your Blog. Vibe coded for your pleasure.,",
+    "subtitle": "A deep dive into Kubernetes Overkill For Your Blog. Vibe coded for your pleasure.",
     "authorId": "architect",
     "tag": "HARDWARE",
     "readTime": "9 MIN",
     "variant": "holo",
     "slug": "kubernetes-overkill-for-your-blog",
     "date": "2025-08-15",
-    "image": "/images/blog/cloud-collapse-render.png"
+    "image": "/images/blog/default-thumb.png"
   },
   {
     "id": "GEN-119",
     "title": "Linux Desktop 2026 Finally",
-    "subtitle": "A deep dive into Linux Desktop 2026 Finally. Vibe coded for your pleasure.,",
+    "subtitle": "A deep dive into Linux Desktop 2026 Finally. Vibe coded for your pleasure.",
     "authorId": "scout",
     "tag": "SOFTWARE",
     "readTime": "6 MIN",
     "variant": "voltage",
     "slug": "linux-desktop-2026-finally",
     "date": "2025-08-15",
-    "image": "/images/blog/opensource-future-hero.png"
+    "image": "/images/blog/default-thumb.png"
   },
   {
     "id": "GEN-120",
     "title": "Local Llms The Ultimate Privacy Shield",
-    "subtitle": "A deep dive into Local Llms The Ultimate Privacy Shield. Vibe coded for your pleasure.,",
+    "subtitle": "A deep dive into Local Llms The Ultimate Privacy Shield. Vibe coded for your pleasure.",
     "authorId": "architect",
     "tag": "DYSTOPIA",
     "readTime": "5 MIN",
@@ -187,31 +189,31 @@ export const EDITORIAL_FEED: Article[] = [
   {
     "id": "GEN-122",
     "title": "Macos The Walled Garden Is Comfy",
-    "subtitle": "A deep dive into Macos The Walled Garden Is Comfy. Vibe coded for your pleasure.,",
+    "subtitle": "A deep dive into Macos The Walled Garden Is Comfy. Vibe coded for your pleasure.",
     "authorId": "scout",
     "tag": "AI",
     "readTime": "7 MIN",
     "variant": "obsidian",
     "slug": "macos-the-walled-garden-is-comfy",
     "date": "2025-08-15",
-    "image": "/images/blog/glitched-art-dog-cat.png"
+    "image": "/images/blog/default-thumb.png"
   },
   {
     "id": "GEN-123",
     "title": "Mechanical Keyboards A Loud Addiction",
-    "subtitle": "A deep dive into Mechanical Keyboards A Loud Addiction. Vibe coded for your pleasure.,",
+    "subtitle": "A deep dive into Mechanical Keyboards A Loud Addiction. Vibe coded for your pleasure.",
     "authorId": "mirror",
     "tag": "FUTURE",
     "readTime": "5 MIN",
     "variant": "obsidian",
     "slug": "mechanical-keyboards-a-loud-addiction",
     "date": "2025-08-15",
-    "image": "/images/blog/toaster-blueprint.png"
+    "image": "/images/blog/cloud-backups-deleted-hero.png"
   },
   {
     "id": "GEN-126",
     "title": "Plex Vs Jellyfin",
-    "subtitle": "A deep dive into Plex Vs Jellyfin. Vibe coded for your pleasure.,",
+    "subtitle": "A deep dive into Plex Vs Jellyfin. Vibe coded for your pleasure.",
     "authorId": "mirror",
     "tag": "SOFTWARE",
     "readTime": "9 MIN",
@@ -223,7 +225,7 @@ export const EDITORIAL_FEED: Article[] = [
   {
     "id": "GEN-131",
     "title": "Right To Repair The War On Glue",
-    "subtitle": "An deep dive into Right To Repair The War On Glue. Vibe coded for your pleasure.,",
+    "subtitle": "An deep dive into Right To Repair The War On Glue. Vibe coded for your pleasure.",
     "authorId": "architect",
     "tag": "HARDWARE",
     "readTime": "6 MIN",
@@ -235,7 +237,7 @@ export const EDITORIAL_FEED: Article[] = [
   {
     "id": "GEN-135",
     "title": "Standing Desks Are They A Scam",
-    "subtitle": "A deep dive into Standing Desks Are They A Scam. Vibe coded for your pleasure.,",
+    "subtitle": "A deep dive into Standing Desks Are They A Scam. Vibe coded for your pleasure.",
     "authorId": "scout",
     "tag": "AI",
     "readTime": "7 MIN",
@@ -247,7 +249,7 @@ export const EDITORIAL_FEED: Article[] = [
   {
     "id": "GEN-136",
     "title": "Starlink The Sky Is Full Of Satellites",
-    "subtitle": "A deep dive into Starlink The Sky Is Full Of Satellites. Vibe coded for your pleasure.,",
+    "subtitle": "A deep dive into Starlink The Sky Is Full Of Satellites. Vibe coded for your pleasure.",
     "authorId": "scout",
     "tag": "SOFTWARE",
     "readTime": "7 MIN",
@@ -259,19 +261,19 @@ export const EDITORIAL_FEED: Article[] = [
   {
     "id": "GEN-137",
     "title": "The Dead Internet Theory Are We Alone",
-    "subtitle": "A deep dive into The Dead Internet Theory Are We Alone. Vibe coded for your pleasure.,",
+    "subtitle": "A deep dive into The Dead Internet Theory Are We Alone. Vibe coded for your pleasure.",
     "authorId": "architect",
     "tag": "AI",
     "readTime": "5 MIN",
     "variant": "obsidian",
     "slug": "the-dead-internet-theory-are-we-alone",
     "date": "2025-08-15",
-    "image": "/images/blog/dead-internet-theory-hero.png"
+    "image": "/images/blog/dead-internet-server-farm.png"
   },
   {
     "id": "GEN-138",
     "title": "The Future Of Open Source",
-    "subtitle": "An deep dive into The Future Of Open Source. Vibe coded for your pleasure.,",
+    "subtitle": "An deep dive into The Future Of Open Source. Vibe coded for your pleasure.",
     "authorId": "scout",
     "tag": "HARDWARE",
     "readTime": "7 MIN",
@@ -283,7 +285,7 @@ export const EDITORIAL_FEED: Article[] = [
   {
     "id": "GEN-140",
     "title": "The Rise Of The Vibe Coder",
-    "subtitle": "An deep dive into The Rise Of The Vibe Coder. Vibe coded for your pleasure.,",
+    "subtitle": "An deep dive into The Rise Of The Vibe Coder. Vibe coded for your pleasure.",
     "authorId": "scout",
     "tag": "HARDWARE",
     "readTime": "8 MIN",
@@ -295,7 +297,7 @@ export const EDITORIAL_FEED: Article[] = [
   {
     "id": "GEN-141",
     "title": "Trackballs The Ergonomic Endgame",
-    "subtitle": "A deep dive into Trackballs The Ergonomic Endgame. Vibe coded for your pleasure.,",
+    "subtitle": "A deep dive into Trackballs The Ergonomic Endgame. Vibe coded for your pleasure.",
     "authorId": "mirror",
     "tag": "TECH",
     "readTime": "6 MIN",
@@ -307,7 +309,7 @@ export const EDITORIAL_FEED: Article[] = [
   {
     "id": "GEN-143",
     "title": "Vertical Monitors Why You Need One",
-    "subtitle": "An deep dive into Vertical Monitors Why You Need One. Vibe coded for your pleasure.,",
+    "subtitle": "An deep dive into Vertical Monitors Why You Need One. Vibe coded for your pleasure.",
     "authorId": "mirror",
     "tag": "SOFTWARE",
     "readTime": "9 MIN",
@@ -319,7 +321,7 @@ export const EDITORIAL_FEED: Article[] = [
   {
     "id": "GEN-144",
     "title": "Voice Interfaces Why They Suck",
-    "subtitle": "A deep dive into Voice Interfaces Why They Suck. Vibe coded for your pleasure.,",
+    "subtitle": "A deep dive into Voice Interfaces Why They Suck. Vibe coded for your pleasure.",
     "authorId": "architect",
     "tag": "SOFTWARE",
     "readTime": "9 MIN",
@@ -331,7 +333,7 @@ export const EDITORIAL_FEED: Article[] = [
   {
     "id": "GEN-145",
     "title": "Why I Deleted My Cloud Backups",
-    "subtitle": "A deep dive into Why I Deleted My Cloud Backups. Vibe coded for your pleasure.,",
+    "subtitle": "A deep dive into Why I Deleted My Cloud Backups. Vibe coded for your pleasure.",
     "authorId": "scout",
     "tag": "HARDWARE",
     "readTime": "9 MIN",
@@ -343,7 +345,7 @@ export const EDITORIAL_FEED: Article[] = [
   {
     "id": "GEN-146",
     "title": "Why Your Smart Fridge Wants To Kill You",
-    "subtitle": "An deep dive into Why Your Smart Fridge Wants To Kill You. Vibe coded for your pleasure.,",
+    "subtitle": "An deep dive into Why Your Smart Fridge Wants To Kill You. Vibe coded for your pleasure.",
     "authorId": "architect",
     "tag": "VIBE",
     "readTime": "6 MIN",
@@ -355,7 +357,7 @@ export const EDITORIAL_FEED: Article[] = [
   {
     "id": "GEN-147",
     "title": "Windows 12 Spyware Edition",
-    "subtitle": "An deep dive into Windows 12 Spyware Edition. Vibe coded for your pleasure.,",
+    "subtitle": "An deep dive into Windows 12 Spyware Edition. Vibe coded for your pleasure.",
     "authorId": "architect",
     "tag": "FUTURE",
     "readTime": "8 MIN",
@@ -367,7 +369,7 @@ export const EDITORIAL_FEED: Article[] = [
   {
     "id": "GEN-148",
     "title": "Zigbee Vs Z Wave Vs Matter",
-    "subtitle": "An deep dive into Zigbee Vs Z Wave Vs Matter. Vibe coded for your pleasure.,",
+    "subtitle": "An deep dive into Zigbee Vs Z Wave Vs Matter. Vibe coded for your pleasure.",
     "authorId": "mirror",
     "tag": "SOFTWARE",
     "readTime": "6 MIN",
