@@ -18,6 +18,30 @@ export type BlogPost = Article;
 
 export const EDITORIAL_FEED: Article[] = [
   {
+    "id": "GEN-201",
+    "title": "The Subscription Apocalypse: You Will Own Nothing and Hate It",
+    "subtitle": "Adobe wants your rent. Windows wants your data. It's time to reject the SaaS drip-feed.",
+    "authorId": "scout",
+    "tag": "DYSTOPIA",
+    "readTime": "6 MIN",
+    "variant": "obsidian",
+    "slug": "subscription-apocalypse",
+    "date": "2026-01-04",
+    "image": "/images/blog/subscription_apocalypse_hero.png"
+  },
+  {
+    "id": "GEN-200",
+    "title": "Why I Finally Stopped Fighting My IDE (And How You Can Too)",
+    "subtitle": "Coding used to be 10% building and 90% configuring. Google's Antigravity changed the math.",
+    "authorId": "architect",
+    "tag": "TECH",
+    "readTime": "5 MIN",
+    "variant": "voltage",
+    "slug": "antigravity-quickstat",
+    "date": "2026-01-03",
+    "image": "/images/blog/antigravity_flow_hero.png"
+  },
+  {
     id: '000-GARLIC',
     title: 'OpenAI Announced GPT-5.2 (Garlic)',
     subtitle: 'Internal codename "Garlic". It remembers more, works smarter, and uses a whole team of experts.',
@@ -29,7 +53,7 @@ export const EDITORIAL_FEED: Article[] = [
     gridArea: 'large',
     slug: 'openai-gpt-5-2-garlic',
     date: '2025-10-15',
-    image: '/images/blog/moe-timeline.webp'
+    image: '/images/blog/openai-gpt-garlic-hero.png'
   },
   {
     id: '001',
@@ -331,7 +355,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'voltage',
     slug: 'cursor-vs-windsurf-the-ai-editor-wars',
     date: '2025-08-15',
-    image: '/images/blog/cursor-vs-windsurf-thumb.png'
+    image: '/images/blog/samurai-editor-war.png'
   },
   {
     id: 'GEN-110',
@@ -343,7 +367,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'holo',
     slug: 'depin-distributed-physical-infrastructure',
     date: '2025-08-15',
-    image: '/images/blog/hivemapper-thumb.png'
+    image: '/images/blog/rpi-cluster-mess.png'
   },
   {
     id: 'GEN-112',
@@ -391,7 +415,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'voltage',
     slug: 'kubernetes-overkill-for-your-blog',
     date: '2025-08-15',
-    image: '/images/blog/pi-cluster-thumb.png'
+    image: '/images/blog/cloud-collapse-render.png'
   },
   {
     id: 'GEN-119',
@@ -415,7 +439,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'holo',
     slug: 'local-llms-the-ultimate-privacy-shield',
     date: '2025-08-15',
-    image: '/images/blog/local-llm-thumb.png'
+    image: '/images/blog/local-jarvis-desk.png'
   },
   {
     id: 'GEN-122',
@@ -427,7 +451,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'holo',
     slug: 'macos-the-walled-garden-is-comfy',
     date: '2025-08-15',
-    image: '/images/blog/mac-studio-thumb.png'
+    image: '/images/blog/glitched-art-dog-cat.png'
   },
   {
     id: 'GEN-123',
@@ -499,7 +523,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'voltage',
     slug: 'the-dead-internet-theory-are-we-alone',
     date: '2025-08-15',
-    image: '/images/blog/dead-internet-thumb.png'
+    image: '/images/blog/dead-internet-theory-hero.png'
   },
   {
     id: 'GEN-138',
@@ -511,7 +535,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'voltage',
     slug: 'the-future-of-open-source',
     date: '2025-08-15',
-    image: '/images/blog/opensource-thumb.png'
+    image: '/images/blog/opensource-future-hero.png'
   },
   {
     id: 'GEN-140',
@@ -523,7 +547,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'holo',
     slug: 'the-rise-of-the-vibe-coder',
     date: '2025-08-15',
-    image: '/images/blog/vibe-coding-thumb.png'
+    image: '/images/blog/vibe-coder-rise-hero.png'
   },
   {
     id: 'GEN-141',
@@ -559,7 +583,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'holo',
     slug: 'voice-interfaces-why-they-suck',
     date: '2025-08-15',
-    image: '/images/blog/uncanny-voice-thumb.png'
+    image: '/images/blog/voice-interfaces-hero.png'
   },
   {
     id: 'GEN-145',
@@ -583,7 +607,7 @@ export const EDITORIAL_FEED: Article[] = [
     variant: 'holo',
     slug: 'why-your-smart-fridge-wants-to-kill-you',
     date: '2025-08-15',
-    image: '/images/blog/smart-fridge-thumb.png'
+    image: '/images/blog/smart-fridge-evil-hero.png'
   },
   {
     id: 'GEN-147',
