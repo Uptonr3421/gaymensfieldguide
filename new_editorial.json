@@ -1,5 +1,29 @@
 [
   {
+    "id": "GEN-201",
+    "title": "The Subscription Apocalypse: You Will Own Nothing and Hate It",
+    "subtitle": "Adobe wants your rent. Windows wants your data. It's time to reject the SaaS drip-feed.",
+    "authorId": "scout",
+    "tag": "DYSTOPIA",
+    "readTime": "6 MIN",
+    "variant": "obsidian",
+    "slug": "subscription-apocalypse",
+    "date": "2026-01-04",
+    "image": "/images/blog/subscription_apocalypse_hero.png"
+  },
+  {
+    "id": "GEN-200",
+    "title": "Why I Finally Stopped Fighting My IDE (And How You Can Too)",
+    "subtitle": "Coding used to be 10% building and 90% configuring. Google's Antigravity changed the math.",
+    "authorId": "architect",
+    "tag": "TECH",
+    "readTime": "5 MIN",
+    "variant": "voltage",
+    "slug": "antigravity-quickstat",
+    "date": "2026-01-03",
+    "image": "/images/blog/antigravity_flow_hero.png"
+  },
+  {
     "id": "GEN-100",
     "title": "Ai Is Augmenting Memory | GMFG\",",
     "subtitle": "Deep dive into Ai Is Augmenting Memory. Optimized for the Nano Banana aesthetics.\",",

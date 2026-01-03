@@ -18,14 +18,23 @@ type SchemaProps = {
     question: string;
     answer: string;
   }[];
+  howTo?: {
+    name: string;
+    description: string;
+    step: {
+      name: string;
+      text: string;
+      image?: string;
+      url?: string;
+    }[];
+  };
 };
 
-export function SchemaBuilder({ article, breadcrumbs, questions }: SchemaProps) {
+export function SchemaBuilder({ article, breadcrumbs, questions, howTo }: SchemaProps) {
   const schemas = [];
 
-  // 1. BlogPosting Schema (more specific than TechArticle for blog posts)
+  // 1. BlogPosting Schema
   if (article) {
-    // Derive the article URL from breadcrumbs if not explicitly provided
     const articleUrl = article.url || 
       (breadcrumbs && breadcrumbs.length > 0 
         ? `https://gaymensfieldguide.com${breadcrumbs[breadcrumbs.length - 1].item}`
@@ -87,6 +96,27 @@ export function SchemaBuilder({ article, breadcrumbs, questions }: SchemaProps) 
           '@type': 'Answer',
           text: q.answer,
         },
+      })),
+    });
+  }
+
+  // 4. HowTo Schema
+  if (howTo) {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: howTo.name,
+      description: howTo.description,
+      step: howTo.step.map((step, index) => ({
+        '@type': 'HowToStep',
+        position: index + 1,
+        name: step.name,
+        text: step.text,
+        image: step.image ? {
+          '@type': 'ImageObject',
+          url: step.image,
+        } : undefined,
+        url: step.url,
       })),
     });
   }

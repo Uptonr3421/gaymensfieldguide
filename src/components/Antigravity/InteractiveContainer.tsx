@@ -68,7 +68,7 @@ export function InteractiveContainer({
             <span className="w-1.5 h-1.5 bg-green-500 animate-pulse inline-block" />
             SYS_READY
          </span>
-         <span className="text-[10px] font-mono text-zinc-600">ID: {Math.random().toString(36).substr(2, 6).toUpperCase()}</span>
+         <span className="text-[10px] font-mono text-zinc-600">ID: GMFG-SYS-01</span>
       </div>
     </div>
   );
