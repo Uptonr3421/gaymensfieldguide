@@ -1,12 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { Metadata } from 'next';
 import { EDITORIAL_FEED } from '@/data/editorial';
-import BentoFeed from '@/components/Experimental/BentoFeed';
 import { STAFF } from '@/data/staff';
 import StaffAvatar from '@/components/Antigravity/StaffAvatar';
-import MarketingCTA from '@/components/MarketingCTA';
 import SplashHero from '@/components/SplashHero';
+
+const BentoFeed = dynamic(() => import('@/components/Experimental/BentoFeed'));
+const MarketingCTA = dynamic(() => import('@/components/MarketingCTA'));
 
 export const metadata: Metadata = {
   title: 'THE GUIDE // Vibe Coder Editorial',

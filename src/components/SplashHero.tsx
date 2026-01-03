@@ -158,10 +158,10 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
                   onClick={() => { setIsAutoPlaying(false); setCurrentIndex(idx); }}
                   tabIndex={-1}
                   className={cn(
-                    "relative flex-1 aspect-video bg-zinc-900 border-2 overflow-hidden transition-all",
+                    "relative flex-1 aspect-video bg-zinc-900 border-2 overflow-hidden transition-opacity duration-300",
                     idx === currentIndex 
-                      ? "border-orange-500 ring-2 ring-orange-500/30" 
-                      : "border-zinc-800 opacity-50 hover:opacity-100 hover:border-zinc-600"
+                      ? "border-orange-500 ring-2 ring-orange-500/30 opacity-100" 
+                      : "border-zinc-800 opacity-50 hover:opacity-100"
                   )}
                 >
                   <Image
@@ -188,8 +188,8 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
                   aria-selected={idx === currentIndex}
                   role="tab"
                   className={cn(
-                    "h-1 transition-all",
-                    idx === currentIndex ? "w-8 bg-orange-500" : "w-4 bg-zinc-700 hover:bg-zinc-600"
+                    "h-1 transition-transform duration-300 origin-center bg-zinc-700 hover:bg-zinc-600 w-4",
+                    idx === currentIndex && "scale-x-150 bg-orange-500 hover:bg-orange-500"
                   )}
                 />
               ))}

@@ -10,6 +10,10 @@ const nextConfig = {
   compress: true,
   reactStrictMode: true,
   
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'date-fns', 'lodash'],
+  },
+  
   // Image Optimization
   images: {
     formats: ['image/avif', 'image/webp'],

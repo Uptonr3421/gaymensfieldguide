@@ -1,11 +1,11 @@
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import dynamic from 'next/dynamic';
-import Script from 'next/script';
 import SkipLink from '../components/Antigravity/SkipLink';
 import OrganizationSchema from '../components/Antigravity/OrganizationSchema';
 import SickNav from '../components/SickNav';
 import Footer from '../components/Footer';
 import { Analytics } from "@vercel/analytics/react";
+import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 
 import type { Metadata } from 'next';
@@ -111,18 +111,7 @@ export default function RootLayout({
         <ReadingProgress />
         <OrganizationSchema />
         <Analytics />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-QMLM24T4QK"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-QMLM24T4QK');
-          `}
-        </Script>
+        <GoogleAnalytics gaId="G-QMLM24T4QK" />
       </body>
     </html>
   );

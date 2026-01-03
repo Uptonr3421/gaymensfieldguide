@@ -37,7 +37,7 @@ export default function BentoFeed({ articles }: BentoFeedProps) {
           <BentoItem 
             title={article.tag} 
             span={getSpan(article.gridArea)} 
-            className="h-full hover:border-orange-500 transition-all duration-300 overflow-hidden flex flex-col"
+            className="h-full hover:border-orange-500 transition-colors duration-300 overflow-hidden flex flex-col"
           >
            {/* Image Section */}
            <div className={`relative w-full overflow-hidden ${
