@@ -9,7 +9,7 @@
     "variant": "voltage",
     "slug": "ai-is-augmenting-memory",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/ai-memory/hero_image.png"
   },
   {
     "id": "GEN-101",
@@ -21,7 +21,7 @@
     "variant": "holo",
     "slug": "ambient-computing-interaction-without-screens",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/smiling-waveform.png"
   },
   {
     "id": "GEN-103",
@@ -33,7 +33,7 @@
     "variant": "holo",
     "slug": "blockchain-gaming-a-ponzi-scheme",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/moe-dragon-rpg.png"
   },
   {
     "id": "GEN-106",
@@ -45,7 +45,7 @@
     "variant": "obsidian",
     "slug": "cursor-vs-windsurf-the-ai-editor-wars",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/samurai-editor-war.png"
   },
   {
     "id": "GEN-110",
@@ -57,7 +57,7 @@
     "variant": "holo",
     "slug": "depin-distributed-physical-infrastructure",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/rpi-cluster-mess.png"
   },
   {
     "id": "GEN-112",
@@ -69,7 +69,7 @@
     "variant": "holo",
     "slug": "docker-it-works-on-my-machine",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/cloud-collapse-render.png"
   },
   {
     "id": "GEN-115",
@@ -81,7 +81,7 @@
     "variant": "holo",
     "slug": "helium-mobile-free-5g",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/fiber-optic-garlic.png"
   },
   {
     "id": "GEN-117",
@@ -93,7 +93,7 @@
     "variant": "voltage",
     "slug": "home-assistant-the-rabbit-hole",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/local-jarvis-desk.png"
   },
   {
     "id": "GEN-118",
@@ -105,7 +105,7 @@
     "variant": "holo",
     "slug": "kubernetes-overkill-for-your-blog",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/cloud-collapse-render.png"
   },
   {
     "id": "GEN-119",
@@ -117,7 +117,7 @@
     "variant": "voltage",
     "slug": "linux-desktop-2026-finally",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/code-lock-breaking.png"
   },
   {
     "id": "GEN-120",
@@ -129,7 +129,7 @@
     "variant": "obsidian",
     "slug": "local-llms-the-ultimate-privacy-shield",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/local-jarvis-desk.png"
   },
   {
     "id": "GEN-122",
@@ -141,7 +141,7 @@
     "variant": "obsidian",
     "slug": "macos-the-walled-garden-is-comfy",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/glitched-art-dog-cat.png"
   },
   {
     "id": "GEN-123",
@@ -153,7 +153,7 @@
     "variant": "obsidian",
     "slug": "mechanical-keyboards-a-loud-addiction",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/credential-badges.png"
   },
   {
     "id": "GEN-126",
@@ -165,7 +165,7 @@
     "variant": "voltage",
     "slug": "plex-vs-jellyfin",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/plex-jellyfin-hero.png"
   },
   {
     "id": "GEN-131",
@@ -177,7 +177,7 @@
     "variant": "obsidian",
     "slug": "right-to-repair-the-war-on-glue",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/right-to-repair-hero.png"
   },
   {
     "id": "GEN-135",
@@ -189,7 +189,7 @@
     "variant": "holo",
     "slug": "standing-desks-are-they-a-scam",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/standing-desk-hero.png"
   },
   {
     "id": "GEN-136",
@@ -201,7 +201,7 @@
     "variant": "obsidian",
     "slug": "starlink-the-sky-is-full-of-satellites",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/starlink-sky-hero.png"
   },
   {
     "id": "GEN-137",
@@ -213,7 +213,7 @@
     "variant": "obsidian",
     "slug": "the-dead-internet-theory-are-we-alone",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/dead-internet-theory-hero.png"
   },
   {
     "id": "GEN-138",
@@ -225,7 +225,7 @@
     "variant": "obsidian",
     "slug": "the-future-of-open-source",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/opensource-future-hero.png"
   },
   {
     "id": "GEN-140",
@@ -237,7 +237,7 @@
     "variant": "holo",
     "slug": "the-rise-of-the-vibe-coder",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/vibe-coder-rise-hero.png"
   },
   {
     "id": "GEN-141",
@@ -249,7 +249,7 @@
     "variant": "holo",
     "slug": "trackballs-the-ergonomic-endgame",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/trackball-ergonomic-hero.png"
   },
   {
     "id": "GEN-143",
@@ -261,7 +261,7 @@
     "variant": "holo",
     "slug": "vertical-monitors-why-you-need-one",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/vertical-monitor-hero.png"
   },
   {
     "id": "GEN-144",
@@ -273,7 +273,7 @@
     "variant": "holo",
     "slug": "voice-interfaces-why-they-suck",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/voice-interfaces-hero.png"
   },
   {
     "id": "GEN-145",
@@ -285,7 +285,7 @@
     "variant": "obsidian",
     "slug": "why-i-deleted-my-cloud-backups",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/cloud-backups-deleted-hero.png"
   },
   {
     "id": "GEN-146",
@@ -297,7 +297,7 @@
     "variant": "voltage",
     "slug": "why-your-smart-fridge-wants-to-kill-you",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/smart-fridge-evil-hero.png"
   },
   {
     "id": "GEN-147",
@@ -309,7 +309,7 @@
     "variant": "holo",
     "slug": "windows-12-spyware-edition",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/windows12-spyware-hero.png"
   },
   {
     "id": "GEN-148",
@@ -321,6 +321,6 @@
     "variant": "holo",
     "slug": "zigbee-vs-z-wave-vs-matter",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/zigbee-matter-hero.png"
   }
 ]
