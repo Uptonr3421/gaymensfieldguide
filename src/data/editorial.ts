@@ -64,7 +64,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "voltage",
     "slug": "ai-is-augmenting-memory",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/smiling-waveform.png"
   },
   {
     "id": "GEN-101",
@@ -76,7 +76,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "holo",
     "slug": "ambient-computing-interaction-without-screens",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/moe-dragon-rpg.png"
   },
   {
     "id": "GEN-103",
@@ -88,7 +88,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "holo",
     "slug": "blockchain-gaming-a-ponzi-scheme",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/samurai-editor-war.png"
   },
   {
     "id": "GEN-106",
@@ -112,7 +112,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "holo",
     "slug": "depin-distributed-physical-infrastructure",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/fiber-optic-garlic.png"
   },
   {
     "id": "GEN-112",
@@ -124,7 +124,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "holo",
     "slug": "docker-it-works-on-my-machine",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/smiling-waveform.png"
   },
   {
     "id": "GEN-115",
@@ -136,7 +136,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "holo",
     "slug": "helium-mobile-free-5g",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/starlink-sky-hero.png""
   },
   {
     "id": "GEN-117",
@@ -148,7 +148,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "voltage",
     "slug": "home-assistant-the-rabbit-hole",
     "date": "2025-08-15",
-    "image": "/images/blog/rabbit-r1-thumb.png"
+    "image": "/images/blog/local-jarvis-desk.png""
   },
   {
     "id": "GEN-118",
@@ -160,7 +160,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "holo",
     "slug": "kubernetes-overkill-for-your-blog",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/cloud-collapse-render.png""
   },
   {
     "id": "GEN-119",
@@ -172,7 +172,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "voltage",
     "slug": "linux-desktop-2026-finally",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/opensource-future-hero.png""
   },
   {
     "id": "GEN-120",
@@ -196,7 +196,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "obsidian",
     "slug": "macos-the-walled-garden-is-comfy",
     "date": "2025-08-15",
-    "image": "/images/blog/default-thumb.png"
+    "image": "/images/blog/glitched-art-dog-cat.png""
   },
   {
     "id": "GEN-123",
@@ -208,7 +208,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "obsidian",
     "slug": "mechanical-keyboards-a-loud-addiction",
     "date": "2025-08-15",
-    "image": "/images/blog/cloud-backups-deleted-hero.png"
+    "image": "/images/blog/toaster-blueprint.png""
   },
   {
     "id": "GEN-126",
