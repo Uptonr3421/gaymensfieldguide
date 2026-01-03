@@ -42,7 +42,7 @@ export default function Home() {
           <h2 className="text-4xl font-black uppercase tracking-tighter text-white">
             Latest Transmissions
           </h2>
-          <span className="font-mono text-sm font-bold text-orange-600 animate-pulse">
+          <span className="font-mono text-sm font-bold text-banana animate-pulse">
             FEED_ACTIVE
           </span>
         </div>
@@ -70,7 +70,7 @@ export default function Home() {
                 <StaffAvatar id={writer.id} initial={writer.name[0]} role={writer.id as any} />
                 
                 <h3 className="text-xl font-bold mb-2 text-white">{writer.name}</h3>
-                <p className="font-mono text-xs uppercase tracking-widest text-orange-600 mb-4">
+                <p className="font-mono text-xs uppercase tracking-widest text-banana mb-4">
                   {writer.role}
                 </p>
                 <p className="text-sm text-zinc-400 leading-relaxed border-t border-zinc-800 pt-4">

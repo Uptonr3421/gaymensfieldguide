@@ -50,7 +50,7 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
             
             {/* Title */}
             <div className="text-center lg:text-left">
-              <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-zinc-400 block mb-4">
+              <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-zinc-300 block mb-4">
                 VIBE_CODED // 2025
               </span>
               <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.85]">
@@ -59,8 +59,8 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
                   GUIDE
                 </span>
               </h1>
-              <p className="mt-6 text-lg text-zinc-400 max-w-md leading-relaxed">
-                The definitive editorial for the <span className="text-orange-500 font-semibold">post-code era</span>. 
+              <p className="mt-6 text-lg text-zinc-300 max-w-md leading-relaxed">
+                The definitive editorial for the <span className="text-banana font-semibold">post-code era</span>. 
                 We don't prompt. We engineer vibe.
               </p>
               
@@ -90,7 +90,7 @@ export default function SplashHero({ featuredArticles }: SplashHeroProps) {
             
             {/* Section Label */}
             <div className="flex items-center justify-between mb-6">
-              <span className="font-mono text-xs text-orange-500 uppercase tracking-widest">
+              <span className="font-mono text-xs text-banana uppercase tracking-widest">
                 FEATURED_TRANSMISSIONS
               </span>
               <div className="flex gap-2">
