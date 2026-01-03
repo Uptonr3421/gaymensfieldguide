@@ -136,7 +136,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "holo",
     "slug": "helium-mobile-free-5g",
     "date": "2025-08-15",
-    "image": "/images/blog/starlink-sky-hero.png""
+    "image": "/images/blog/starlink-sky-hero.png"
   },
   {
     "id": "GEN-117",
@@ -148,7 +148,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "voltage",
     "slug": "home-assistant-the-rabbit-hole",
     "date": "2025-08-15",
-    "image": "/images/blog/local-jarvis-desk.png""
+    "image": "/images/blog/local-jarvis-desk.png"
   },
   {
     "id": "GEN-118",
@@ -160,7 +160,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "holo",
     "slug": "kubernetes-overkill-for-your-blog",
     "date": "2025-08-15",
-    "image": "/images/blog/cloud-collapse-render.png""
+    "image": "/images/blog/cloud-collapse-render.png"
   },
   {
     "id": "GEN-119",
@@ -172,7 +172,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "voltage",
     "slug": "linux-desktop-2026-finally",
     "date": "2025-08-15",
-    "image": "/images/blog/opensource-future-hero.png""
+    "image": "/images/blog/opensource-future-hero.png"
   },
   {
     "id": "GEN-120",
@@ -196,7 +196,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "obsidian",
     "slug": "macos-the-walled-garden-is-comfy",
     "date": "2025-08-15",
-    "image": "/images/blog/glitched-art-dog-cat.png""
+    "image": "/images/blog/glitched-art-dog-cat.png"
   },
   {
     "id": "GEN-123",
@@ -208,7 +208,7 @@ export const EDITORIAL_FEED: Article[] = [
     "variant": "obsidian",
     "slug": "mechanical-keyboards-a-loud-addiction",
     "date": "2025-08-15",
-    "image": "/images/blog/toaster-blueprint.png""
+    "image": "/images/blog/toaster-blueprint.png"
   },
   {
     "id": "GEN-126",
