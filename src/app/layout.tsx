@@ -4,8 +4,6 @@ import SkipLink from '../components/Antigravity/SkipLink';
 import OrganizationSchema from '../components/Antigravity/OrganizationSchema';
 import SickNav from '../components/SickNav';
 import Footer from '../components/Footer';
-import { Analytics } from "@vercel/analytics/react";
-import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 
 import type { Metadata } from 'next';
@@ -66,9 +64,6 @@ export const metadata: Metadata = {
     description: 'The definitive editorial for the post-code era.',
     images: ['/images/blog/moe-timeline.webp'],
   },
-  verification: {
-    google: 'google1cd91746b71a2414',
-  },
   robots: {
     index: true,
     follow: true,
@@ -95,10 +90,8 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <meta name="theme-color" content="#FACC15" />
+        <meta name="google-site-verification" content="kmGxst0wzYwh5_OEKtgAZkelhCVTtSSYgaKiVgZPGgw" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </head>
       <body className="min-h-screen font-sans bg-paper dark:bg-paper-dark text-industrial-900 dark:text-industrial-50 bg-noise selection:bg-banana selection:text-black">
@@ -110,8 +103,6 @@ export default function RootLayout({
         <ImpactMeter />
         <ReadingProgress />
         <OrganizationSchema />
-        <Analytics />
-        <GoogleAnalytics gaId="G-QMLM24T4QK" />
       </body>
     </html>
   );

@@ -1,1 +1,12 @@
-{"token": "ya29.a0Aa7pCA--h24xBTnIZLSfWwgL5Osk_5mJo0Zwgop6zNiRl-8mRtPohMy0lwkfandaAg379I4WI98Atzv-39aoORFV7BX9xQngNY7yGdNwYPUShEda1ECJrsLSe0paSxfBUXagU3LJgqLgRRdTH5eugwO7LDUCA8JHga2mKJjvry0oVsH698gNplhljv-6-KsHi15IbgMaCgYKAbkSARISFQHGX2Miz-9LM8Wv81b16OfpOjKKZQ0206", "refresh_token": "1//054a1n_Y6z7SGCgYIARAAGAUSNwF-L9IrhfH2JHf1S3SiyNL2tCFed8cvPqM9M9dWUh_8Y01Gz_s-UziaMWUdcf4NMtALTn0Wr10", "token_uri": "https://oauth2.googleapis.com/token", "client_id": "1065660286023-u2e26dmlpi68uv3r8d4t8iiafqtlavq2.apps.googleusercontent.com", "client_secret": "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", "scopes": ["https://www.googleapis.com/auth/analytics.edit", "https://www.googleapis.com/auth/analytics.readonly", "https://www.googleapis.com/auth/webmasters", "https://www.googleapis.com/auth/webmasters.readonly"], "universe_domain": "googleapis.com", "account": "", "expiry": "2025-12-16T10:20:53Z"}
+{
+  "_note": "LOCAL SECRET REMOVED. Generate this locally via OAuth flow and do not commit it.",
+  "token": "REDACTED",
+  "refresh_token": "REDACTED",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "client_id": "REDACTED",
+  "client_secret": "REDACTED",
+  "scopes": [],
+  "universe_domain": "googleapis.com",
+  "account": "",
+  "expiry": "REDACTED"
+}
