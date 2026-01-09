@@ -52,6 +52,11 @@ model_dump.txt
 *.tmp
 .env*.local
 
+# Test files (compiled)
+test-*.mjs
+test-*.js
+codex-mcp-demo.mjs
+
 # Service Account Keys - NEVER COMMIT THESE
 *-key.json
 *.credentials.json
