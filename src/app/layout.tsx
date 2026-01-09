@@ -91,7 +91,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="theme-color" content="#FACC15" />
-        <meta name="google-site-verification" content="kmGxst0wzYwh5_OEKtgAZkelhCVTtSSYgaKiVgZPGgw" />
+        <meta
+          name="google-site-verification"
+          content="kmGxst0wzYwh5_OEKtgAZkelhCVTtSSYgaKiVgZPGgw"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </head>
       <body className="min-h-screen font-sans bg-paper dark:bg-paper-dark text-industrial-900 dark:text-industrial-50 bg-noise selection:bg-banana selection:text-black">

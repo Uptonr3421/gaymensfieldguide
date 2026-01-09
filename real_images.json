@@ -1,0 +1,242 @@
+[
+  {
+    "path": "public\\images\\ai-memory\\article_thumbnail.png",
+    "size": 228733
+  },
+  {
+    "path": "public\\images\\ai-memory\\hero_image.png",
+    "size": 1263137
+  },
+  {
+    "path": "public\\images\\blog\\antigravity_agent_comparison.png",
+    "size": 1769126
+  },
+  {
+    "path": "public\\images\\blog\\antigravity_flow_hero.png",
+    "size": 776683
+  },
+  {
+    "path": "public\\images\\blog\\binary-fingerprint-scanner.png",
+    "size": 1684474
+  },
+  {
+    "path": "public\\images\\blog\\cloud-backups-deleted-hero.png",
+    "size": 861270
+  },
+  {
+    "path": "public\\images\\blog\\cloud-collapse-render.png",
+    "size": 1511388
+  },
+  {
+    "path": "public\\images\\blog\\code-lock-breaking.png",
+    "size": 1898727
+  },
+  {
+    "path": "public\\images\\blog\\credential-badges.png",
+    "size": 893153
+  },
+  {
+    "path": "public\\images\\blog\\cursor-vs-windsurf-thumb.png",
+    "size": 1660272
+  },
+  {
+    "path": "public\\images\\blog\\dead-internet-server-farm.png",
+    "size": 1747033
+  },
+  {
+    "path": "public\\images\\blog\\dead-internet-server-farm.webp",
+    "size": 134608
+  },
+  {
+    "path": "public\\images\\blog\\dead-internet-theory-hero.png",
+    "size": 705367
+  },
+  {
+    "path": "public\\images\\blog\\dead-internet-theory-hero.webp",
+    "size": 108618
+  },
+  {
+    "path": "public\\images\\blog\\digital-eviction-notice.png",
+    "size": 1706679
+  },
+  {
+    "path": "public\\images\\blog\\dual-3090-monster.png",
+    "size": 1822945
+  },
+  {
+    "path": "public\\images\\blog\\editor-war-thumb.png",
+    "size": 1660272
+  },
+  {
+    "path": "public\\images\\blog\\fiber-optic-garlic.png",
+    "size": 843445
+  },
+  {
+    "path": "public\\images\\blog\\flipper-thumb.png",
+    "size": 1276974
+  },
+  {
+    "path": "public\\images\\blog\\flipper-zero-neon-waves.png",
+    "size": 1276974
+  },
+  {
+    "path": "public\\images\\blog\\flipper-zero-thumb.png",
+    "size": 1276974
+  },
+  {
+    "path": "public\\images\\blog\\glitched-art-dog-cat.png",
+    "size": 2257692
+  },
+  {
+    "path": "public\\images\\blog\\glitched-art-dog-cat.webp",
+    "size": 328058
+  },
+  {
+    "path": "public\\images\\blog\\hallucination-city.png",
+    "size": 924243
+  },
+  {
+    "path": "public\\images\\blog\\impossible-maze-render.png",
+    "size": 437175
+  },
+  {
+    "path": "public\\images\\blog\\killer-fridge-ransomware.png",
+    "size": 1659359
+  },
+  {
+    "path": "public\\images\\blog\\local-jarvis-desk.png",
+    "size": 1078369
+  },
+  {
+    "path": "public\\images\\blog\\local-jarvis-thumb.png",
+    "size": 1078369
+  },
+  {
+    "path": "public\\images\\blog\\lonely-bot-liking-itself.png",
+    "size": 1027363
+  },
+  {
+    "path": "public\\images\\blog\\moe-dragon-rpg.png",
+    "size": 899507
+  },
+  {
+    "path": "public\\images\\blog\\moe-timeline.png",
+    "size": 837704
+  },
+  {
+    "path": "public\\images\\blog\\moe-timeline.webp",
+    "size": 125766
+  },
+  {
+    "path": "public\\images\\blog\\openai-gpt-garlic-hero.png",
+    "size": 700496
+  },
+  {
+    "path": "public\\images\\blog\\opensource-future-hero.png",
+    "size": 800969
+  },
+  {
+    "path": "public\\images\\blog\\plex-jellyfin-hero.png",
+    "size": 1131123
+  },
+  {
+    "path": "public\\images\\blog\\rabbit-r1-thumb.png",
+    "size": 1925384
+  },
+  {
+    "path": "public\\images\\blog\\rabbit-teardown-xray.png",
+    "size": 1925384
+  },
+  {
+    "path": "public\\images\\blog\\rabbit-teardown-xray.webp",
+    "size": 219874
+  },
+  {
+    "path": "public\\images\\blog\\right-to-repair-hero.png",
+    "size": 659329
+  },
+  {
+    "path": "public\\images\\blog\\rpi-cluster-mess.png",
+    "size": 1769126
+  },
+  {
+    "path": "public\\images\\blog\\samurai-editor-war.png",
+    "size": 1660272
+  },
+  {
+    "path": "public\\images\\blog\\samurai-editor-war.webp",
+    "size": 137702
+  },
+  {
+    "path": "public\\images\\blog\\smart-fridge-evil-hero.png",
+    "size": 502593
+  },
+  {
+    "path": "public\\images\\blog\\smart-fridge-thumb.png",
+    "size": 502593
+  },
+  {
+    "path": "public\\images\\blog\\smiling-waveform.png",
+    "size": 1757132
+  },
+  {
+    "path": "public\\images\\blog\\standing-desk-hero.png",
+    "size": 884263
+  },
+  {
+    "path": "public\\images\\blog\\starlink-sky-hero.png",
+    "size": 775808
+  },
+  {
+    "path": "public\\images\\blog\\subscription_apocalypse_hero.png",
+    "size": 1511388
+  },
+  {
+    "path": "public\\images\\blog\\toaster-blueprint.png",
+    "size": 1435857
+  },
+  {
+    "path": "public\\images\\blog\\trackball-ergonomic-hero.png",
+    "size": 653166
+  },
+  {
+    "path": "public\\images\\blog\\vertical-monitor-hero.png",
+    "size": 864709
+  },
+  {
+    "path": "public\\images\\blog\\vibe-coder-rise-hero.png",
+    "size": 765522
+  },
+  {
+    "path": "public\\images\\blog\\voice-interfaces-hero.png",
+    "size": 662961
+  },
+  {
+    "path": "public\\images\\blog\\windows12-spyware-hero.png",
+    "size": 730373
+  },
+  {
+    "path": "public\\images\\blog\\zigbee-matter-hero.png",
+    "size": 646146
+  },
+  {
+    "path": "public\\images\\sprites\\player.jpg",
+    "size": 247905
+  },
+  {
+    "path": "public\\images\\sprites\\sprites.jpg",
+    "size": 200248
+  },
+  {
+    "path": "public\\images\\sprites\\sprites2.jpg",
+    "size": 228924
+  },
+  {
+    "path": "public\\images\\sprites\\sprites3.jpg",
+    "size": 240411
+  },
+  {
+    "path": "public\\images\\sprites\\sprites4.jpg",
+    "size": 247905
+  }
+]

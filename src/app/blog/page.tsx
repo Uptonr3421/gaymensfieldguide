@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import { EDITORIAL_FEED } from '@/data/editorial';
 import BentoFeed from '@/components/Experimental/BentoFeed';
-import HeroAnimation from '@/components/HeroAnimation';
 
 export const metadata: Metadata = {
   title: 'Blog // The Field Guide',
