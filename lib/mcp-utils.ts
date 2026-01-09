@@ -13,10 +13,10 @@ import { ConsoleLogger, LogLevel } from '@github/copilot/sdk';
 export class MCPLogger extends ConsoleLogger {
   private mcpContext: string;
 
-  constructor(context: string = 'MCP') {
+  constructor(context: string = 'MCP', logLevel: LogLevel = LogLevel.Info) {
     super();
     this.mcpContext = context;
-    this.logLevel = LogLevel.Info;
+    this.logLevel = logLevel;
   }
 
   /**
@@ -127,7 +127,11 @@ export class MCPToolExecutionError extends MCPError {
  */
 export function handleMCPError(error: any, logger: MCPLogger): void {
   if (error instanceof MCPServerStartupError) {
-    logger.logServerError(error.serverName!, error.originalError!);
+    if (error.serverName && error.originalError) {
+      logger.logServerError(error.serverName, error.originalError);
+    } else {
+      logger.error(`Server startup failed: ${error.message}`);
+    }
   } else if (error instanceof MCPToolExecutionError) {
     logger.error(`Tool execution failed: ${error.message}`);
   } else if (error.message?.includes('@modelcontextprotocol/sdk')) {
