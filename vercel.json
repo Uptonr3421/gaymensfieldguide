@@ -1,5 +1,10 @@
 {
-  "installCommand": "npm install",
-  "buildCommand": "next build",
-  "framework": "nextjs"
+  "framework": null,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://alignment-ai.io/$1",
+      "permanent": true
+    }
+  ]
 }
